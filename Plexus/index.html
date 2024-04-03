@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plexus</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      .bg-wireframe {
+        background-image: url("./assets/wireframe\ land.png");
+      }
+      .bg-hero {
+        background-image: url("assets/bg-hero.png");
+      }
+      .bg-mask-cover {
+        background-image: url("assets/Mask\ group.png");
+      }
+      .bg-text {
+        background-clip: text;
+        background: linear-gradient(
+          to right,
+          #f7c573,
+          #ce81a2,
+          #8757e4,
+          #60e7e3
+        );
+      }
+      .bg-text2 {
+        color: transparent;
+        background-clip: text;
+        background: linear-gradient(to right, #f7c573, #8757e4, #60e7e3);
+      }
+      .border-gradient {
+        border-style: solid;
+        border-width: 0px 0px 1px 0px;
+        border-image: linear-gradient(
+            to right,
+            #f7c573,
+            #ce81a2,
+            #8757e4,
+            #60e7e3
+          )
+          1;
+      }
+      .border-gradient1 {
+        border-style: solid;
+        border-width: 1px 0px 0px 0px;
+        border-image: linear-gradient(
+            to right,
+            #f7c573,
+            #ce81a2,
+            #8757e4,
+            #60e7e3
+          )
+          1;
+      }
+    </style>
+  </head>
+  <body class="bg-black text-white">
+    <header
+      class="border-gradient flex justify-center py-10 absolute top-0 w-full z-10"
+    >
+      <img src="./assets/icon.png" alt="" width="80" class="-mb-20" />
+    </header>
+
+    <!-- 1st Section Start -->
+    <div class="bg-hero bg-cover bg-no-repeat relative px-4">
+      <div
+        class="max-w-6xl m-auto text-center flex flex-col sm:gap-16 gap-8 sm:pt-64 pt-44 sm:pb-32 pb-24"
+      >
+        <h1 class="sm:text-6xl text-4xl font-bold">
+          Empowering the
+          <span class="bg-text text-transparent bg-clip-text"> Future</span>
+          with
+          <span class="bg-text text-transparent bg-clip-text">
+            AI Infrastructure </span
+          >on
+          <span class="bg-text text-transparent bg-clip-text"> Blockchain</span>
+        </h1>
+        <p class="max-w-2xl m-auto sm:text-xl px-4">
+          At Plexus, we're dedicated to pioneering the fusion of artificial
+          intelligence (AI) infrastructure with blockchain technology, reshaping
+          industries and empowering innovators worldwide. Our comprehensive
+          suite of products and services provides the essential foundation for
+          seamlessly developing, deploying, and managing AI projects in a
+          decentralized manner.
+        </p>
+        <div class="flex gap-5 justify-center sm:-mt-4 font-semibold z-10">
+          <a href="#">
+            <button class="bg-gray-400 rounded-full px-6 py-1 text-lg bg-text">
+              Buy $Plex
+            </button>
+          </a>
+          <a href="#">
+            <button
+              class="rounded-full px-6 py-1 text-lg bg-text text-transparent bg-clip-text border-[#8757e4] border font-bold"
+            >
+              Telegram
+            </button>
+          </a>
+        </div>
+      </div>
+      <img
+        src="./assets/Isolation_Mode.png"
+        alt=""
+        width="300"
+        class="absolute top-0 right-0"
+      />
+      <img
+        src="./assets/Isolation_Mode2.png"
+        alt=""
+        width="300"
+        class="absolute bottom-0 left-0"
+      />
+      <img
+        src="./assets/Isolation_Mode3.png"
+        alt=""
+        width="600"
+        class="absolute bottom-0 right-0"
+      />
+      <img
+        src="./assets/Isolation_Mode4.png"
+        alt=""
+        width="400"
+        class="absolute top-0 left-0"
+      />
+    </div>
+    <!-- 1st Section End -->
+
+    <!-- 2nd Section Start -->
+    <div class="border-gradient1 px-4">
+      <div class="max-w-7xl m-auto flex flex-col items-center gap-16 py-12">
+        <h1 class="sm:text-4xl text-3xl font-semibold">AI Infrastructure</h1>
+        <div
+          class="flex min-[900px]:flex-row flex-col justify-between min-[900px]:gap-4 gap-8"
+        >
+          <div
+            class="min-[900px]:w-[35%] flex flex-col min-[900px]:gap-10 gap-6"
+          >
+            <h1 class="sm:text-4xl text-3xl font-semibold">
+              Powering Tomorrow's Innovations
+            </h1>
+            <p class="sm:text-xl sm:pr-12">
+              Plexus AI Infrastructure stands as the cornerstone of our
+              offerings, integrating cutting-edge hardware, software, and
+              networking components. Our flagship products include:
+            </p>
+            <a href="#" class="w-fit">
+              <button
+                class="bg-gray-400 rounded-full px-6 py-1 w-fit text-lg min-[900px]:mt-10 bg-text"
+              >
+                Explore More
+              </button>
+            </a>
+          </div>
+          <div class="min-[900px]:w-[60%] flex sm:flex-row flex-col">
+            <div
+              class="min-[900px]:w-[350px] sm:w-1/2 flex flex-col gap-4 justify-between border border-gradient px-10 py-12 rounded-xl h-fit backdrop-blur-sm"
+            >
+              <img src="./assets/cloud.png" alt="" width="50" />
+              <h1
+                class="text-2xl font-bold bg-text2 text-transparent bg-clip-text"
+              >
+                Plexus Cloud:
+              </h1>
+              <p class="sm:text-xl pr-3">
+                Offering VPS, RDP, and Domain services, Plexus Cloud provides a
+                robust foundation for hosting AI applications with unmatched
+                flexibility and scalability.
+              </p>
+            </div>
+            <div
+              class="min-[900px]:w-[380px] sm:w-1/2 flex flex-col gap-4 justify-between border border-gradient pl-12 pr-8 py-6 rounded-xl h-fit mt-12 sm:-ml-8 -z-10"
+            >
+              <img src="./assets/gpu.png" alt="" width="50" />
+              <h1
+                class="text-2xl font-bold bg-text2 text-transparent bg-clip-text"
+              >
+                Plexus GPU:
+              </h1>
+              <p class="sm:text-xl">
+                Accelerating machine learning training, AI inference, rendering,
+                and cloud gaming, Plexus GPU leverages state-of-the-art
+                technology to optimize performance. With support for leading AI
+                frameworks such as TensorFlow, PyTorch, and Keras, Plexus GPU
+                sets the standard for AI development.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 2nd Section End -->
+
+    <!-- 3rd Section Start -->
+    <div
+      class="bg-mask-cover bg-cover bg-center bg-no-repeat text-center border-y border-white md:py-52 min-[460px]:py-32 py-20"
+    >
+      <div
+        class="max-w-xl m-auto flex flex-col gap-12 md:px-10 min-[460px]:px-20 px-10"
+      >
+        <h1 class="sm:text-4xl font-bold text-3xl max-w-sm m-auto">
+          Bridging<span class="bg-text text-transparent bg-clip-text"> AI</span>
+          and<span class="bg-text text-transparent bg-clip-text">
+            Blockchain</span
+          >
+        </h1>
+        <p class="sm:text-xl">
+          Our research-backed App Chain network revolutionizes the integration
+          of AI with blockchain technology. Plexus App Chain empowers developers
+          with seamless tools to harness the power of AI on the blockchain, with
+          compatibility for leading LLMs and EVM Bytecode integration.
+        </p>
+      </div>
+    </div>
+    <!-- 3rd Section End -->
+
+    <!-- 4th Section Start -->
+    <div class="relative border-gradient">
+      <div
+        class="bg-wireframe bg-no-repeat bg-cover bg-center h-[450px] absolute bottom-0 -z-10 w-full"
+      ></div>
+      <div
+        class="flex md:flex-row flex-col items-center justify-between gap-12 max-w-7xl m-auto py-10 px-4"
+      >
+        <div class="md:w-[45%] flex flex-col gap-10">
+          <h1 class="sm:text-4xl text-3xl font-semibold">
+            Safeguarding Your Online Presence
+          </h1>
+          <p class="sm:text-xl">
+            Privacy is paramount in today's digital landscape. Plexus VPN, our
+            flagship privacy product, ensures secure and anonymous browsing,
+            free from the constraints of internet censorship. Utilizing $PLEX
+            tokens for purchase, Plexus VPN guarantees peace of mind in an
+            increasingly connected world.
+          </p>
+        </div>
+        <div class="md:w-[55%]">
+          <img src="./assets/Group 11.png" alt="" width="550" class="m-auto" />
+        </div>
+      </div>
+    </div>
+    <!-- 4th Section End -->
+
+    <!-- 5th Section Start -->
+    <div class="px-4">
+      <div
+        class="max-w-6xl m-auto flex min-[860px]:flex-row flex-col items-center gap-4 py-20"
+      >
+        <div class="min-[860px]:w-1/2 relative">
+          <img
+            src="./assets/Ellipse 5.png"
+            alt=""
+            width="1250"
+            class="absolute -z-10 -top-16 -left-20"
+          />
+          <img src="./assets/left box.png" alt="" width="500" />
+        </div>
+        <div class="min-[860px]:w-1/2 flex flex-col min-[860px]:gap-16 gap-8">
+          <h1 class="sm:text-4xl text-3xl font-semibold">Tokenomics</h1>
+          <p class="sm:text-xl sm:pr-12">
+            The $PLEX token lies at the heart of the Plexus ecosystem,
+            facilitating seamless transactions and powering our decentralized
+            infrastructure. With a finite supply and a deflationary model, $PLEX
+            tokens incentivize participation and reward stakeholders for their
+            contributions to the network's growth.
+          </p>
+          <div class="flex sm:gap-16 gap-6">
+            <div>
+              <h1 class="text-[#60E7E3] text-4xl font-semibold">. 90%</h1>
+              <p class="text-lg ml-5">Treasury</p>
+            </div>
+            <div>
+              <h1 class="text-[#F7C573] text-4xl font-semibold">. 5%</h1>
+              <p class="text-lg ml-5">Marketing</p>
+            </div>
+            <div>
+              <h1 class="text-[#CE81A2] text-4xl font-semibold">. 5%</h1>
+              <p class="text-lg ml-5">Liquidity</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 5th Section End -->
+
+    <!-- 6th Section Start -->
+    <div class="relative px-4">
+      <div
+        class="max-w-7xl m-auto flex flex-col gap-12 items-center text-center sm:py-16 py-8"
+      >
+        <h1 class="sm:text-4xl text-3xl font-bold">
+          Building for
+          <span class="bg-text text-transparent bg-clip-text"> Tomorrow</span>
+        </h1>
+        <div
+          class="sm:mt-10 mt-6 flex min-[950px]:flex-row flex-col gap-16 text-left"
+        >
+          <div
+            class="min-[950px]:w-1/3 border border-[#F7C573] sm:p-10 p-6 rounded-xl h-fit backdrop-blur-sm"
+          >
+            <div class="flex justify-between gap-2">
+              <h1 class="text-2xl font-bold text-[#F7C573] self-end">
+                Plexus Cloud:
+              </h1>
+              <img src="./assets/box 1.png" alt="" width="50" />
+            </div>
+            <p class="sm:text-xl mt-8">
+              From personal users to enterprises, Plexus Cloud offers tailored
+              virtual instances for a myriad of purposes. Whether hosting
+              websites, conducting software testing, or managing game servers,
+              Plexus Cloud delivers unparalleled flexibility and reliability.
+            </p>
+          </div>
+          <div
+            class="min-[950px]:w-1/3 border border-[#60E7E3] sm:p-8 p-6 rounded-xl h-fit backdrop-blur-sm"
+          >
+            <div class="flex justify-between gap-2">
+              <h1 class="text-2xl font-bold text-[#60E7E3] self-end">
+                Plexus GPU:
+              </h1>
+              <img src="./assets/box 2.png" alt="" width="50" />
+            </div>
+            <p class="sm:text-xl mt-8">
+              Pushing the boundaries of AI, Plexus GPU delivers unmatched
+              performance in machine learning training, AI inference, rendering,
+              and cloud gaming. Powered by NVIDIA technology, Plexus GPU is the
+              cornerstone of innovation in AI infrastructure.
+            </p>
+          </div>
+          <div
+            class="min-[950px]:w-1/3 border border-[#8757E4] sm:p-8 p-6 rounded-xl h-fit backdrop-blur-sm"
+          >
+            <div class="flex justify-between gap-2">
+              <h1 class="text-2xl font-bold text-[#8757E4] self-end">
+                Plexus VPN:
+              </h1>
+              <img src="./assets/box 3.png" alt="" width="50" />
+            </div>
+            <p class="sm:text-xl mt-8">
+              Break free from internet censorship with Plexus VPN. Protect your
+              digital footprint and access restricted content with ease,
+              utilizing $PLEX tokens for added convenience.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/Ellipse 7.png"
+        alt=""
+        width="180"
+        class="absolute left-0 -top-10 -z-10"
+      />
+      <img
+        src="./assets/Ellipse 6.png"
+        alt=""
+        width="220"
+        class="absolute right-0 -bottom-10 -z-10"
+      />
+    </div>
+    <!-- 6th Section End -->
+
+    <!-- 7th Section Start -->
+    <div class="relative px-4">
+      <div
+        class="max-w-5xl m-auto flex flex-col items-center text-center sm:gap-12 gap-8 py-20"
+      >
+        <h1 class="sm:text-4xl text-3xl font-bold max-w-xl">
+          Join Us on the
+          <span class="bg-text text-transparent bg-clip-text"> Journey</span> to
+          <span class="bg-text text-transparent bg-clip-text"> Tomorrow</span>
+        </h1>
+        <p class="sm:text-xl max-w-4xl m-auto">
+          Explore the limitless possibilities with Plexus and unlock the full
+          potential of AI infrastructure on the blockchain. Join us as we pave
+          the way for a future powered by innovation, collaboration, and
+          limitless potential.
+        </p>
+        <a href="#">
+          <button
+            class="rounded-full px-6 py-1 text-lg bg-text text-transparent bg-clip-text border-[#8757e4] border font-bold"
+          >
+            Join Us
+          </button>
+        </a>
+      </div>
+      <img
+        src="./assets/Ellipse 9.png"
+        alt=""
+        width="250"
+        class="absolute left-0 -top-32"
+      />
+      <img
+        src="./assets/Ellipse 10.png"
+        alt=""
+        width="250"
+        class="absolute right-0 -top-32"
+      />
+    </div>
+    <!-- 7th Section End -->
+
+    <!-- Footer Start -->
+    <footer
+      class="border-t border-white flex justify-center py-8 relative border-gradient1 bg-[#0E0E0E] px-4"
+    >
+      <img
+        src="./assets/icon.png"
+        alt=""
+        width="80"
+        class="absolute -top-10 left-1/2 transform -translate-x-1/2"
+      />
+      <div class="max-w-5xl w-full flex justify-between items-center gap-6">
+        <div class="text-[#6F6F6F]">
+          <p>© 2024 Plexus.</p>
+          <p>All rights reserved.</p>
+        </div>
+        <div class="flex gap-4 items-center">
+          <a href="#">
+            <img src="./assets/x.png" alt="" width="30" />
+          </a>
+          <a href="#">
+            <img src="./assets/telegram.png" alt="" width="30" />
+          </a>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer End -->
+  </body>
+</html>

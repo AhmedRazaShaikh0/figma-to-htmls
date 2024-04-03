@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Synth</title>
+    <link rel="icon" href="./assets/icon.png" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <style>
+    @font-face {
+      font-family: Elemental-end;
+      src: url("./assets/Elemental\ End.ttf");
+    }
+    h1 {
+      font-family: Elemental-end, sans-serif;
+    }
+    .dropdown {
+      width: 100%;
+      height: 0;
+      position: fixed;
+      z-index: 500;
+      overflow-x: hidden;
+      transition: 0.8s;
+    }
+
+    .dropdown a {
+      padding: 8px 8px 8px 8px;
+      text-decoration: none;
+      font-size: 20px;
+      color: #ffffff;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .dropdown .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      color: white;
+      font-size: 50px;
+      margin-left: 50px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .dropdown a {
+        font-size: 18px;
+      }
+    }
+
+    .toggle_icon {
+      cursor: pointer;
+      color: #ffffff;
+      order: 2;
+    }
+    .font-roboto {
+      font-family: "Roboto", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+    }
+  </style>
+  <body class="bg-[#090D11] font-roboto text-white">
+    <!-- Header Start -->
+    <header class="absolute sm:top-8 top-8 w-full z-10 sm:px-12">
+      <div
+        class="max-w-[85rem] m-auto text-white flex justify-between items-center px-6"
+      >
+        <div>
+          <img src="./assets/icon.png" alt="" width="50" height="50" class="" />
+        </div>
+        <div class="flex gap-16 items-center">
+          <div class="hidden md:block">
+            <ul class="text-white flex gap-10">
+              <li class="">
+                <a href="/">Home</a>
+              </li>
+              <li class="">
+                <a href="/">PrivateSQL</a>
+              </li>
+              <li class="">
+                <a href="/">Solutions</a>
+              </li>
+              <li class="">
+                <a href="/"> Features</a>
+              </li>
+            </ul>
+          </div>
+          <button
+            class="text-white text-lg bg-gradient-to-br from-[#ffffff41] via-transparent to-[#ffffff28] sm:py-2 py-1 px-7 rounded-lg"
+          >
+            <h1>DOCS</h1>
+          </button>
+        </div>
+        <div class="md:hidden block z-50">
+          <button id="hamburger-icon" class="float-right toggle_icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8"
+              fill="white"
+              viewBox="0 0 24 24"
+              stroke="white"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="3"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <div
+          id="dropdown"
+          class="dropdown flex flex-col justify-center uppercase top-0 left-0 bg-[rgba(0,0,0,0.9)] z-50"
+        >
+          <button class="closebtn mr-4 mt-8">×</button>
+          <ul class="text-white p-12 text-center">
+            <li>
+              <a class="py-2" href="/">Home</a>
+            </li>
+            <li>
+              <a class="py-2" href="#">PrivateSQL</a>
+            </li>
+            <li>
+              <a class="py-2" href="#">Solutions</a>
+            </li>
+            <li>
+              <a class="py-2" href="#"> Features</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- Header Start -->
+
+    <!-- 1st section Start -->
+    <div>
+      <div class="relative py-40">
+        <div class="max-w-7xl m-auto sm:px-10 px-4">
+          <div
+            class="rounded-xl sm:pb-28 pb-20 sm:pt-40 pt-20 bg-[#a0a0a00c] flex flex-col items-center gap-12 px-4 backdrop-blur-lg relative shadow-inner shadow-[#ffffff75]"
+          >
+            <h1 class="sm:text-[3rem] text-2xl text-center leading-snug">
+              Shaping the
+              <span
+                class="bg-gradient-to-b from-[#FFFFFF] to-[#838181] inline-block text-transparent bg-clip-text"
+                >Future</span
+              >
+              of
+              <span
+                class="bg-gradient-to-b from-[#FFFFFF] to-[#838181] inline-block text-transparent bg-clip-text"
+              >
+                Responsible AI</span
+              >
+            </h1>
+            <p class="max-w-xl m-auto text-[#888888] text-center">
+              Embark on a journey of innovation with SYNTH, where cutting-edge
+              technology meets ethical AI. Discover how we're revolutionizing
+              the landscape of decentralization, privacy, and AI to create a
+              brighter tomorrow.
+            </p>
+            <div class="flex flex-wrap gap-4 justify-center">
+              <button
+                class="text-white text-lg bg-gradient-to-br from-[#ffffff2a] via-transparent to-[#ffffff1e] sm:py-2 py-1 px-7 rounded-lg"
+              >
+                <h1>DOCS</h1>
+              </button>
+              <button
+                class="text-white text-lg bg-transparent border border-[#ffffff27] sm:py-2 py-1 px-7 rounded-lg"
+              >
+                <h1>TELEGRAM</h1>
+              </button>
+            </div>
+            <img
+              src="./assets/triangle 1.png"
+              alt=""
+              width="110"
+              class="absolute -top-16 left-20"
+            />
+            <img
+              src="./assets/Group 10.png"
+              alt=""
+              width="230"
+              class="absolute -bottom-20 -left-28 sm:w-[230px] w-[200px]"
+            />
+          </div>
+          <img
+            src="./assets/Group 11.png"
+            alt=""
+            width="230"
+            class="absolute right-0 sm:bottom-10 bottom-20 sm:w-[230px] w-[170px]"
+          />
+          <img
+            src="./assets/triangle 3.png"
+            alt=""
+            width="80"
+            class="absolute left-[7%] top-[33rem] -z-10"
+          />
+          <img
+            src="./assets/triangle 2.png"
+            alt=""
+            width="110"
+            class="absolute right-[6%] top-96 -z-10"
+          />
+
+          <!-- <img src="./assets/bg wave 1.png" alt="" class="absolute top-0" />
+          <img src="./assets/bg wave.png" alt="" class="absolute bottom-0" /> -->
+        </div>
+        <img
+          src="./assets/Group 972.png"
+          alt=""
+          width="130"
+          class="absolute left-28 -bottom-20 -z-10"
+        />
+      </div>
+      <img
+        src="./assets/Group 3.png"
+        alt=""
+        class="absolute right-0 top-0 -z-10"
+        width="850"
+      />
+    </div>
+    <!-- 1st section Start -->
+
+    <!-- 2nd section Start -->
+    <div
+      class="border-y border-[#ffffff34] sm:py-32 py-16 sm:px-10 px-4 backdrop-blur-md relative"
+    >
+      <div
+        class="max-w-7xl m-auto sm:px-8 px-4 flex lg:flex-row flex-col gap-10 items-center justify-between"
+      >
+        <div class="lg:w-[35%] flex flex-col gap-10">
+          <h1 class="sm:text-4xl text-2xl leading-snug">
+            Experience the power of SYNTH PrivateSQL
+          </h1>
+          <p class="text-[#888888]">
+            Dive into our world of privacy-preserving AI, ensuring fairness and
+            transparency at every turn. Explore a fusion of advanced
+            technologies including MPC, Homomorphic Encryption, Differential
+            Privacy, and Zero-Knowledge Proofs, setting new standards for
+            privacy protection.
+          </p>
+        </div>
+        <div
+          class="shadow-inner shadow-[#ffffff75] min-[1250px]:border-r-0 border-white sm:p-20 p-8 rounded-s-xl min-[1250px]:rounded-r-none rounded-r-xl min-[1250px]:absolute right-0 min-[1250px]:w-[50rem] backdrop-blur-2xl"
+        >
+          <img src="./assets/Group 978.png" alt="" width="600" />
+          <img
+            src="./assets/Group 976.png"
+            alt=""
+            width="80"
+            class="absolute -top-8 left-6"
+          />
+        </div>
+        <img
+          src="./assets/Group 975.png"
+          alt=""
+          width="80"
+          class="absolute right-4 bottom-12 -z-10"
+        />
+      </div>
+    </div>
+    <!-- 2nd section Start -->
+
+    <!-- 3rd section Start -->
+    <div class="relative">
+      <div class="max-w-7xl m-auto py-40 sm:px-10 px-4 relative">
+        <div
+          class="shadow-inner shadow-[#ffffff75] rounded-xl sm:py-24 py-16 bg-[#a0a0a00c] flex flex-col items-center gap-12 px-4 backdrop-blur-sm"
+        >
+          <h1 class="sm:text-4xl text-2xl text-center leading-snug">
+            Unlocking the Potential of SYNTH
+            <span
+              class="bg-gradient-to-b from-[#FFFFFF] to-[#838181] inline-block text-transparent bg-clip-text"
+              >Beyond PrivateSQL</span
+            >
+          </h1>
+          <p class="max-w-3xl m-auto text-[#888888] text-center sm:px-8 px-2">
+            SYNTH goes beyond PrivateSQL, offering a suite of innovative
+            functionalities to meet your AI and privacy needs. From advanced
+            analytics to secure data sharing, SYNTH empowers organizations to
+            leverage data ethically and responsibly.
+          </p>
+          <div class="flex gap-4">
+            <img src="./assets/Group.png" alt="" width="400" />
+          </div>
+        </div>
+        <img
+          src="./assets/Group 22.png"
+          alt=""
+          width="200"
+          class="absolute top-24 -left-10 -z-10"
+        />
+        <img
+          src="./assets/Group 969.png"
+          alt=""
+          width="100"
+          class="absolute bottom-80 right-32 -z-10"
+        />
+        <img
+          src="./assets/Group 969.png"
+          alt=""
+          width="100"
+          class="absolute top-[30rem] left-4"
+        />
+      </div>
+      <img
+        src="./assets/Ellipse 8.png"
+        alt=""
+        width="350"
+        class="absolute -bottom-6 left-0"
+      />
+      <img
+        src="./assets/Ellipse 6.png"
+        alt=""
+        width="350"
+        class="absolute right-0 -top-8"
+      />
+      <img
+        src="./assets/Group 21.png"
+        alt=""
+        width="300"
+        class="absolute -bottom-4 right-0 -z-10"
+      />
+      <img
+        src="./assets/Group 12.png"
+        alt=""
+        width="100"
+        class="absolute -bottom-20 left-0 z-10"
+      />
+    </div>
+    <!-- 3rd section Start -->
+
+    <!-- 4th section Start -->
+    <div
+      class="border-y border-[#ffffff34] bg-[#0D1319] sm:py-24 py-16 sm:px-10 backdrop-blur-3xl z-10"
+    >
+      <div
+        class="max-w-7xl m-auto px-8 flex min-[920px]:flex-row flex-col gap-10 items-center justify-between"
+      >
+        <div class="min-[920px]:w-[60%] flex flex-col gap-10">
+          <h1 class="sm:text-4xl text-2xl leading-snug">
+            Privacy-First Solutions: Empowering Data, Preserving Privacy
+          </h1>
+          <p class="text-[#888888] sm:pr-16">
+            At SYNTH, privacy is paramount. Experience the power of PrivateSQL
+            as it unlocks the potential of sensitive data, delivering real-time
+            insights while safeguarding individual privacy through cutting-edge
+            protocols. With every query rewritten under the lens of differential
+            privacy, user anonymity remains intact, regardless of complexity.
+          </p>
+        </div>
+        <img src="./assets/Group 23.png" alt="" width="350" />
+      </div>
+    </div>
+    <!-- 4th section Start -->
+
+    <!-- 5th section Start -->
+    <div class="relative">
+      <div
+        class="max-w-7xl m-auto my-40 sm:px-10 px-4 flex flex-col gap-10 relative"
+      >
+        <h1 class="sm:text-4xl text-2xl text-center leading-snug sm:px-20">
+          SYNTH's Comprehensive Suite of Features
+        </h1>
+        <p class="max-w-3xl m-auto text-[#888888] text-center sm:px-8 px-2">
+          Discover the full spectrum of features offered by SYNTH, including:
+        </p>
+        <div
+          class="shadow-inner shadow-[#ffffff75] rounded-xl mt-10 bg-[#a0a0a00c] flex items-center justify-center backdrop-blur-md"
+        >
+          <img
+            src="./assets/Group 26 copy.png"
+            alt=""
+            width="750"
+            class="sm:block hidden"
+          />
+          <img
+            src="./assets/Group 26 mob.png"
+            alt=""
+            width="750"
+            class="sm:hidden block"
+          />
+        </div>
+        <!-- <img
+          src="./assets/Layer_1.png"
+          alt=""
+          width="200"
+          class="absolute top-28 -right-14 -z-10"
+        /> -->
+        <img
+          src="./assets/Layer_4.png"
+          alt=""
+          width="130"
+          class="absolute -left-8 top-[55%] -z-10"
+        />
+        <img
+          src="./assets/Layer_3.png"
+          alt=""
+          width="130"
+          class="absolute -bottom-14 left-[25%] -z-10"
+        />
+      </div>
+      <img
+        src="./assets/Layer_2.png"
+        alt=""
+        width="250"
+        class="absolute sm:-bottom-20 -bottom-32 right-0 sm:w-[250px] w-[180px]"
+      />
+      <img
+        src="./assets/Ellipse 13.png"
+        alt=""
+        width="300"
+        class="absolute -top-96 right-0 -z-10"
+      />
+    </div>
+    <!-- 5th section Start -->
+
+    <!-- 6th section Start -->
+    <div
+      class="border-y border-[#ffffff34] bg-[#0D1319] sm:py-24 py-16 sm:px-10 px-4 backdrop-blur-3xl relative"
+    >
+      <div
+        class="max-w-7xl m-auto sm:px-8 px-4 flex lg:flex-row flex-col gap-10 items-center justify-between"
+      >
+        <div class="lg:w-[50%] flex flex-col gap-10">
+          <h1 class="sm:text-4xl text-2xl leading-snug">
+            Partnering with ETH for Fairness and Bias Assessment
+          </h1>
+          <p class="text-[#888888]">
+            Join our collaboration with Ethereum as we spearhead ethical AI
+            practices. Together, we're leading the charge in privacy-preserving
+            assessments of AI model fairness and bias, setting new benchmarks
+            for responsible AI development. Leveraging a potent mix of MPC,
+            Homomorphic Encryption, Differential Privacy, and Zero-Knowledge
+            Proofs, we ensure unparalleled privacy protection on a grand scale.
+          </p>
+        </div>
+        <div
+          class="shadow-inner shadow-[#ffffff75] min-[1250px]:border-r-0 border-white sm:p-14 p-8 rounded-s-xl min-[1250px]:rounded-r-none rounded-r-xl min-[1250px]:absolute right-0 min-[1250px]:w-[40rem] backdrop-blur-md"
+        >
+          <img src="./assets/Group 977.png" alt="" width="450" />
+          <img
+            src="./assets/Group 976.png"
+            alt=""
+            width="60"
+            class="absolute -top-8 left-6"
+          />
+        </div>
+        <img
+          src="./assets/Group 975.png"
+          alt=""
+          width="80"
+          class="absolute right-4 bottom-8 -z-10"
+        />
+      </div>
+    </div>
+    <!-- 6th section Start -->
+
+    <!-- Footer Start -->
+    <div
+      class="max-w-7xl m-auto flex sm:justify-between justify-center sm:pt-36 pt-20 pb-10 items-center px-8 gap-4 flex-wrap"
+    >
+      <div><img src="./assets/logo.png" alt="" width="200" /></div>
+      <div>
+        <p class="text-[#555555] text-xl text-center">
+          © 2024 Synth. All rights reserved.
+        </p>
+      </div>
+      <div class="flex gap-6">
+        <img src="./assets/telegram.png" alt="" />
+        <img src="./assets/x.png" alt="" />
+      </div>
+    </div>
+    <!-- Footer Start -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".toggle_icon").click(function () {
+          $("#dropdown").toggleClass("h-screen pt-10");
+        });
+        // function openNav() {
+        //     $("#dropdown").addClass("h-screen pt-10");
+        // }
+
+        $(".closebtn").click(function () {
+          $("#dropdown").removeClass("h-screen pt-10");
+        });
+      });
+    </script>
+  </body>
+</html>

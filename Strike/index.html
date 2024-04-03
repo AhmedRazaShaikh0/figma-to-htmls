@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strike</title>
+    <link rel="icon" href="./assets/icon.png" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    .font-inter {
+      font-family: "Inter", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+    }
+    p {
+      color: #f5f5f5;
+    }
+    .dropdown {
+      width: 100%;
+      height: 0;
+      position: fixed;
+      z-index: 500;
+      overflow-x: hidden;
+      transition: 0.8s;
+    }
+
+    .dropdown a {
+      padding: 8px 8px 8px 8px;
+      text-decoration: none;
+      font-size: 20px;
+      color: #ffffff;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .dropdown .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      color: white;
+      font-size: 50px;
+      margin-left: 50px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .dropdown a {
+        font-size: 18px;
+      }
+    }
+
+    .toggle_icon {
+      cursor: pointer;
+      color: #ffffff;
+      order: 2;
+    }
+  </style>
+  <body class="font-inter bg-[#0A0A0A] text-white">
+    <!-- Header Start -->
+    <header class="py-12 absolute top-0 w-full z-10 px-8">
+      <div class="max-w-7xl m-auto flex justify-between gap-6">
+        <img src="./assets/icon.png" alt="" width="50" />
+        <div
+          class="bg-[#161D2B] rounded-full gap-4 items-center px-8 py-3 md:flex hidden"
+        >
+          <ul class="flex space-x-10 items-center pr-4">
+            <a href="#"><li>Home</li></a>
+            <a href="#"><li>About</li></a>
+            <a href="#"><li>Features</li></a>
+            <a href="#"><li>Docs</li></a>
+          </ul>
+          <button
+            class="bg-gradient-to-r from-[#0059FF] to-[#003393] rounded-full py-1 px-6 font-semibold sm:text-lg"
+          >
+            Launch App
+          </button>
+        </div>
+        <div class="md:hidden block z-50">
+          <button id="hamburger-icon" class="float-right toggle_icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8"
+              fill="white"
+              viewBox="0 0 24 24"
+              stroke="white"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="3"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <div
+          id="dropdown"
+          class="dropdown flex flex-col justify-center uppercase top-0 left-0 bg-[rgba(0,0,0,0.9)] z-50"
+        >
+          <button class="closebtn mr-4 mt-8">×</button>
+          <ul class="text-white p-12 text-center">
+            <a href="#"><li>Home</li></a>
+            <a href="#"><li>About</li></a>
+            <a href="#"><li>Features</li></a>
+            <a href="#"><li>Docs</li></a>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- 1st Section Start -->
+    <div class="px-6 relative">
+      <div class="max-w-7xl m-auto sm:pt-56 pt-44 pb-32">
+        <div class="flex flex-col gap-12 items-start max-w-2xl">
+          <div class="sm:text-6xl text-5xl font-semibold">
+            <h1>
+              Enter the
+              <span
+                class="bg-gradient-to-r from-[#0059FF] to-[#003393] inline-block text-transparent bg-clip-text"
+                >Arena</span
+              >
+            </h1>
+            <h1>
+              Unleash Your
+              <span
+                class="bg-gradient-to-r from-[#0059FF] to-[#003393] inline-block text-transparent bg-clip-text"
+              >
+                Potential</span
+              >
+            </h1>
+          </div>
+          <p class="sm:text-lg pr-8">
+            Step into our world where every move is a masterpiece of strategy
+            and every decision a stroke of brilliance. Join us at Strike and
+            redefine what's possible in finance.
+          </p>
+          <button
+            class="bg-gradient-to-r from-[#0059FF] to-[#003393] rounded-full py-2 px-8 font-semibold sm:text-lg"
+          >
+            Launch App
+          </button>
+        </div>
+      </div>
+      <img
+        src="./assets/Asset 1@4x.png"
+        alt=""
+        width="180"
+        class="absolute top-28 left-0 -z-10"
+      />
+      <img
+        src="./assets/Asset 1@4x1.png"
+        alt=""
+        width="500"
+        class="absolute lg:-bottom-40 -bottom-80 right-0 lg:z-10 -z-10"
+      />
+      <img
+        src="./assets/Ellipse 20.png"
+        alt=""
+        width="600"
+        class="absolute lg:-bottom-52 -bottom-80 right-0 -z-10"
+      />
+    </div>
+    <!-- 1st Section End -->
+
+    <!-- 2nd Section Start -->
+    <div class="bg-[#161D2B] py-16">
+      <div class="max-w-7xl m-auto flex flex-col gap-6 px-10">
+        <h1 class="sm:text-[40px] text-4xl font-bold">About Us</h1>
+        <h1
+          class="sm:text-[40px] text-4xl font-bold bg-gradient-to-r from-[#0059FF] to-[#003393] inline-block text-transparent bg-clip-text -mt-4"
+        >
+          Redefining Finance
+        </h1>
+        <p class="sm:text-lg pr-8 max-w-2xl">
+          Strike merges real estate and crypto, offering a revolutionary money
+          game. Investors thrive on NFTs, enjoying returns and ongoing cash
+          flows. Join us as we reshape finance's future.
+        </p>
+      </div>
+    </div>
+    <!-- 2nd Section End -->
+
+    <!-- 3rd Section Start -->
+    <div
+      class="max-w-6xl m-auto flex items-center md:flex-row flex-col md:gap-4 gap-8 py-32 px-6 relative"
+    >
+      <div class="md:w-[40%]">
+        <img src="./assets/Group 1027.png" alt="" width="350" />
+        <img
+          src="./assets/Ellipse 19.png"
+          alt=""
+          width="700"
+          class="absolute sm:-top-6 top-10 md:-left-36 sm:left-8 left-0 -z-10"
+        />
+      </div>
+      <div class="md:w-[60%] m-auto flex flex-col gap-6">
+        <h1 class="sm:text-[40px] text-4xl font-bold leading-tight">
+          Introducing the ERC200 Standard:
+        </h1>
+        <h1
+          class="sm:text-[40px] text-4xl font-bold leading-tight bg-gradient-to-r from-[#0059FF] to-[#003393] inline-block text-transparent bg-clip-text"
+        >
+          Innovative Tokenomics
+        </h1>
+        <p class="sm:text-lg max-w-2xl">
+          Enter the ERC200 Standard, where holders rent tokens from the
+          protocol. Cash flows from rent are reinvested, ensuring perpetual
+          value creation. Users essentially purchase a call option from the
+          protocol, seizing the upside potential of the market.
+        </p>
+      </div>
+    </div>
+    <!-- 3rd Section End -->
+
+    <!-- 4th Section Start -->
+    <div class="px-6">
+      <div
+        class="max-w-[85rem] m-auto flex lg:flex-row flex-col gap-12 justify-between items-center bg-[#161D2B] sm:p-16 p-10 rounded-3xl"
+      >
+        <div class="lg:w-1/2 m-auto flex flex-col md:gap-10 gap-6">
+          <h1 class="sm:text-[40px] text-4xl font-bold leading-tight">
+            Explore Our Dashboard
+          </h1>
+          <h1
+            class="sm:text-[40px] text-4xl font-bold leading-tight bg-gradient-to-r from-[#0059FF] to-[#003393] inline-block text-transparent bg-clip-text"
+          >
+            Your Gateway to Success
+          </h1>
+          <p class="sm:text-lg max-w-2xl sm:pr-16">
+            Unlock insights, track investments, and seize opportunities with our
+            intuitive dashboard. Experience seamless navigation and stay ahead
+            of the game. Welcome to the future of finance at your fingertips.
+          </p>
+
+          <button
+            class="bg-gradient-to-r from-[#0059FF] to-[#003393] rounded-full py-2 px-8 font-semibold sm:text-lg w-fit"
+          >
+            Launch App
+          </button>
+        </div>
+        <div class="lg:w-1/2">
+          <img
+            src="./assets/Group 1028.png"
+            alt=""
+            width="500"
+            class="m-auto"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- 4th Section End -->
+
+    <!-- 5th Section Start -->
+    <div class="px-6">
+      <div
+        class="max-w-7xl m-auto flex flex-col items-center gap-16 text-center py-32"
+      >
+        <div class="max-w-2xl m-auto flex flex-col gap-6">
+          <h1 class="sm:text-[40px] text-4xl font-bold leading-tight">
+            The Game Plan
+          </h1>
+          <h1
+            class="sm:text-[40px] text-4xl font-bold leading-tight bg-gradient-to-r from-[#0059FF] to-[#003393] inline-block text-transparent bg-clip-text"
+          >
+            Premiums, Strikes, and Market Dynamics
+          </h1>
+        </div>
+        <div class="flex lg:flex-row flex-col w-full gap-12">
+          <div
+            class="bg-[#161D2B] text-lg lg:w-1/3 sm:w-3/5 m-auto rounded-2xl flex flex-col items-center gap-6 px-12 pt-16 pb-12 backdrop-blur-2xl"
+          >
+            <img src="./assets/1st box.png" alt="" width="150" />
+            <h2 class="font-semibold mt-4">Premium Payments</h2>
+            <p>
+              Buyers commit to regular premiums, investing in the potential of
+              the market.
+            </p>
+          </div>
+          <div
+            class="bg-[#161D2B] text-lg lg:w-1/3 sm:w-3/5 m-auto rounded-2xl flex flex-col items-center gap-6 px-12 pt-16 pb-12 backdrop-blur-2xl"
+          >
+            <img src="./assets/2nd box.png" alt="" width="150" />
+            <h2 class="font-semibold mt-4">Strategic Strikes</h2>
+            <p>
+              The strike price aligns with the market buy price, laying the
+              foundation for profitability.
+            </p>
+          </div>
+          <div
+            class="bg-[#161D2B] text-lg lg:w-1/3 sm:w-3/5 m-auto rounded-2xl flex flex-col items-center gap-6 px-12 pt-16 pb-12 backdrop-blur-2xl"
+          >
+            <img src="./assets/3rd box.png" alt="" width="120" />
+            <h2 class="font-semibold mt-4">Dynamic Market Access</h2>
+            <p>
+              Access the market via Uniswap or fees, ensuring an intuitive
+              journey customized to your needs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 5th Section End -->
+
+    <!-- 6th Section End -->
+    <div
+      class="max-w-6xl m-auto flex md:flex-row flex-col items-center gap-4 py-32 px-6"
+    >
+      <div class="md:w-[50%] m-auto flex flex-col sm:gap-10 gap-6">
+        <h1 class="sm:text-[40px] text-4xl font-bold leading-tight">
+          Join the Revolution
+        </h1>
+        <h1
+          class="sm:text-[40px] text-4xl font-bold leading-tight bg-gradient-to-r from-[#0059FF] to-[#003393] inline-block text-transparent bg-clip-text"
+        >
+          Collaborate and Thrive
+        </h1>
+        <p class="sm:text-lg max-w-2xl">
+          Strike isn't just a project; it's a movement. Collaborate with us and
+          shape the future of finance. Generous advisory allocations await those
+          ready to innovate. With talent, capital, and vision, Strike is poised
+          to revolutionize the industry.
+        </p>
+      </div>
+      <div class="md:w-[60%]">
+        <img src="./assets/Layer_1.png" alt="" width="450" class="m-auto" />
+      </div>
+    </div>
+    <!-- 6th Section End -->
+
+    <!-- 7th Section Start -->
+    <div class="bg-[#161D2B] py-16">
+      <div
+        class="max-w-7xl m-auto flex flex-col gap-6 px-10 items-center text-center"
+      >
+        <h1 class="sm:sm:text-[40px] text-4xl font-bold">
+          Ready to
+          <span
+            class="bg-gradient-to-r from-[#0059FF] to-[#003393] inline-block text-transparent bg-clip-text -mt-4"
+          >
+            Strike?</span
+          >
+        </h1>
+        <p class="sm:text-lg pr-8 max-w-3xl">
+          Experience the future of money games with Strike. Explore, engage, and
+          elevate your financial journey. Join us at the forefront of innovation
+        </p>
+
+        <button
+          class="bg-gradient-to-r from-[#0059FF] to-[#003393] rounded-full py-2 px-8 font-semibold sm:text-lg"
+        >
+          Join Now
+        </button>
+      </div>
+    </div>
+    <!-- 7th Section End -->
+
+    <!-- Footer Start -->
+    <footer
+      class="max-w-7xl m-auto flex sm:flex-row flex-col items-center justify-between gap-8 py-28 px-6"
+    >
+      <div class="flex gap-4">
+        <img src="./assets/footer icon.png" alt="" width="100" />
+        <div class="flex flex-col gap-2 justify-between">
+          <img src="./assets/footer icon 2.png" alt="" width="210" />
+          <p>© 2024 Flare. All rights reserved.</p>
+        </div>
+      </div>
+      <div class="flex gap-2 sm:self-end">
+        <img src="./assets/telegram.png" alt="" width="40" />
+        <img src="./assets/x.png" alt="" width="40" />
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".toggle_icon").click(function () {
+          $("#dropdown").toggleClass("h-screen pt-10");
+        });
+        // function openNav() {
+        //     $("#dropdown").addClass("h-screen pt-10");
+        // }
+
+        $(".closebtn").click(function () {
+          $("#dropdown").removeClass("h-screen pt-10");
+        });
+      });
+    </script>
+  </body>
+</html>

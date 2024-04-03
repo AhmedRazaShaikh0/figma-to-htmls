@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flare</title>
+    <link rel="icon" href="./assets/icon.png" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      @font-face {
+        font-family: Nasalization;
+        src: url("./assets/nasalization-rg.otf");
+      }
+      h1,
+      ul > li {
+        font-family: Nasalization, sans-serif;
+      }
+      @font-face {
+        font-family: Axiforma;
+        src: url("./assets/Axiforma-Regular.ttf");
+      }
+      p {
+        font-family: Axiforma, sans-serif;
+      }
+      .dropdown {
+        width: 100%;
+        height: 0;
+        position: fixed;
+        z-index: 500;
+        overflow-x: hidden;
+        transition: 0.8s;
+      }
+
+      .dropdown a {
+        padding: 8px 8px 8px 8px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #ffffff;
+        display: block;
+        transition: 0.3s;
+      }
+
+      .dropdown .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        color: white;
+        font-size: 50px;
+        margin-left: 50px;
+      }
+
+      @media screen and (max-height: 450px) {
+        .dropdown a {
+          font-size: 18px;
+        }
+      }
+
+      .toggle_icon {
+        cursor: pointer;
+        color: #ffffff;
+        order: 2;
+      }
+      .border-gradient {
+        border: 2px solid transparent;
+        border-image: linear-gradient(to left, #f81a05, #f36621) 1;
+      }
+      .border-gradient2 {
+        border: 2px solid transparent;
+        border-image: linear-gradient(to top, #f8190500, #f3672177) 1;
+      }
+      .bg-image {
+        background-image: url("./assets/Mask\ group.png");
+        background-position-x: center;
+      }
+    </style>
+  </head>
+  <body class="bg-[#0B0300] text-white">
+    <!-- Header Start -->
+    <header
+      class="absolute top-0 w-full z-10 sm:px-12 px-6 py-5 border-b border-[#F81A05]"
+    >
+      <div
+        class="max-w-[85rem] m-auto text-white flex justify-between items-center"
+      >
+        <div>
+          <img src="./assets/icon.png" alt="" width="40" height="50" class="" />
+        </div>
+        <div class="flex gap-16 items-center">
+          <div class="hidden md:block">
+            <ul class="text-white flex gap-10 font-extralight">
+              <li class="">
+                <a href="/">Home</a>
+              </li>
+              <li class="">
+                <a href="/">About</a>
+              </li>
+              <li class="">
+                <a href="/">Features</a>
+              </li>
+              <li class="">
+                <a href="/"> Docs</a>
+              </li>
+            </ul>
+          </div>
+          <button
+            class="text-white sm:text-lg bg-gradient-to-l from-[#F81A05] to-[#F36621] sm:py-2 py-1 px-7 rounded-md"
+          >
+            <h1>Join Us</h1>
+          </button>
+        </div>
+        <div class="md:hidden block z-50">
+          <button id="hamburger-icon" class="float-right toggle_icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8"
+              fill="white"
+              viewBox="0 0 24 24"
+              stroke="white"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="3"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <div
+          id="dropdown"
+          class="dropdown flex flex-col justify-center uppercase top-0 left-0 bg-[rgba(0,0,0,0.9)] z-50"
+        >
+          <button class="closebtn mr-4 mt-8">×</button>
+          <ul class="text-white p-12 text-center">
+            <li>
+              <a class="py-2" href="/">Home</a>
+            </li>
+            <li>
+              <a class="py-2" href="#">About</a>
+            </li>
+            <li>
+              <a class="py-2" href="#">Features</a>
+            </li>
+            <li>
+              <a class="py-2" href="#"> Docs</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- Header Start -->
+
+    <!-- 1st Section Start -->
+    <div class="px-6 bg-image bg-contain bg-no-repeat">
+      <div
+        class="flex flex-col justify-center items-center relative m-auto text-white md:gap-12 gap-8 md:pt-64 pt-40 md:pb-40 pb-28"
+      >
+        <h1 class="sm:text-6xl text-4xl text-center sm:px-0 px-2 max-w-6xl">
+          Transforming
+          <span
+            class="bg-gradient-to-l from-[#F81A05] to-[#F36621] inline-block text-transparent bg-clip-text"
+          >
+            Web 3</span
+          >
+          with
+          <span
+            class="bg-gradient-to-l from-[#F81A05] to-[#F36621] inline-block text-transparent bg-clip-text"
+          >
+            Spatial Computing</span
+          >
+        </h1>
+
+        <p class="text-center max-w-xl text-white sm:text-lg text-sm">
+          At Flare, we are leading the transformation of the digital landscape
+          by converging Blockchain, AI, and Spatial Computing. Join us in our
+          mission to abstract the boundaries between physical and digital
+          realms.
+        </p>
+        <div class="flex gap-3">
+          <button
+            class="text-white sm:text-xl bg-gradient-to-l from-[#F81A05] to-[#F36621] sm:py-2 py-1 px-5 rounded-md"
+          >
+            <h1>Telegram</h1>
+          </button>
+          <button
+            class="text-white sm:text-xl border border-[#F81A05] sm:py-2 py-1 px-6 rounded-md"
+          >
+            <h1>Docs</h1>
+          </button>
+        </div>
+      </div>
+      <div
+        class="bg-[#ffc4a73b] max-w-[85rem] m-auto flex md:flex-row flex-col items-center md:gap-4 gap-10 sm:p-16 p-8 rounded-lg border border-[#F81A05] mb-12"
+      >
+        <div class="flex flex-col gap-6 md:w-[60%]">
+          <h1 class="sm:text-4xl text-3xl">
+            About
+            <span
+              class="bg-gradient-to-l from-[#F81A05] to-[#F36621] inline-block text-transparent bg-clip-text"
+              >Flare</span
+            >
+          </h1>
+          <p class="sm:text-lg text-sm sm:pr-6">
+            Welcome to Flare, where innovation meets possibility. Flare is a
+            groundbreaking platform at the forefront of Spatial Computing. By
+            harnessing the power of Blockchain technology, advanced AI
+            capabilities, and seamless AR/VR integration, Flare is
+            revolutionizing how we interact with the digital and physical
+            worlds. Join us as we shape the future of immersive spatial
+            applications.
+          </p>
+          <button
+            class="text-white w-fit sm:mt-6 sm:text-xl bg-gradient-to-l from-[#F81A05] to-[#F36621] sm:py-2 py-1 px-5 rounded-md"
+          >
+            <h1>Learn more</h1>
+          </button>
+        </div>
+        <div class="flex justify-center items-center w-[40%]">
+          <img src="./assets/icon2.png" alt="" width="170" />
+        </div>
+      </div>
+      <div
+        class="bg-gradient-to-b from-[#ff9e9517] to-[#995f5900] max-w-[85rem] m-auto flex flex-col items-center sm:p-16 p-8 border-gradient2 mb-12"
+      >
+        <h1
+          class="sm:text-4xl text-3xl bg-gradient-to-l from-[#F81A05] to-[#F36621] inline-block text-transparent bg-clip-text"
+        >
+          Features
+        </h1>
+        <div class="flex flex-col gap-5 mt-12 w-full">
+          <div class="border-b border-[#757575]">
+            <button
+              class="text-sm flex sm:gap-6 gap-3 items-center accordion rounded-md font-semibold text-white cursor-pointer py-3 pr-4 w-full text-left border-none outline-none transition duration-300"
+            >
+              <span>
+                <img src="./assets/Group 13.png" alt="" width="30" />
+              </span>
+              <div class="flex justify-between w-full items-center">
+                <p class="w-5/6 sm:text-lg">Spatial Smart Contracts:</p>
+                <span class="">
+                  <img src="./assets/++.png" alt="" width="20" />
+                </span>
+              </div>
+            </button>
+            <div
+              class="panel relative -z-50 text-white py-4 sm:px-6 -mt-2 overflow-hidden hidden"
+            >
+              <p class="text-white sm:pl-8 sm:text-base text-xs sm:pr-20">
+                Experience the world’s first spatially aware smart contracts,
+                enabling decentralized applications (dApps) that intelligently
+                respond to spatial data.
+              </p>
+            </div>
+          </div>
+          <div class="border-b border-[#757575]">
+            <button
+              class="text-sm flex sm:gap-6 gap-3 items-center accordion rounded-md font-semibold text-white cursor-pointer py-3 pr-4 w-full text-left border-none outline-none transition duration-300"
+            >
+              <span>
+                <img src="./assets/Group 13.png" alt="" width="30" />
+              </span>
+              <div class="flex justify-between w-full items-center">
+                <p class="w-5/6 sm:text-lg">AI-Enhanced Spatial Analysis:</p>
+                <span class="">
+                  <img src="./assets/++.png" alt="" width="20" />
+                </span>
+              </div>
+            </button>
+            <div
+              class="panel relative -z-50 text-white py-4 sm:px-6 -mt-2 overflow-hidden hidden"
+            >
+              <p class="text-white sm:pl-8 sm:text-base text-xs sm:pr-20">
+                Experience the world’s first spatially aware smart contracts,
+                enabling decentralized applications (dApps) that intelligently
+                respond to spatial data.
+              </p>
+            </div>
+          </div>
+          <div class="border-b border-[#757575]">
+            <button
+              class="text-sm flex sm:gap-6 gap-3 items-center accordion rounded-md font-semibold text-white cursor-pointer py-3 pr-4 w-full text-left border-none outline-none transition duration-300"
+            >
+              <span>
+                <img src="./assets/Group 13.png" alt="" width="30" />
+              </span>
+              <div class="flex justify-between w-full items-center">
+                <p class="w-5/6 sm:text-lg">Spatial Data Marketplace:</p>
+                <span class="">
+                  <img src="./assets/++.png" alt="" width="20" />
+                </span>
+              </div>
+            </button>
+            <div
+              class="panel relative -z-50 text-white py-4 sm:px-6 -mt-2 overflow-hidden hidden"
+            >
+              <p class="text-white sm:pl-8 sm:text-base text-xs sm:pr-20">
+                Experience the world’s first spatially aware smart contracts,
+                enabling decentralized applications (dApps) that intelligently
+                respond to spatial data.
+              </p>
+            </div>
+          </div>
+          <div class="border-b border-[#757575]">
+            <button
+              class="text-sm flex sm:gap-6 gap-3 items-center accordion rounded-md font-semibold text-white cursor-pointer py-3 pr-4 w-full text-left border-none outline-none transition duration-300"
+            >
+              <span>
+                <img src="./assets/Group 13.png" alt="" width="30" />
+              </span>
+              <div class="flex justify-between w-full items-center">
+                <p class="w-5/6 sm:text-lg">
+                  Fully Homomorphic Encryption (FHE):
+                </p>
+                <span class="">
+                  <img src="./assets/++.png" alt="" width="20" />
+                </span>
+              </div>
+            </button>
+            <div
+              class="panel relative -z-50 text-white py-4 sm:px-6 -mt-2 overflow-hidden hidden"
+            >
+              <p class="text-white sm:pl-8 sm:text-base text-xs sm:pr-20">
+                Experience the world’s first spatially aware smart contracts,
+                enabling decentralized applications (dApps) that intelligently
+                respond to spatial data.
+              </p>
+            </div>
+          </div>
+          <div class="border-b border-[#757575]">
+            <button
+              class="text-sm flex sm:gap-6 gap-3 items-center accordion rounded-md font-semibold text-white cursor-pointer py-3 pr-4 w-full text-left border-none outline-none transition duration-300"
+            >
+              <span>
+                <img src="./assets/Group 13.png" alt="" width="30" />
+              </span>
+              <div class="flex justify-between w-full items-center">
+                <p class="w-5/6 sm:text-lg">Spatial Smart Contracts:</p>
+                <span class="">
+                  <img src="./assets/++.png" alt="" width="20" />
+                </span>
+              </div>
+            </button>
+            <div
+              class="panel relative -z-50 text-white py-4 sm:px-6 -mt-2 overflow-hidden hidden"
+            >
+              <p class="text-white sm:pl-8 sm:text-base text-xs sm:pr-20">
+                Experience the world’s first spatially aware smart contracts,
+                enabling decentralized applications (dApps) that intelligently
+                respond to spatial data.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 1st Section End-->
+
+    <!-- 2nd Section Start -->
+    <div class="px-6 py-10 bg-gradient-to-l from-[#F81A05] to-[#F36621]">
+      <div class="max-w-7xl m-auto sm:px-8">
+        <div class="max-w-4xl flex flex-col gap-8">
+          <h1 class="sm:text-4xl text-3xl">Join Flare</h1>
+          <p class="sm:text-lg text-sm sm:pr-6">
+            Become part of the Flare community. Connect with us on our social
+            media platforms to stay updated, contribute, and help shape the
+            future of spatial computing.
+          </p>
+          <button
+            class="w-fit sm:text-xl bg-white text-[#F81A05] sm:py-2 py-1 px-5 rounded-md"
+          >
+            <h1>Learn more</h1>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- 2nd Section End-->
+
+    <!-- 3rd Section Start -->
+    <div class="px-6 py-20 relative">
+      <div class="flex flex-col gap-8 text-center">
+        <h1 class="sm:text-4xl text-3xl">
+          Unlocking
+          <span
+            class="bg-gradient-to-l from-[#F81A05] to-[#F36621] inline-block text-transparent bg-clip-text"
+            >Seamless Integration</span
+          >
+        </h1>
+        <p class="sm:text-lg text-sm max-w-4xl m-auto">
+          Explore the interconnected ecosystem of spatial smart contracts, AI
+          integration, spatial data marketplace, and fully homomorphic
+          encryption (FHE) at Flare.
+        </p>
+        <div class="max-w-4xl m-auto relative w-full">
+          <img
+            src="./assets/Group 18.png"
+            alt=""
+            width="700"
+            class="m-auto -mt-6"
+          />
+          <img
+            src="./assets/+.png"
+            alt=""
+            width="60"
+            class="absolute top-0 sm:left-10 left-2"
+          />
+          <img
+            src="./assets/+.png"
+            alt=""
+            width="60"
+            class="absolute top-0 sm:right-10 right-2"
+          />
+          <img
+            src="./assets/+.png"
+            alt=""
+            width="60"
+            class="absolute bottom-0 sm:right-10 right-2"
+          />
+          <img
+            src="./assets/+.png"
+            alt=""
+            width="60"
+            class="absolute bottom-0 sm:left-10 left-2"
+          />
+        </div>
+      </div>
+      <img
+        src="./assets/Group 973.png"
+        alt=""
+        width="550"
+        class="absolute -top-80 left-0 -z-10"
+      />
+    </div>
+    <!-- 3rd Section End-->
+
+    <!-- 4th Section Start -->
+    <div class="px-6">
+      <div
+        class="max-w-[85rem] flex items-center flex-col m-auto bg-[#995f592a] sm:py-20 py-12 rounded-xl border border-[#F81A05]"
+      >
+        <h1 class="sm:text-4xl text-3xl text-center">
+          The Flare
+          <span
+            class="bg-gradient-to-l from-[#F81A05] to-[#F36621] inline-block text-transparent bg-clip-text"
+            >Advantages</span
+          >
+        </h1>
+        <div
+          class="flex sm:flex-row flex-col sm:gap-12 gap-6 max-w-6xl m-auto w-full sm:mt-24 mt-10 px-6"
+        >
+          <div
+            class="sm:w-1/2 border border-[#F36621] border-gradient bg-[#ffc4a723] p-8 sm:text-xl text-sm"
+          >
+            <div class="flex items-center gap-6">
+              <p class="font-semibold">For Developers:</p>
+              <img src="./assets/1.png" alt="" width="40" />
+            </div>
+            <p class="mt-6">
+              A robust platform for building and deploying next-generation AR/VR
+              applications effortlessly.
+            </p>
+          </div>
+          <div
+            class="sm:w-1/2 border border-[#F36621] border-gradient2 bg-gradient-to-b from-[#ff9e9517] to-[#995f5900] p-8 sm:text-xl text-sm"
+          >
+            <div class="flex items-center gap-6">
+              <p class="font-semibold">For Creators:</p>
+              <img src="./assets/2.png" alt="" width="40" />
+            </div>
+            <p class="mt-6">
+              Unlock a new realm of possibilities for creating and monetizing
+              spatial content and experiences.
+            </p>
+          </div>
+        </div>
+        <div
+          class="flex sm:flex-row flex-col gap-12 max-w-6xl m-auto w-full mt-8 px-6"
+        >
+          <div
+            class="sm:w-1/2 border border-[#F36621] border-gradient2 bg-gradient-to-b from-[#ff9e9517] to-[#995f5900] p-8 sm:text-xl text-sm"
+          >
+            <div class="flex items-center gap-6">
+              <p class="font-semibold">For Enterprises:</p>
+              <img src="./assets/3.png" alt="" width="40" />
+            </div>
+            <p class="mt-6">
+              Access innovative solutions leveraging spatial computing for
+              marketing, training, simulations, and beyond.
+            </p>
+          </div>
+          <div
+            class="sm:w-1/2 border border-[#F36621] border-gradient bg-[#ffc4a723] p-8 sm:text-xl text-sm"
+          >
+            <div class="flex items-center gap-6">
+              <p class="font-semibold">For Users:</p>
+              <img src="./assets/4.png" alt="" width="40" />
+            </div>
+            <p class="mt-6">
+              Immerse yourself in enriched AR/VR experiences like never before.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 4th Section End-->
+
+    <!-- 5th Section Start -->
+    <div
+      class="max-w-7xl m-auto min-[890px]:py-32 py-16 flex flex-col items-center px-12"
+    >
+      <h1 class="sm:text-4xl text-3xl text-center">
+        Development
+        <span
+          class="bg-gradient-to-l from-[#F81A05] to-[#F36621] inline-block text-transparent bg-clip-text"
+          >Roadmap</span
+        >
+      </h1>
+      <div
+        class="flex min-[890px]:flex-row flex-col min-[890px]:gap-0 gap-16 mt-20 w-full justify-between"
+      >
+        <div
+          class="flex flex-col items-center font-semibold sm:text-lg text-sm"
+        >
+          <h2>Foundation Building</h2>
+          <h2>(Year 1-2)</h2>
+          <img src="./assets/Group 12.png" alt="" width="50" class="mt-4" />
+          <ol class="list-disc mt-8">
+            <li>Blockchain Launch:</li>
+            <li>Initial Smart Contracts:</li>
+            <li>Marketplace Establishment:</li>
+          </ol>
+        </div>
+        <div
+          class="bg-[#ff9e953b] w-[.15rem] h-24 self-end -mb-2 min-[890px]:block hidden"
+        ></div>
+        <div
+          class="flex flex-col items-center font-semibold sm:text-lg text-sm"
+        >
+          <h2>Ecosystem Expansion</h2>
+          <h2>(Year 3 - 5)</h2>
+          <img src="./assets/Group 13.png" alt="" width="50" class="mt-4" />
+          <ol class="list-disc mt-8 text-[#7D7D7D]">
+            <li>AI Enhancements:</li>
+            <li>Advanced Smart Contracts:</li>
+            <li>Marketplace Growth:</li>
+          </ol>
+        </div>
+        <div
+          class="bg-[#ff9e953b] w-[.15rem] h-24 self-end -mb-2 min-[890px]:block hidden"
+        ></div>
+
+        <div
+          class="flex flex-col items-center font-semibold sm:text-lg text-sm"
+        >
+          <h2>Maturation & Scalability</h2>
+          <h2>(Year 6-10)</h2>
+          <img src="./assets/Group 13.png" alt="" width="50" class="mt-4" />
+          <ol class="list-disc mt-8 text-[#7D7D7D]">
+            <li>AI-AR/VR Integration:</li>
+            <li>Governance Decentralization:</li>
+            <li>Scalability Improvements:</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <!-- 5th Section End-->
+
+    <!-- Footer Start -->
+    <footer
+      class="px-6 pt-10 pb-16 border-t border-[#F81A05] relative bg-gradient-to-l from-[#f363203d] via-[#000000] to-[#f8190523]"
+    >
+      <div class="max-w-7xl m-auto px-8 flex items-center gap-8">
+        <img src="./assets/icon3.png" alt="" width="80" />
+        <div class="text-[#ffffff5b]">
+          <p>© 2024 Flare.</p>
+          <p>All rights reserved.</p>
+          <div class="flex items-center gap-2 mt-2">
+            <img
+              src="./assets/telegram.png"
+              alt=""
+              width="30"
+              class="opacity-50"
+            />
+            <img src="./assets/x.png" alt="" width="30" class="opacity-50" />
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/Ellipse 7.png"
+        alt=""
+        width="500"
+        class="absolute bottom-0 left-0"
+      />
+    </footer>
+    <!-- Footer End-->
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".toggle_icon").click(function () {
+          $("#dropdown").toggleClass("h-screen pt-10");
+        });
+        // function openNav() {
+        //     $("#dropdown").addClass("h-screen pt-10");
+        // }
+
+        $(".closebtn").click(function () {
+          $("#dropdown").removeClass("h-screen pt-10");
+        });
+      });
+    </script>
+
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+      // acc.addEventListener("click", );
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+            this.style.color = "";
+          } else {
+            panel.style.display = "block";
+            this.style.color = "#F36621";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

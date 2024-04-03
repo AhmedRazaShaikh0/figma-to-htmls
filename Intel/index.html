@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intel</title>
+    <link rel="icon" href="./assets/icon.png" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <style>
+    @font-face {
+      font-family: Nirmala;
+      src: url("./assets/nirmala.ttf");
+    }
+    @font-face {
+      font-family: Nirmala-Bold;
+      src: url("./assets/NirmalaB.ttf");
+    }
+    body {
+      font-family: Nirmala, sans-serif;
+    }
+    h1 {
+      font-family: Nirmala-Bold, sans-serif;
+    }
+    .dropdown {
+      width: 100%;
+      height: 0;
+      position: fixed;
+      z-index: 500;
+      overflow-x: hidden;
+      transition: 0.8s;
+    }
+
+    .dropdown a {
+      padding: 8px 8px 8px 8px;
+      text-decoration: none;
+      font-size: 20px;
+      color: #ffffff;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .dropdown .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      color: white;
+      font-size: 50px;
+      margin-left: 50px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .dropdown a {
+        font-size: 18px;
+      }
+    }
+
+    .toggle_icon {
+      cursor: pointer;
+      color: #ffffff;
+      order: 2;
+    }
+  </style>
+  <body class="bg-[#111316]">
+    <!-- Header Start -->
+    <header class="absolute sm:top-8 top-8 w-full z-10 sm:px-12 px-4">
+      <div
+        class="max-w-7xl m-auto text-[#F3F3F3] flex justify-between items-center"
+      >
+        <div>
+          <img src="./assets/icon.png" alt="" width="50" height="50" class="" />
+        </div>
+        <div class="hidden md:block">
+          <ul class="text-[#F3F3F3] flex gap-10">
+            <li>
+              <a class="hover:text-[#2BE9A3]" href="/">Home</a>
+            </li>
+            <li>
+              <a class="hover:text-[#2BE9A3]" href="/">About Us</a>
+            </li>
+            <li>
+              <a class="hover:text-[#2BE9A3]" href="/">Key Features</a>
+            </li>
+            <li>
+              <a class="hover:text-[#2BE9A3]" href="/">How it works?</a>
+            </li>
+            <li>
+              <a class="hover:text-[#2BE9A3]" href="/">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="md:hidden block z-50">
+          <button id="hamburger-icon" class="float-right toggle_icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8"
+              fill="white"
+              viewBox="0 0 24 24"
+              stroke="white"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="3"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <div
+          id="dropdown"
+          class="dropdown flex flex-col justify-center uppercase top-0 left-0 bg-[rgba(0,0,0,0.9)] z-50"
+        >
+          <button class="closebtn mr-4 mt-8">×</button>
+          <ul class="text-white p-12 text-center">
+            <li>
+              <a class="text-[#2BE9A3] py-2" href="/">Home</a>
+            </li>
+            <li>
+              <a class="text-[#2BE9A3] py-2" href="#">About Us</a>
+            </li>
+            <li>
+              <a class="text-[#2BE9A3] py-2" href="#">Key Features</a>
+            </li>
+            <li>
+              <a class="text-[#2BE9A3] py-2" href="#">How it works?</a>
+            </li>
+            <li>
+              <a class="text-[#2BE9A3] py-2" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- Header Start -->
+
+    <!-- 1st Section Start -->
+    <div class="px-10 sm:pt-48 pt-36 pb-32 relative">
+      <div class="max-w-7xl m-auto relative">
+        <div class="max-w-3xl flex flex-col gap-12">
+          <h1 class="text-white sm:text-5xl text-4xl font-extrabold">
+            Your Gateway to <span class="text-[#2BE9A3]">Decentralized</span> AI
+            <span class="text-[#8750EC]"> Model Hosting </span>
+          </h1>
+          <p class="text-[#F3F3F3] sm:text-lg sm:pr-36">
+            Intel is revolutionizing the AI landscape by providing a
+            decentralized Layer 2 network tailored for hosting and inference.
+            Join us in democratizing access to cutting-edge AI models, bridging
+            GPU miners with the open-source AI community.
+          </p>
+          <button
+            class="bg-[#2BE9A3] px-5 py-2 w-fit rounded-md font-extrabold"
+          >
+            Explore more
+          </button>
+        </div>
+        <img
+          src="./assets/Group 1089563.png"
+          alt=""
+          width="80"
+          class="-z-10 absolute -bottom-10 sm:left-80 left-20"
+        />
+        <img
+          src="./assets/Group 1089561.png"
+          alt=""
+          width="80"
+          class="-z-10 absolute -top-8 right-28"
+        />
+        <img
+          src="./assets/Group 1089565.png"
+          alt=""
+          width="80"
+          class="-z-10 absolute md:top-8 sm:top-16 top-20 sm:right-0 -right-8 sm:opacity-100 opacity-60 sm:w-[80px] w-[60px]"
+        />
+        <img
+          src="./assets/Group 1089567.png"
+          alt=""
+          width="50"
+          class="-z-10 absolute sm:top-52 top-72 md:right-[24rem] sm:right-72 right-20 sm:opacity-100 opacity-60"
+        />
+        <img
+          src="./assets/Group 1089566.png"
+          alt=""
+          width="50"
+          class="-z-10 absolute -bottom-20 md:right-40 right-0"
+        />
+      </div>
+      <img
+        src="./assets/Group 1089579.png"
+        alt=""
+        width="50"
+        class="-z-10 absolute left-0 bottom-0"
+      />
+      <img
+        src="./assets/Ellipse 896.png"
+        alt=""
+        width="250"
+        class="-z-10 absolute left-0 -bottom-64"
+      />
+      <img
+        src="./assets/Ellipse 892.png"
+        alt=""
+        class="-z-10 absolute right-0 top-0"
+      />
+    </div>
+    <!-- 1st Section End -->
+
+    <!-- 2nd Section Start -->
+    <div
+      class="flex items-center justify-center py-32 relative max-w-4xl m-auto px-4"
+    >
+      <h1
+        class="text-white sm:text-5xl text-4xl font-extrabold max-w-2xl text-center leading-tight"
+      >
+        A New <span class="text-[#2BE9A3]">Blockchain</span> Programming
+        <span class="text-[#8750EC]"> Paradigm</span>
+      </h1>
+      <img
+        src="./assets/Group 1089564.png"
+        alt=""
+        width="70"
+        class="absolute left-8 top-12"
+      />
+      <img
+        src="./assets/Group 1089575.png"
+        alt=""
+        width="70"
+        class="absolute bottom-0 right-0"
+      />
+    </div>
+    <!-- 2nd Section End -->
+
+    <!-- 3rd Section Start -->
+    <div class="relative">
+      <div
+        class="max-w-7xl m-auto py-20 px-10 flex flex-col justify-center items-center"
+      >
+        <h1
+          class="text-white sm:text-5xl text-4xl font-extrabold text-center leading-tight"
+        >
+          Who Are<span class="text-[#2BE9A3]"> We?</span>
+        </h1>
+        <div class="flex sm:flex-row flex-col gap-4 mt-20">
+          <div
+            class="bg-[#14171B] text-white text-2xl flex flex-col sm:gap-0 gap-12 justify-between sm:items-center py-12 sm:w-1/4 rounded-lg border border-white sm:pl-0 pl-8"
+          >
+            <h1>About Us</h1>
+            <h1>Mission <br />Statement:</h1>
+          </div>
+          <div
+            class="bg-[#14171B] sm:w-4/5 rounded-lg border border-white text-[#F3F3F3] sm:text-lg flex gap-6 flex-col justify-between items-center py-12 sm:pl-10 pl-8 md:pr-40 pr-8 font-medium"
+          >
+            <p>
+              At Intel, we're dedicated to pioneering the future of AI through
+              decentralized infrastructure. Our platform serves as a nexus
+              between GPU miners and the open-source AI community, fostering
+              collaboration and innovation.
+            </p>
+            <p>
+              Our mission is to empower individuals and organizations by
+              granting them server-less access to top-tier AI models hosted on a
+              decentralized network of computing resources.
+            </p>
+          </div>
+        </div>
+        <div class="flex md:flex-nowrap flex-wrap gap-4 mt-4">
+          <div
+            class="bg-[#14171B] gap-8 rounded-lg border border-white text-[#F3F3F3] sm:text-lg flex flex-col justify-center py-6 px-8 font-medium md:w-1/3"
+          >
+            <h1 class="text-2xl">Transparency:</h1>
+
+            <p class="text-[#F3F3F3] sm:pr-16">
+              We believe in open communication and honesty in everything we do.
+            </p>
+          </div>
+          <div
+            class="bg-[#14171B] gap-8 rounded-lg border border-white text-[#F3F3F3] sm:text-lg flex flex-col justify-center py-6 px-8 font-medium md:w-1/3"
+          >
+            <h1 class="text-2xl">Security:</h1>
+
+            <p class="text-[#F3F3F3]">
+              Ensuring the utmost security and privacy of our users' data and
+              transactions is paramount.
+            </p>
+          </div>
+          <div
+            class="bg-[#14171B] gap-8 rounded-lg border border-white text-[#F3F3F3] sm:text-lg flex flex-col justify-center py-6 px-8 font-medium md:w-1/3"
+          >
+            <h1 class="text-2xl">Innovation:</h1>
+
+            <p class="text-[#F3F3F3]">
+              We're committed to pushing the boundaries of AI technology through
+              continuous innovation and collaboration.
+            </p>
+          </div>
+        </div>
+        <button
+          class="bg-[#2BE9A3] px-5 py-2 w-fit rounded-md font-extrabold mt-20"
+        >
+          Explore more
+        </button>
+      </div>
+      <img
+        src="./assets/Ellipse 895.png"
+        alt=""
+        width="300"
+        class="absolute left-0 -bottom-40"
+      />
+      <img
+        src="./assets/Ellipse 899.png"
+        alt=""
+        width="300"
+        class="absolute right-0 -top-40"
+      />
+    </div>
+
+    <!-- 3rd Section End -->
+
+    <!-- 4th Section Start -->
+    <div class="py-32 flex flex-col justify-center gap-6 px-10 relative">
+      <img
+        src="./assets/Group 1089568.png"
+        alt=""
+        width="70"
+        class="absolute left-0 top-16 -z-10"
+      />
+      <img
+        src="./assets/Group 1089580.png"
+        alt=""
+        width="70"
+        class="absolute md:right-44 right-20 top-36 -z-10"
+      />
+      <h1
+        class="text-white sm:text-5xl text-4xl font-extrabold text-center leading-tight"
+      >
+        How it works?
+      </h1>
+      <p class="text-[#F3F3F3] sm:text-lg text-center">
+        we are building critical infrastructure to enable a more decentralized
+        internet
+      </p>
+      <div
+        class="border border-white max-w-7xl m-auto w-full px-6 pb-32 rounded-2xl mt-24 relative"
+      >
+        <img
+          src="./assets/icon box.png"
+          alt=""
+          width="120"
+          class="mx-auto -mt-16"
+        />
+        <div
+          class="flex flex-wrap lg:flex-row flex-col justify-center items-center text-center pt-20"
+        >
+          <div
+            class="border border-white px-[5%] py-6 flex items-center justify-center text-white rounded-2xl"
+          >
+            <h1>User Requests</h1>
+          </div>
+          <img src="./assets/arrow.png" alt="" class="lg:block hidden" />
+          <img src="./assets/arrow copy.png" alt="" class="lg:hidden block" />
+          <div
+            class="border border-white px-[3%] py-6 flex items-center justify-center text-white rounded-2xl"
+          >
+            <h1>
+              Platform Routes <br />
+              Request to Decentralized <br />
+              Computing Network
+            </h1>
+          </div>
+          <img src="./assets/arrow.png" alt="" class="lg:block hidden" />
+          <img src="./assets/arrow copy.png" alt="" class="lg:hidden block" />
+          <div
+            class="border border-white px-[4%] py-6 flex items-center justify-center text-white rounded-2xl"
+          >
+            <h1>Decentralized Network <br />Allocates Resources</h1>
+          </div>
+          <!-- <img
+            src="./assets/arrow3.png"
+            alt=""
+            width="60"
+            class="lg:block hidden absolute right-40 bottom-40"
+          /> -->
+          <img src="./assets/arrow copy.png" alt="" class="lg:hidden block" />
+        </div>
+        <div
+          class="flex lg:flex-row flex-col justify-center items-center rounded-2xl lg:mt-20 text-center"
+        >
+          <div
+            class="border border-white px-[5%] py-6 flex items-center justify-center text-white rounded-2xl"
+          >
+            <h1>Results Returned</h1>
+          </div>
+          <img src="./assets/arrow2.png" alt="" class="lg:block hidden" />
+          <img src="./assets/arrow copy.png" alt="" class="lg:hidden block" />
+
+          <div
+            class="border border-white px-[5%] py-6 flex items-center justify-center text-white rounded-2xl"
+          >
+            <h1>
+              AI Model Inference <br />
+              and Processing
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 4th Section End -->
+
+    <!-- 5th Section Start -->
+    <div class="relative">
+      <div
+        class="flex items-center justify-center py-24 relative max-w-4xl m-auto px-4"
+      >
+        <h1
+          class="text-white sm:text-5xl text-4xl font-extrabold max-w-2xl text-center leading-tight"
+        >
+          We're shaping<span class="text-[#2BE9A3]"> the future</span> of
+          <span class="text-[#8750EC]"> the internet </span>
+        </h1>
+        <img
+          src="./assets/Group 1089559.png"
+          alt=""
+          width="70"
+          class="absolute lg:-left-8 left-0 top-4"
+        />
+        <img
+          src="./assets/Group 1089575.png"
+          alt=""
+          width="70"
+          class="absolute bottom-8 lg:-right-10 right-0"
+        />
+      </div>
+      <img
+        src="./assets/Ellipse 891.png"
+        alt=""
+        width="350"
+        class="absolute left-0 -top-40"
+      />
+    </div>
+    <!-- 5th Section End -->
+
+    <!-- 6th Section Start -->
+    <div class="border-y border-y-white px-8 relative">
+      <div class="max-w-6xl m-auto py-28 min-[900px]:flex">
+        <div
+          class="min-[900px]:w-2/6 flex flex-col gap-12 min-[900px]:items-baseline items-center min-[900px]:justify-start justify-center"
+        >
+          <h1 class="text-white text-4xl font-bold">
+            Key <br class="min-[900px]:block hidden" />
+            Features
+          </h1>
+          <button
+            class="bg-[#8750EC] px-5 py-2 w-fit rounded-md font-extrabold"
+          >
+            Explore more
+          </button>
+        </div>
+        <div
+          class="min-[900px]:w-4/5 flex sm:flex-row flex-col gap-4 min-[900px]:mt-0 mt-6 items-center justify-center"
+        >
+          <div class="sm:w-1/2 flex flex-col gap-4 text-white">
+            <div
+              class="sm:h-[18rem] h-[16rem] bg-[#14171B] rounded-2xl p-6 flex flex-col gap-2"
+            >
+              <h2 class="font-bold sm:text-xl">Fast website, always</h2>
+              <p class="text-xs text-[#BFBFBF]">
+                Your website will load super fast because we use the latest
+                technology and powerful servers
+              </p>
+              <div
+                class="flex justify-between items-center sm:px-4 mt-8 font-semibold text-xs gap-2"
+              >
+                <h2>Intel</h2>
+                <img
+                  src="./assets/rectangle 1.png"
+                  alt=""
+                  width="200"
+                  class="sm:w-[200px] w-[150px]"
+                />
+              </div>
+              <div
+                class="flex justify-between items-center sm:px-4 font-semibold text-xs gap-2"
+              >
+                <h2>Other 1</h2>
+                <img
+                  src="./assets/rectangle 2.png"
+                  alt=""
+                  width="200"
+                  class="sm:w-[200px] w-[150px]"
+                />
+              </div>
+              <div
+                class="flex justify-between items-center sm:px-4 font-semibold text-xs gap-2"
+              >
+                <h2>Other 2</h2>
+                <img
+                  src="./assets/rectangle 3.png"
+                  alt=""
+                  width="200"
+                  class="sm:w-[200px] w-[150px]"
+                />
+              </div>
+              <div
+                class="flex justify-between items-center sm:px-4 font-semibold text-xs gap-2"
+              >
+                <h2>Other 3</h2>
+                <img
+                  src="./assets/rectangle 4.png"
+                  alt=""
+                  width="200"
+                  class="sm:w-[200px] w-[150px]"
+                />
+              </div>
+            </div>
+            <div
+              class="sm:h-[18rem] h-[16rem] bg-[#14171B] rounded-2xl p-6 flex flex-col gap-2"
+            >
+              <h2 class="font-bold sm:text-xl">Help when you need it</h2>
+              <p class="text-xs text-[#BFBFBF]">
+                Need help? We’re here 24/7. Our team is super friendly and ready
+                to help you with anything.
+              </p>
+              <img
+                src="./assets/Group 12.png"
+                alt=""
+                width="250"
+                class="m-auto"
+              />
+            </div>
+          </div>
+          <div class="sm:w-1/2 flex flex-col gap-4">
+            <div
+              class="h-[11.7rem] bg-[#171717] rounded-2xl p-8 flex flex-col gap-2 text-white relative"
+            >
+              <h2 class="font-bold sm:text-xl">Grow your website easily</h2>
+              <p class="text-xs text-[#BFBFBF]">
+                if your website gets bigger, no worries, you can easily make it
+                bigger too
+              </p>
+              <img
+                src="./assets/box 1.png"
+                alt=""
+                width="350"
+                class="absolute bottom-0 right-0"
+              />
+            </div>
+            <div
+              class="h-[11.7rem] bg-[#14171B] rounded-2xl p-8 flex flex-col gap-2 text-white relative"
+            >
+              <h2 class="font-bold sm:text-xl">Keep your website safe</h2>
+              <p class="text-xs text-[#BFBFBF]">
+                we’ve got a bunch of security tools to make sure your website
+                stays safe from bad stuff
+              </p>
+              <img
+                src="./assets/box 3.png"
+                alt=""
+                width="300"
+                class="m-auto w-[340px] h-[40px] mt-4"
+              />
+            </div>
+            <div
+              class="h-[11.7rem] bg-[#171717] rounded-2xl p-8 flex flex-col gap-2 text-white relative"
+            >
+              <h2 class="font-bold sm:text-xl">
+                Great service, affordable prices
+              </h2>
+              <p class="text-xs text-[#BFBFBF]">
+                We give you a lot of your money, Big websites or small, we have
+                a plan that fits your budget.
+              </p>
+              <img src="./assets/box 2.png" alt="" width="350" class="mt-3" />
+            </div>
+          </div>
+        </div>
+        <img
+          src="./assets/Group 1089571.png"
+          alt=""
+          width="100"
+          class="absolute md:left-20 left-0 bottom-52 -z-10"
+        />
+      </div>
+    </div>
+    <!-- 6th Section End -->
+
+    <!-- 7th Section Start -->
+    <div
+      class="flex flex-col py-32 justify-center items-center gap-8 text-white px-10 text-center"
+    >
+      <h1 class="text-2xl">Contact Us</h1>
+      <div class="text-center text-white">
+        <h2 class="font-bold">Get in Touch:</h2>
+        <p>Have a question or need support?</p>
+        <p>Email us at <span class="text-[#0578FF]">support@intel.ai</span></p>
+      </div>
+      <p>
+        Connect with us on social media to stay updated on the latest news and
+        developments.
+      </p>
+      <div class="flex gap-16">
+        <h2 class="text-[#0578FF]">Twitter</h2>
+        <h2>|</h2>
+        <h2 class="text-[#0578FF]">Telegram</h2>
+      </div>
+      <img
+        src="./assets/Ellipse 898.png"
+        alt=""
+        width="350"
+        class="absolute left-0"
+      />
+      <img
+        src="./assets/Ellipse 897.png"
+        alt=""
+        width="350"
+        class="absolute right-0"
+      />
+    </div>
+    <!-- 7th Section End -->
+
+    <!-- Footer Start -->
+    <div
+      class="max-w-7xl m-auto text-[#8C8C8C] flex sm:flex-row items-center gap-6 flex-col justify-between p-10"
+    >
+      <div class="">
+        <img src="./assets/icon.png" alt="" width="50" class="m-auto" />
+        <p class="mt-4">Copyright © 2024 Intel.</p>
+        <p>All rights reserved.</p>
+      </div>
+      <div class="sm:self-end">
+        <h2>Privacy Policy</h2>
+        <h2>Terms os Service</h2>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".toggle_icon").click(function () {
+          $("#dropdown").toggleClass("h-screen pt-10");
+        });
+        // function openNav() {
+        //     $("#dropdown").addClass("h-screen pt-10");
+        // }
+
+        $(".closebtn").click(function () {
+          $("#dropdown").removeClass("h-screen pt-10");
+        });
+      });
+    </script>
+  </body>
+</html>

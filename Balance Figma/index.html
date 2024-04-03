@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Balance</title>
+    <link rel="icon" href="./assets/icon.png" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    .dropdown {
+      width: 100%;
+      height: 0;
+      position: fixed;
+      z-index: 500;
+      overflow-x: hidden;
+      transition: 0.8s;
+    }
+
+    .dropdown a {
+      padding: 8px 8px 8px 8px;
+      text-decoration: none;
+      font-size: 20px;
+      color: #ffffff;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .dropdown .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      color: white;
+      font-size: 50px;
+      margin-left: 50px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .dropdown a {
+        font-size: 18px;
+      }
+    }
+
+    .toggle_icon {
+      cursor: pointer;
+      color: #ffffff;
+      order: 2;
+    }
+    .font-montserrat {
+      font-family: "Montserrat", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+    }
+    .border-gradient {
+      border-style: solid;
+      border-width: 0.1px;
+      border-image: linear-gradient(to right, #9fd7fc, #4f35f8) 0.5;
+    }
+    .custom-bg {
+      background-image: url("./assets/Vector\ bg.png");
+    }
+  </style>
+  <body class="bg-[#0B0B11] font-montserrat">
+    <!-- Header Start -->
+    <header class="absolute sm:top-12 top-8 w-full z-10 sm:px-12 px-4">
+      <div
+        class="max-w-7xl m-auto text-white flex justify-between items-center"
+      >
+        <div>
+          <img src="./assets/icon.png" alt="" width="50" height="50" class="" />
+        </div>
+        <div class="hidden md:block">
+          <ul class="text-white flex gap-10">
+            <li
+              class="hover:bg-gradient-to-b from-[#9FD7FC] to-[#4F35F8] hover:inline-block hover:text-transparent hover:bg-clip-text"
+            >
+              <a href="/">Home</a>
+            </li>
+            <li
+              class="hover:bg-gradient-to-b from-[#9FD7FC] to-[#4F35F8] hover:inline-block hover:text-transparent hover:bg-clip-text"
+            >
+              <a href="/">About us</a>
+            </li>
+            <li
+              class="hover:bg-gradient-to-b from-[#9FD7FC] to-[#4F35F8] hover:inline-block hover:text-transparent hover:bg-clip-text"
+            >
+              <a href="/">How it works?</a>
+            </li>
+            <li
+              class="hover:bg-gradient-to-b from-[#9FD7FC] to-[#4F35F8] hover:inline-block hover:text-transparent hover:bg-clip-text"
+            >
+              <a href="/"> FAQs</a>
+            </li>
+            <li
+              class="hover:bg-gradient-to-b from-[#9FD7FC] to-[#4F35F8] hover:inline-block hover:text-transparent hover:bg-clip-text"
+            >
+              <a href="/">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <button
+            class="font-bold text-black text-lg bg-gradient-to-r from-[#9FD7FC] to-[#4F35F8] py-2 px-8 rounded-full"
+          >
+            <p>Docs</p>
+          </button>
+        </div>
+        <div class="md:hidden block z-50">
+          <button id="hamburger-icon" class="float-right toggle_icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8"
+              fill="white"
+              viewBox="0 0 24 24"
+              stroke="white"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="3"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <div
+          id="dropdown"
+          class="dropdown flex flex-col justify-center uppercase top-0 left-0 bg-[rgba(0,0,0,0.9)] z-50"
+        >
+          <button class="closebtn mr-4 mt-8">×</button>
+          <ul class="text-white p-12 text-center">
+            <li>
+              <a
+                class="hover:bg-gradient-to-b from-[#9FD7FC] to-[#4F35F8] hover:inline-block hover:text-transparent hover:bg-clip-text py-2"
+                href="/"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:bg-gradient-to-b from-[#9FD7FC] to-[#4F35F8] hover:inline-block hover:text-transparent hover:bg-clip-text py-2"
+                href="#"
+                >About us</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:bg-gradient-to-b from-[#9FD7FC] to-[#4F35F8] hover:inline-block hover:text-transparent hover:bg-clip-text py-2"
+                href="#"
+                >How it works?</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:bg-gradient-to-b from-[#9FD7FC] to-[#4F35F8] hover:inline-block hover:text-transparent hover:bg-clip-text py-2"
+                href="#"
+              >
+                FAQs</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:bg-gradient-to-b from-[#9FD7FC] to-[#4F35F8] hover:inline-block hover:text-transparent hover:bg-clip-text py-2"
+                href="#"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- Header Start -->
+
+    <!-- 1st Section Start -->
+    <div
+      class="sm:pb-40 pb-20 custom-bg bg-cover bg-no-repeat bg-center sm:px-12 px-4"
+    >
+      <!-- <img src="./assets/Vector bg.png" alt="" class="absolute top-0 -z-50" /> -->
+
+      <div
+        class="flex flex-col text-white max-w-7xl m-auto gap-12 md:pt-52 pt-40 md:pb-40 pb-32"
+      >
+        <div class="flex flex-col sm:gap-16 gap-6 max-w-3xl z-[1]">
+          <h1
+            class="sm:text-[50px] sm:text-4xl text-3xl sm:leading-tight leading-none font-bold"
+          >
+            Where
+            <span
+              class="bg-gradient-to-r from-[#9FD7FC] to-[#4F35F8] inline-block text-transparent bg-clip-text"
+              >equilibrium</span
+            >
+            meets
+            <span
+              class="bg-gradient-to-r from-[#9FD7FC] to-[#4F35F8] inline-block text-transparent bg-clip-text"
+              >innovation</span
+            >
+            in the realm of
+            <span
+              class="bg-gradient-to-r from-[#9FD7FC] to-[#4F35F8] inline-block text-transparent bg-clip-text"
+              >machine learning.</span
+            >
+          </h1>
+          <!-- <img src="./assets/Group 2.png" alt="" width="170" /> -->
+          <p class="font-normal text-sm sm:text-xl pr-3">
+            Embark on a journey with us as we redefine the boundaries of
+            decentralized compute, reshaping the landscape of AI through our
+            pioneering approach.
+          </p>
+          <div class="flex gap-4">
+            <button
+              class="bg-gradient-to-r from-[#9FD7FC] to-[#4F35F8] py-2 px-7 rounded-full text-black font-semibold text-xl"
+            >
+              DOCs
+            </button>
+            <button
+              class="bg-gradient-to-r from-[#9FD7FC] to-[#4F35F8] inline-block text-transparent bg-clip-text border border-[#4F35F8] py-2 px-9 rounded-full text-black font-semibold text-xl"
+            >
+              Telegram
+            </button>
+          </div>
+        </div>
+        <img
+          src="./assets/opticle right.png"
+          alt=""
+          width="500"
+          class="absolute right-0 top-20"
+        />
+      </div>
+
+      <div class="sm:px-10 px-6 z-10">
+        <img
+          src="./assets/Ellipse 7.png"
+          alt=""
+          width="300"
+          class="absolute left-0 -mt-20"
+        />
+        <div
+          class="text-white flex flex-col gap-12 justify-center items-center backdrop-blur-lg max-w-[1200px] m-auto rounded-xl sm:p-16 p-8 border border-[#003b7367]"
+        >
+          <h1 class="md:text-5xl sm:text-4xl text-3xl font-bold text-center">
+            Experience
+            <span
+              class="bg-gradient-to-r from-[#8AADFB] to-[#5037F8] inline-block text-transparent bg-clip-text"
+              >Efficiency</span
+            >
+            Redefined:
+          </h1>
+          <div class="flex gap-10 flex-wrap justify-center">
+            <div class="flex flex-col gap-4 md:w-80">
+              <img src="./assets/1st icon.png" alt="" width="40" />
+              <h2 class="font-semibold text-[20px]">Cost-Efficient</h2>
+              <p class="text-lg sm:pr-8">
+                Embrace a peer-to-peer paradigm that eliminates unnecessary
+                margins, ensuring optimal utilization of resources without the
+                constraints of traditional cloud services.
+              </p>
+            </div>
+            <div class="flex flex-col gap-4 md:w-80">
+              <img src="./assets/2nd icon.png" alt="" width="40" />
+              <h2 class="font-semibold text-[20px]">Quickscale</h2>
+              <p class="text-lg sm:pr-6">
+                Unlock the boundless potential of computing resources,
+                transcending conventional limitations to harness the power of
+                diverse devices worldwide.
+              </p>
+            </div>
+            <div class="flex flex-col gap-4 md:w-80">
+              <img src="./assets/3rd icon.png" alt="" width="40" />
+              <h2 class="font-semibold text-[20px]">
+                Uncensored & Permissionless
+              </h2>
+              <p class="text-lg sm:pr-12">
+                Join us in championing an open ecosystem where access to AI
+                training is democratized, free from censorship and restrictions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 1st Section End -->
+
+    <!-- 2nd Section Start -->
+    <div
+      class="bg-[#000C17] py-20 border-y border-t-[#003b7367] border-b-[#003b7328] bg-opacity-30"
+    >
+      <div class="max-w-6xl m-auto sm:px-12 px-10 relative">
+        <img
+          src="./assets/Layer_1.png"
+          alt=""
+          width="60"
+          class="absolute -top-12 left-10"
+        />
+        <p class="text-white sm:text-4xl text-xl text-center font-bold">
+          We believe in
+          <span
+            class="bg-gradient-to-r from-[#9FD7FC] to-[#4F35F8] inline-block text-transparent bg-clip-text"
+            >empowering individuals</span
+          >
+          and organizations alike to unleash their
+          <span
+            class="bg-gradient-to-r from-[#9FD7FC] to-[#4F35F8] inline-block text-transparent bg-clip-text"
+            >full potential</span
+          >, without compromise.
+        </p>
+      </div>
+    </div>
+    <!-- 2nd Section End -->
+
+    <!-- 3rd Section Start -->
+    <div class="sm:p-20 p-8 text-white">
+      <img
+        src="./assets/Asset 1@4x-8 2.png"
+        alt=""
+        width="400"
+        class="absolute left-0 mt-20"
+      />
+      <img src="./assets/Ellipse 13.png" alt="" class="absolute left-0" />
+      <img src="./assets/Ellipse 14.png" alt="" class="absolute right-0" />
+      <img
+        src="./assets/Ellipse 9.png"
+        alt=""
+        class="absolute right-[1%] -mt-40"
+      />
+      <img
+        src="./assets/Ellipse 11.png"
+        alt=""
+        class="absolute right-[20%] -mt-36"
+      />
+      <div
+        class="max-w-[1200px] flex min-[1200px]:flex-row flex-col md:gap-6 gap-10 m-auto border border-[#003b7367] sm:p-16 p-6 rounded-xl backdrop-blur-lg"
+      >
+        <div class="flex flex-col gap-8">
+          <h1 class="font-semibold sm:text-5xl text-3xl">
+            Empowering the Future of AI
+          </h1>
+          <p class="md:pr-20 sm:text-xl">
+            Invest in Balance (BAL)At Balance, we're at the forefront of AI
+            innovation. Join us on this groundbreaking journey.
+          </p>
+          <h2 class="text-2xl font-bold">Invest Early, Invest Wisely</h2>
+          <p class="md:pr-16 sm:text-xl">
+            Balance is in its experimental phase, paving the way for the future
+            of AI. While no guaranteed income is promised, early involvement
+            offers unique opportunities.
+          </p>
+          <div>
+            <h2 class="text-2xl mt-8 font-bold">Unlock the Potential:</h2>
+            <div class="sm:flex md:gap-12 gap-8 mt-8 ml-5 sm:text-xl">
+              <ul class="list-disc flex flex-col gap-4">
+                <li>Support AI Generations</li>
+                <li>Delegate and Accrue Fees</li>
+                <li>Validate the Network and Earn</li>
+              </ul>
+              <ul class="list-disc flex flex-col gap-4">
+                <li>Participate in Governance</li>
+                <li>Stake LP for Residual Income</li>
+                <li>Advocate for Free and Open AI</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex items-center justify-center mx-auto flex-col gap-12 self-end"
+        >
+          <img
+            src="./assets/Objects.png"
+            alt=""
+            width="750"
+            class="md:w-[750px] w-[350px]"
+          />
+          <button
+            class="bg-gradient-to-r from-[#9FD7FC] to-[#4F35F8] py-2 px-7 rounded-full text-white font-semibold text-xl"
+          >
+            Buy $BAL
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="max-w-xl text-center m-auto flex flex-col gap-12 mt-40 mb-12 justify-center items-center"
+      >
+        <img
+          src="./assets/Ellipse 16.png"
+          alt=""
+          width="300"
+          class="absolute right-0"
+        />
+        <img
+          src="./assets/Ellipse 15.png"
+          alt=""
+          width="600"
+          class="absolute right-[30%] mt-28"
+        />
+        <h1 class="sm:text-4xl text-3xl font-bold">
+          Discover
+          <span
+            class="bg-gradient-to-r from-[#9FD7FC] to-[#4F35F8] inline-block text-transparent bg-clip-text"
+          >
+            Pre-Built
+          </span>
+          Strategies
+        </h1>
+        <p class="sm:px-20">
+          Find Strategies you can participate in right away, across a variety of
+          purpose driven categories.
+        </p>
+        <button
+          class="border border-[#4F35F8] py-1 px-9 rounded-full text-white text-xl"
+        >
+          Connect wallet
+        </button>
+      </div>
+
+      <!-- <div
+        class="max-w-7xl m-auto flex md:flex-row flex-col border border-[#003b7367] rounded-md mb-10"
+      >
+        <div class="p-8 border-[#003b739c] border md:w-auto w-full">
+          <img src="./assets/Group 970.png" alt="" width="250" />
+        </div>
+        <div class="md:p-12 sm:p-8 p-4">
+          <img src="./assets/Group 969.png" alt="" width="800" />
+        </div>
+      </div> -->
+
+      <div
+        class="flex flex-col lg:flex-row border border-[#003b7367] rounded-xl m-auto max-w-[94rem]"
+      >
+        <div class="lg:w-1/4 w-full p-6 border border-[#003b7367]">
+          <img src="./assets/Group 6.png" alt="" />
+          <div class="flex flex-col mt-10 gap-2">
+            <div
+              class="flex hover:text-[#6562F9] rounded-md cursor-pointer gap-4 p-3 border border-transparent hover:border-[#5745f846]"
+            >
+              <img src="./assets/list icon 1.svg" alt="" />
+              <h2 class="">Trading Bots</h2>
+            </div>
+            <div
+              class="flex hover:text-[#6562F9] rounded-md cursor-pointer gap-4 p-3 border border-transparent hover:border-[#5745f846]"
+            >
+              <img src="./assets/list icon 2.svg" alt="" />
+              <h2 class="">Automate Smart Contracts</h2>
+            </div>
+            <div
+              class="flex hover:text-[#6562F9] rounded-md cursor-pointer gap-4 p-3 border border-transparent hover:border-[#5745f846]"
+            >
+              <img src="./assets/list icon 3.svg" alt="" />
+              <h2 class="">Trading Templates</h2>
+            </div>
+            <div
+              class="flex hover:text-[#6562F9] rounded-md cursor-pointer gap-4 p-3 border border-transparent hover:border-[#5745f846]"
+            >
+              <img src="./assets/list icon 4.svg" alt="" />
+              <h2 class="">Trading Dashboard</h2>
+            </div>
+          </div>
+        </div>
+        <div class="lg:w-3/4 w-full sm:p-10 p-4">
+          <div class="flex justify-between items-center">
+            <div class="flex flex-col gap-3 text-[#F4F4F4]">
+              <h2 class="text-lg text-[#F4F4F4]">Manage Trading</h2>
+              <h2 class="mt-7">Build your first Trading Bot</h2>
+              <p class="text-sm text-[#979797]">
+                Improve your crypto processes by creating automated workflows.
+              </p>
+            </div>
+            <div>
+              <img
+                src="./assets/icon.png"
+                alt=""
+                width="70"
+                height="70"
+                class=""
+              />
+            </div>
+          </div>
+          <div
+            class="flex sm:flex-row flex-col sm:items-start items-center gap-4 mt-10"
+          >
+            <div class="md:w-1/5 sm:w-2/5 w-4/5">
+              <p class="text-sm text-[#979797]">Start from scratch</p>
+              <div
+                class="border border-[#003b7367] h-48 rounded-xl md:max-w-xs max-w-full mt-8 flex items-center justify-center gap-4 flex-col text-center"
+              >
+                <img
+                  src="./assets/Group 973.png"
+                  alt=""
+                  class="cursor-pointer"
+                />
+                <p class="text-sm px-8">Launch Custom Trading Bot</p>
+              </div>
+            </div>
+            <div class="w-4/5">
+              <p class="text-sm text-[#979797]">
+                Pre Configured Trading Templates
+              </p>
+              <div class="flex flex-wrap md:flex-row flex-col gap-4 mt-8">
+                <div
+                  class="border border-[#003b7367] h-48 rounded-xl md:max-w-[45%] max-w-full flex flex-col justify-between p-3 gap-4"
+                >
+                  <img src="./assets/joined 1.png" alt="" width="50" />
+                  <div class="flex justify-between">
+                    <h2>Ethereum Price Drop</h2>
+                    <img src="./assets/settings.png" alt="" />
+                  </div>
+                  <img src="./assets/Group 976.png" alt="" />
+                </div>
+                <div
+                  class="border border-[#003b7367] h-48 rounded-xl md:max-w-[45%] max-w-full flex flex-col justify-between p-3 gap-4"
+                >
+                  <img src="./assets/joined 1.png" alt="" width="50" />
+                  <div class="flex justify-between">
+                    <h2>Ethereum Price Drop</h2>
+                    <img src="./assets/settings.png" alt="" />
+                  </div>
+                  <img src="./assets/Group 976.png" alt="" />
+                </div>
+              </div>
+              <div class="flex flex-wrap md:flex-row flex-col gap-4 mt-4">
+                <div
+                  class="border border-[#003b7367] h-48 rounded-xl md:max-w-[45%] max-w-full flex flex-col justify-between p-3 gap-4"
+                >
+                  <img src="./assets/joined 1.png" alt="" width="50" />
+                  <div class="flex justify-between">
+                    <h2>Ethereum Price Drop</h2>
+                    <img src="./assets/settings.png" alt="" />
+                  </div>
+                  <img src="./assets/Group 976.png" alt="" />
+                </div>
+                <div
+                  class="border border-[#003b7367] h-48 rounded-xl md:max-w-[45%] max-w-full flex flex-col justify-between p-3 gap-4"
+                >
+                  <img src="./assets/joined 1.png" alt="" width="50" />
+                  <div class="flex justify-between">
+                    <h2>Ethereum Price Drop</h2>
+                    <img src="./assets/settings.png" alt="" />
+                  </div>
+                  <img src="./assets/Group 976.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 3rd Section End -->
+
+    <!-- 4th Section Start -->
+    <div class="bg-[#000C17] py-20 bg-opacity-30">
+      <div class="max-w-3xl m-auto sm:px-12 px-10 relative">
+        <img
+          src="./assets/Layer_1.png"
+          alt=""
+          width="60"
+          class="absolute -top-12 left-10"
+        />
+        <p class="text-white sm:text-4xl text-xl text-center font-bold">
+          Shape the
+          <span
+            class="bg-gradient-to-r from-[#9FD7FC] to-[#4F35F8] inline-block text-transparent bg-clip-text"
+            >Future of AI
+          </span>
+          with Balance
+        </p>
+      </div>
+    </div>
+    <!-- 4th Section End -->
+
+    <!-- Footer Start -->
+    <div
+      class="flex justify-between sm:flex-row flex-col items-center max-w-7xl m-auto p-14 gap-6"
+    >
+      <div>
+        <img src="/assets/Group 7.png" alt="" width="230" />
+        <p class="text-[#515151] mt-2">© 2024 Balance. All rights reserved.</p>
+      </div>
+      <div class="flex gap-6">
+        <img src="./assets/Vector.png" alt="" width="40" />
+        <img src="./assets/Vector2.png" alt="" width="40" />
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".toggle_icon").click(function () {
+          $("#dropdown").toggleClass("h-screen pt-10");
+        });
+        // function openNav() {
+        //     $("#dropdown").addClass("h-screen pt-10");
+        // }
+
+        $(".closebtn").click(function () {
+          $("#dropdown").removeClass("h-screen pt-10");
+        });
+      });
+    </script>
+  </body>
+</html>

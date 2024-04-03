@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ethera</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+
+  <style>
+    @font-face {
+      font-family: Axiforma;
+      src: url("./assets/Axiforma-Regular.ttf");
+    }
+    .overflow-scroll::-webkit-scrollbar {
+      display: none;
+    }
+    body {
+      font-family: Axiforma, sans-serif;
+    }
+    .dropdown {
+      width: 0;
+      height: 100vh;
+      position: fixed;
+      z-index: 500;
+      overflow-x: hidden;
+      transition: 0.8s;
+    }
+
+    .dropdown a {
+      padding: 8px 8px 8px 8px;
+      text-decoration: none;
+      font-size: 20px;
+      color: #ffffff;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .dropdown .closebtn {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: white;
+      font-size: 50px;
+      margin-left: 20px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .dropdown a {
+        font-size: 18px;
+      }
+    }
+    @media (min-height: 800px) {
+      .h-scr {
+        height: 100vh;
+      }
+    }
+  </style>
+  <body class="text-white bg-[#F7F7F7]">
+    <div class="flex h-full">
+      <div
+        class="w-[22%] bg-[#0F1214] flex-col items-center py-8 lg:flex hidden h-screen"
+      >
+        <a href="/">
+          <img src="./assets/icon.png" alt="" width="180" />
+        </a>
+        <div class="mt-20 flex flex-col gap-2 w-full">
+          <a href="/" class="border-l-4 border-white">
+            <div
+              class="flex justify-start py-3 gap-2 text-lg items-center font-semibold w-40 m-auto"
+            >
+              <img src="./assets/1st.png" alt="" width="20" />
+              <h3>Dashboard</h3>
+            </div>
+          </a>
+          <a
+            href="/metrics.html"
+            class="border-l-4 hover:border-white border-black"
+          >
+            <div
+              class="flex justify-start py-3 gap-2 items-center w-40 m-auto text-lg"
+            >
+              <img src="./assets/2nd.png" alt="" width="20" />
+              <h3>Metrics</h3>
+            </div>
+          </a>
+          <a
+            href="/performance.html"
+            class="border-l-4 hover:border-white border-black"
+          >
+            <div
+              class="flex justify-start py-3 gap-2 items-center w-40 m-auto text-lg"
+            >
+              <img src="./assets/3rd.png" alt="" width="20" />
+              <h3>Performance</h3>
+            </div>
+          </a>
+          <a
+            href="/key-metrics.html"
+            class="border-l-4 hover:border-white border-black"
+          >
+            <div
+              class="flex justify-start py-3 gap-2 items-center w-40 m-auto text-lg"
+            >
+              <img src="./assets/4th.png" alt="" width="20" />
+              <h3>Key Metrics</h3>
+            </div>
+          </a>
+          <a
+            href="/transactions.html"
+            class="border-l-4 hover:border-white border-black"
+          >
+            <div
+              class="flex justify-start py-3 gap-2 items-center w-40 m-auto text-lg"
+            >
+              <img src="./assets/5th.png" alt="" width="20" />
+              <h3>Transactions</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="lg:w-[78%] w-full h-screen overflow-scroll relative">
+        <!-- Mobile Menu Start -->
+        <div class="lg:hidden block z-50 absolute top-6 left-4">
+          <button id="hamburger-icon" class="float-right toggle_icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8"
+              fill="black"
+              viewBox="0 0 24 24"
+              stroke="black"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="3"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <div
+          id="dropdown"
+          class="dropdown flex flex-col justify-center uppercase top-0 left-0 bg-[#0F1214] z-50"
+        >
+          <button class="closebtn mt-2">×</button>
+          <a href="/" class>
+            <div
+              class="flex justify-start py-3 gap-2 text-lg items-center font-semibold w-40 m-auto"
+            >
+              <img src="./assets/1st.png" alt="" width="20" />
+              <h3>Dashboard</h3>
+            </div>
+          </a>
+          <a href="/metrics.html">
+            <div
+              class="flex justify-start py-3 gap-2 items-center w-40 m-auto text-lg"
+            >
+              <img src="./assets/2nd.png" alt="" width="20" />
+              <h3>Metrics</h3>
+            </div>
+          </a>
+          <a href="/performance.html">
+            <div
+              class="flex justify-start py-3 gap-2 items-center w-40 m-auto text-lg"
+            >
+              <img src="./assets/3rd.png" alt="" width="20" />
+              <h3>Performance</h3>
+            </div>
+          </a>
+          <a href="/key-metrics.html">
+            <div
+              class="flex justify-start py-3 gap-2 items-center w-40 m-auto text-lg"
+            >
+              <img src="./assets/4th.png" alt="" width="20" />
+              <h3>Key Metrics</h3>
+            </div>
+          </a>
+          <a href="/transactions.html">
+            <div
+              class="flex justify-start py-3 gap-2 items-center w-40 m-auto text-lg"
+            >
+              <img src="./assets/5th.png" alt="" width="20" />
+              <h3>Transactions</h3>
+            </div>
+          </a>
+        </div>
+        <!-- Mobile Menu End -->
+        <div
+          class="bg-white pl-16 pr-8 sm:pr-16 w-full text-black flex justify-between gap-2 h-fit py-4"
+        >
+          <div class="flex flex-col justify-center">
+            <div class="flex justify-start gap-2 items-center">
+              <img src="./assets/1st copy.png" alt="" width="20" />
+              <h3 class="text-[#0F1214] sm:text-base text-xs">> Dashboard</h3>
+            </div>
+          </div>
+          <div class="flex gap-2 items-center">
+            <div class="flex flex-col items-end">
+              <h2 class="sm:text-sm text-xs font-semibold">Alex Harmony</h2>
+              <p class="text-[0.65rem] text-[#0F1214]">alexharmony@gmail.com</p>
+            </div>
+            <img src="./assets/user.jpg" alt="" width="50" />
+          </div>
+        </div>
+        <div class="sm:px-10 sm:py-12 py-8 px-8">
+          <div class="flex md:flex-row flex-col gap-6 justify-between">
+            <div class="md:w-[68%] h-[300px] bg-white rounded-md">
+              <div>
+                <h1
+                  class="bg-[#0F1214] w-fit pt-2 pb-1 pl-6 pr-16 text-sm rounded-br-md uppercase"
+                >
+                  NAV Over Time
+                </h1>
+                <div
+                  id="chartContainer1"
+                  style="height: 220px; width: 90%"
+                  class="m-auto mt-8"
+                ></div>
+              </div>
+            </div>
+            <div class="md:w-[32%] h-[300px] bg-white rounded-md">
+              <div>
+                <h1
+                  class="bg-[#0F1214] w-fit pt-2 pb-1 pl-6 pr-16 text-sm rounded-br-md uppercase"
+                >
+                  Growth
+                </h1>
+                <div class="px-6 py-10 text-black text-sm">
+                  <h1 class="text-[#B6E1CE] text-5xl font-bold tracking-widest">
+                    +1320%
+                  </h1>
+                  <p class="mt-4 capitalize">
+                    <span class="font-semibold">+1320%</span> growth this year
+                    so far
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex md:flex-row flex-col gap-6 justify-between mt-6">
+            <div class="md:w-[32%] h-[300px] bg-white rounded-md">
+              <div>
+                <h1
+                  class="bg-[#0F1214] w-fit pt-2 pb-1 pl-6 pr-16 text-sm rounded-br-md uppercase"
+                >
+                  Graph Data
+                </h1>
+                <div class="px-6 py-10 text-black text-sm">
+                  <h1 class="text-[#B6E1CE] text-5xl font-bold tracking-widest">
+                    200%
+                  </h1>
+                  <p class="mt-4 capitalize">
+                    <span class="font-semibold">200%</span> growth this year so
+                    far
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="md:w-[68%] h-[300px] bg-white rounded-md">
+              <div>
+                <h1
+                  class="bg-[#0F1214] w-fit pt-2 pb-1 pl-6 pr-16 text-sm rounded-br-md uppercase"
+                >
+                  Roi Comparison
+                </h1>
+                <div
+                  id="chartContainer"
+                  style="height: 220px; width: 90%"
+                  class="m-auto mt-8"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+
+    <!-- <script>
+      const ctx = document.getElementById("myChart1");
+
+      new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec",
+          ],
+          datasets: [
+            {
+              label: "NAV Over Time",
+              data: [25, 40, 70, 220, 230, 225, 130, 100, 220, 420, 480],
+              borderWidth: 1,
+              pointRadius: 4,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          scales: {
+            y: {
+              min: 0,
+              max: 500,
+              ticks: {
+                stepSize: 100,
+              },
+            },
+            x: {
+              border: {
+                display: false,
+              },
+              grid: {
+                display: false,
+                drawOnChartArea: false,
+                drawTicks: false,
+              },
+            },
+          },
+        },
+      });
+    </script> -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".toggle_icon").click(function () {
+          $("#dropdown").toggleClass("w-60 h-screen");
+        });
+        // function openNav() {
+        //     $("#dropdown").addClass("h-screen");
+        // }
+
+        $(".closebtn").click(function () {
+          $("#dropdown").removeClass("w-60 h-screen");
+        });
+      });
+    </script>
+    <script>
+      window.onload = function () {};
+      var chart1 = new CanvasJS.Chart("chartContainer1", {
+        animationEnabled: true,
+        theme: "light2",
+
+        data: [
+          {
+            type: "line",
+            indexLabelFontSize: 16,
+            dataPoints: [
+              { y: 450 },
+              { y: 414 },
+
+              { y: 460 },
+              { y: 450 },
+              { y: 500 },
+              { y: 480 },
+              { y: 480 },
+
+              { y: 500 },
+              { y: 480 },
+              { y: 510 },
+            ],
+          },
+        ],
+      });
+      chart1.render();
+
+      window.onload = function () {
+        var chart = new CanvasJS.Chart("chartContainer", {
+          exportEnabled: false,
+          animationEnabled: true,
+          //   title: {
+          //     text: "Car Parts Sold in Different States",
+          //   },
+          //   subtitles: [
+          //     {
+          //       text: "Click Legend to Hide or Unhide Data Series",
+          //     },
+          //   ],
+          axisX: {
+            title: " ",
+          },
+          axisY: {
+            titleFontColor: "#4F81BC",
+            lineColor: "#B6E1CE",
+            labelFontColor: "#4F81BC",
+            tickColor: "#4F81BC",
+            includeZero: true,
+            gridColor: "#FFFFFF",
+          },
+          axisY2: {
+            titleFontColor: "#C0504E",
+            lineColor: "#C0504E",
+            labelFontColor: "#C0504E",
+            tickColor: "#C0504E",
+            includeZero: true,
+            gridColor: "#FFFFFF",
+          },
+          toolTip: {
+            shared: false,
+          },
+          legend: {
+            cursor: "pointer",
+            itemclick: toggleDataSeries,
+          },
+          data: [
+            {
+              type: "column",
+              name: "Oil Filter",
+              color: "#B6E1CE",
+              showInLegend: false,
+              yValueFormatString: "#,##0.# Units",
+              dataPoints: [
+                { label: "Jan", y: 50 },
+                { label: "Feb", y: 60 },
+                { label: "Mar", y: 70 },
+                { label: "Apr", y: 80 },
+                { label: "May", y: 120 },
+                { label: "Jun", y: 140 },
+                { label: "Jul", y: 150 },
+                { label: "Aug", y: 200 },
+              ],
+            },
+            {
+              type: "column",
+              name: "Clutch",
+              color: "#F6CBCC",
+              axisYType: "secondary",
+              showInLegend: false,
+              yValueFormatString: "#,##0.# Units",
+              dataPoints: [
+                { label: "Jan", y: 50 },
+                { label: "Feb", y: 40 },
+                { label: "Mar", y: 80 },
+                { label: "Apr", y: 110 },
+                { label: "May", y: 80 },
+                { label: "Jun", y: 150 },
+                { label: "Jul", y: 120 },
+                { label: "Aug", y: 170 },
+              ],
+            },
+          ],
+        });
+        chart.render();
+
+        function toggleDataSeries(e) {
+          if (
+            typeof e.dataSeries.visible === "undefined" ||
+            e.dataSeries.visible
+          ) {
+            e.dataSeries.visible = false;
+          } else {
+            e.dataSeries.visible = true;
+          }
+          e.chart.render();
+        }
+      };
+    </script>
+  </body>
+</html>

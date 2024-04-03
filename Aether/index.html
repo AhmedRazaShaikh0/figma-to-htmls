@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aether</title>
+    <link rel="icon" href="./assets/icon.png" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <style>
+    @font-face {
+      font-family: Nasalization;
+      src: url("./assets/nasalization-rg.otf");
+    }
+    h1 {
+      font-family: Nasalization, sans-serif;
+    }
+    .dropdown {
+      width: 100%;
+      height: 0;
+      position: fixed;
+      z-index: 500;
+      overflow-x: hidden;
+      transition: 0.8s;
+    }
+
+    .dropdown a {
+      padding: 8px 8px 8px 8px;
+      text-decoration: none;
+      font-size: 20px;
+      color: #ffffff;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .dropdown .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      color: white;
+      font-size: 50px;
+      margin-left: 50px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .dropdown a {
+        font-size: 18px;
+      }
+    }
+
+    .toggle_icon {
+      cursor: pointer;
+      color: #ffffff;
+      order: 2;
+    }
+  </style>
+  <body class="bg-black text-white">
+    <!-- Header Start -->
+    <header class="absolute sm:top-8 top-8 w-full z-10 sm:px-12 px-4">
+      <div
+        class="max-w-7xl m-auto text-[#272E35] flex md:justify-center justify-between items-center gap-10 px-4"
+      >
+        <div class="hidden md:block md:-ml-12">
+          <ul class="text-white flex gap-10">
+            <li>
+              <a class="hover:text-[#ED4738]" href="/">Home</a>
+            </li>
+            <li>
+              <a class="hover:text-[#ED4738]" href="/">About Us</a>
+            </li>
+            <li>
+              <a class="hover:text-[#ED4738]" href="/">Notion</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <img src="./assets/icon.png" alt="" width="80" height="80" class="" />
+        </div>
+        <div class="hidden md:block">
+          <ul class="text-white flex gap-10">
+            <li>
+              <a class="hover:text-[#ED4738]" href="/">Twitter</a>
+            </li>
+            <li>
+              <a class="hover:text-[#ED4738]" href="/">Telegram</a>
+            </li>
+          </ul>
+        </div>
+        <div class="md:hidden block z-50">
+          <button id="hamburger-icon" class="float-right toggle_icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8"
+              fill="white"
+              viewBox="0 0 24 24"
+              stroke="white"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="3"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <div
+          id="dropdown"
+          class="dropdown flex flex-col justify-center uppercase top-0 left-0 bg-[rgba(0,0,0,0.9)] z-50"
+        >
+          <button class="closebtn mr-4 mt-8">×</button>
+          <ul class="text-white p-12 text-center">
+            <li>
+              <a class="text-[#ED4738] py-2" href="/">Home</a>
+            </li>
+            <li>
+              <a class="text-[#ED4738] py-2" href="#">About Us</a>
+            </li>
+            <li>
+              <a class="text-[#ED4738] py-2" href="#">Notion</a>
+            </li>
+            <li>
+              <a class="text-[#ED4738] py-2" href="#">Twitter</a>
+            </li>
+            <li>
+              <a class="text-[#ED4738] py-2" href="#">Telegram</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- Header Start -->
+
+    <!-- 1st Section Start -->
+    <div
+      class="flex flex-col justify-center items-center relative m-auto text-white md:gap-16 gap-8 md:pt-56 pt-40 md:pb-40 pb-28 px-8"
+    >
+      <h1 class="sm:text-7xl text-4xl text-center sm:px-0 px-2 max-w-6xl">
+        Enable
+        <span
+          class="bg-gradient-to-r from-[#AAA2F7] to-[#706EF5] inline-block text-transparent bg-clip-text"
+          >Advanced</span
+        >
+        On-Chain Analysis with
+        <span
+          class="bg-gradient-to-r from-[#AAA2F7] to-[#706EF5] inline-block text-transparent bg-clip-text"
+          >AI</span
+        >
+      </h1>
+
+      <p class="text-center max-w-4xl sm:px-10 text-white sm:text-lg">
+        Aether would be designed to serve both novice and experienced
+        cryptocurrency investors, offering deep insights into market dynamics
+        without the complexities associated with regulatory compliance and legal
+        considerations. By focusing on the analytical strengths of AI, Aether
+        aims to democratize access to high-quality investment intelligence,
+        enabling users to make informed decisions based on comprehensive data
+        analysis.
+      </p>
+      <div class="flex gap-2">
+        <button
+          class="text-white bg-gradient-to-r from-[#AAA2F7] to-[#706EF5] py-2 sm:px-6 px-4 rounded-full"
+        >
+          <h1>TWITTER</h1>
+        </button>
+        <button
+          class="border border-[#706EF5] py-2 sm:px-6 px-4 text-white rounded-full"
+        >
+          <h1>TELEGRAM</h1>
+        </button>
+      </div>
+      <img
+        src="./assets/Group 1089686.png"
+        alt=""
+        width="450"
+        class="absolute top-0 right-0"
+      />
+      <img
+        src="./assets/Group 1089687.png"
+        alt=""
+        width="400"
+        class="absolute sm:-bottom-60 -bottom-72 left-0 -z-10"
+      />
+      <img
+        src="./assets/Asset 3@4x-8.png"
+        alt=""
+        width="200"
+        class="absolute -bottom-48 sm:right-10 right-1"
+      />
+      <img
+        src="./assets/Layer_1.png"
+        alt=""
+        class="absolute sm:top-32 top-44 md:left-40 left-2"
+        width="120"
+      />
+      <img
+        src="./assets/Layer_2.png"
+        alt=""
+        class="absolute md:top-48 top-60 sm:right-36 right-4"
+        width="90"
+      />
+      <img
+        src="./assets/Layer_3.png"
+        alt=""
+        class="absolute sm:bottom-16 bottom-10 md:right-96 right-20"
+        width="90"
+      />
+    </div>
+    <!-- 1st Section End-->
+
+    <!-- 2nd Section Start-->
+    <div>
+      <h2 class="text-center font-semibold text-3xl">About Us</h2>
+      <div class="bg-[#06051F] border-y-[#706EF5] border-y-2 py-10 my-14">
+        <div
+          class="max-w-6xl m-auto px-10 flex md:gap-5 gap-10 justify-between md:flex-row flex-col"
+        >
+          <div class="flex flex-col gap-2 md:w-96">
+            <img src="./assets/mission.png" alt="" width="40" />
+            <h3
+              class="font-bold text-2xl bg-gradient-to-r from-[#AAA2F7] to-[#706EF5] inline-block text-transparent bg-clip-text"
+            >
+              Mission
+            </h3>
+            <p class="text-xl">
+              To empower early-stage projects with innovative funding solutions
+              and foster a thriving community of passionate investors and
+              builders.
+            </p>
+          </div>
+          <div class="flex flex-col gap-2 md:w-96">
+            <img src="./assets/vision.png" alt="" width="40" />
+            <h3
+              class="font-bold text-2xl bg-gradient-to-r from-[#AAA2F7] to-[#706EF5] inline-block text-transparent bg-clip-text"
+            >
+              Vision
+            </h3>
+            <p class="text-xl">
+              To be the leading launchpad for the next generation of
+              groundbreaking ventures, shaping the future of blockchain
+              innovation.
+            </p>
+          </div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+    <!-- 2nd Section End-->
+
+    <!-- 3rd Section Start-->
+    <div class="sm:pt-36 pt-16 pb-10 px-12 relative">
+      <h1 class="sm:text-5xl text-3xl text-center sm:px-0 px-2">
+        <span
+          class="bg-gradient-to-r from-[#AAA2F7] to-[#706EF5] inline-block text-transparent bg-clip-text"
+        >
+          Advanced AI</span
+        >
+        Solutions
+      </h1>
+      <h1 class="sm:text-5xl text-3xl text-center sm:px-0 px-2 mt-2">
+        Tailored for Your
+        <span
+          class="bg-gradient-to-r from-[#AAA2F7] to-[#706EF5] inline-block text-transparent bg-clip-text"
+        >
+          Success</span
+        >
+      </h1>
+      <p class="text-center sm:px-10 text-white sm:text-lg mt-12">
+        The integration of AI in Aether would be multifaceted, involving:
+      </p>
+      <div
+        class="max-w-6xl m-auto border border-[#706ef583] rounded-xl sm:mt-36 mt-20 md:pb-16 md:px-16 px-8 pb-8 pt-12 flex md:gap-0 gap-8 md:flex-row flex-col bg-[#020211]"
+      >
+        <div class="md:w-[55%] flex flex-col gap-16 items-baseline">
+          <h3
+            class="font-bold sm:text-3xl text-xl bg-gradient-to-r from-[#AAA2F7] to-[#706EF5] inline-block text-transparent bg-clip-text"
+          >
+            Natural Language Processing (NLP):
+          </h3>
+          <p class="sm:text-lg md:max-w-sm md:pr-16">
+            To analyze social media and news outlets for sentiment analysis,
+            gauging market mood and potential impact on cryptocurrency prices.
+          </p>
+          <a
+            class="text-white bg-gradient-to-r from-[#AAA2F7] to-[#706EF5] py-1 sm:px-6 px-4 rounded-full mt-4"
+            href="https://aether-ai.notion.site/Introduction-to-Aether-925b4b8b11b44664b15af69e50196380?pvs=4"
+          >
+            <button>Learn more</button>
+          </a>
+        </div>
+        <div class="md:w-[65%] pt-10 pb-5">
+          <img src="./assets/right img.png" alt="" width="600" class="-ml-16" />
+        </div>
+      </div>
+
+      <div class="max-w-6xl m-auto">
+        <div
+          class="max-w-2xl border border-[#706ef583] rounded-xl mt-5 pt-12 pr-8 pl-2 flex sm:flex-row sm:items-baseline items-center flex-col sm:gap-0 gap-2 bg-[#020211]"
+        >
+          <div class="sm:w-[50%] sm:self-end">
+            <img
+              src="./assets/left img.png"
+              alt=""
+              width="300"
+              class="sm:-mb-4"
+            />
+          </div>
+          <div class="sm:w-1/2 flex flex-col gap-2 items-baseline">
+            <h3
+              class="font-bold sm:text-3xl text-xl bg-gradient-to-r from-[#AAA2F7] to-[#706EF5] inline-block text-transparent bg-clip-text"
+            >
+              Pattern Recognition:
+            </h3>
+            <p class="sm:text-lg max-w-sm sm:pr-8">
+              Employing algorithms to identify historical data patterns and
+              their outcomes, improving the predictive accuracy of market
+              movements.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="max-w-6xl m-auto flex justify-end">
+        <div
+          class="max-w-2xl border border-[#706ef583] rounded-xl mt-5 pl-8 pr-2 pt-12 pb-6 flex sm:flex-row items-center flex-col gap-2 bg-[#020211] relative"
+        >
+          <div class="sm:w-[45%] flex flex-col gap-4 items-baseline">
+            <h3
+              class="font-bold sm:text-3xl text-xl bg-gradient-to-r from-[#AAA2F7] to-[#706EF5] inline-block text-transparent bg-clip-text"
+            >
+              Anomaly Detection:
+            </h3>
+            <p class="sm:text-lg max-w-sm sm:pr-12">
+              Identifying outliers in trading volume or price movements that
+              could indicate significant events, enabling timely user alerts
+            </p>
+          </div>
+          <div class="sm:w-[55%]">
+            <img
+              src="./assets/right img 2.png"
+              alt=""
+              width="350"
+              class="sm:-mb-10"
+            />
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/Ellipse 4.png"
+        alt=""
+        width="350"
+        class="absolute right-0 -top-52"
+      />
+      <img
+        src="./assets/Ellipse 5.png"
+        alt=""
+        width="350"
+        class="absolute left-0 -top-52"
+      />
+      <img
+        src="./assets/Asset 3@4x-81.png"
+        alt=""
+        width="300"
+        class="absolute left-0 -bottom-20 -z-10"
+      />
+      <img
+        src="./assets/left ellipse.png"
+        alt=""
+        class="absolute md:left-60 sm:left-20 left-4 sm:top-64 top-40"
+      />
+      <img
+        src="./assets/right ellipse.png"
+        alt=""
+        width="120"
+        class="absolute sm:top-10 top-0 md:right-72 right-20"
+      />
+      <img
+        src="./assets/Asset 4@4x-8.png"
+        alt=""
+        width="300"
+        class="absolute right-0 top-[45%] -z-10"
+      />
+    </div>
+    <!-- 3rd Section End-->
+
+    <!-- 4th Section Start-->
+    <div class="max-w-6xl m-auto px-10 flex flex-col justify-center gap-10">
+      <h1 class="sm:text-5xl text-3xl text-center sm:px-0 px-2">
+        <span
+          class="bg-gradient-to-r from-[#AAA2F7] to-[#706EF5] inline-block text-transparent bg-clip-text"
+          >AETH</span
+        >
+        Token
+      </h1>
+      <p class="text-center max-w-3xl m-auto text-xl sm:px-10 px-4">
+        MoonBlast Ecosystem operations are based on the MNB Token. Learn more
+        about the possibility to get and utilize the token.
+      </p>
+      <div
+        class="flex md:flex-row md:items-baseline items-center flex-col justify-center gap-10 my-16"
+      >
+        <div
+          class="bg-[#020211] border border-[#706ef53f] sm:w-[26rem] rounded-xl"
+        >
+          <div class="border-b border-[#706ef53f]">
+            <h3
+              class="font-bold text-2xl bg-gradient-to-r from-[#AAA2F7] to-[#706EF5] inline-block text-transparent bg-clip-text pb-5 pl-10 pt-9"
+            >
+              Private Sale
+            </h3>
+          </div>
+          <div class="border-b border-[#706ef53f] sm:text-xl px-10 py-6">
+            <div class="flex justify-between gap-4">
+              <h4 class="text-[#555555]">Amount</h4>
+              <p class="font-bold">45,000,000 AETH</p>
+            </div>
+            <div class="flex justify-between gap-4 mt-2">
+              <h4 class="text-[#555555]">Price</h4>
+              <p class="font-bold">$0.022</p>
+            </div>
+          </div>
+          <div class="sm:text-xl px-10 pt-8 pb-10">
+            <div class="flex justify-between gap-4">
+              <h4 class="text-[#555555]">Release</h4>
+              <p class="">5% TGE</p>
+            </div>
+            <div class="flex justify-between gap-4 mt-2">
+              <h4 class="text-[#555555]">Cliff</h4>
+              <p class="">3 months</p>
+            </div>
+            <div class="flex justify-between gap-4 mt-2">
+              <h4 class="text-[#555555]">Vesting</h4>
+              <p class="">15 months</p>
+            </div>
+            <div class="flex justify-between gap-4 mt-2">
+              <h4 class="text-[#555555]">Distribution</h4>
+              <p class="">Daily</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-[#020211] border border-[#706ef53f] sm:w-[26rem] rounded-xl"
+        >
+          <div class="border-b border-[#706ef53f]">
+            <h3
+              class="font-bold text-2xl bg-gradient-to-r from-[#AAA2F7] to-[#706EF5] inline-block text-transparent bg-clip-text pb-5 pl-10 pt-10"
+            >
+              Public Sale
+            </h3>
+          </div>
+          <div class="border-b border-[#706ef53f] sm:text-xl px-10 py-6">
+            <div class="flex justify-between gap-4">
+              <h4 class="text-[#555555]">Amount</h4>
+              <p class="font-bold">30,000,000 AETH</p>
+            </div>
+            <div class="flex justify-between gap-4 mt-2">
+              <h4 class="text-[#555555]">Price</h4>
+              <p class="font-bold">$0.03</p>
+            </div>
+          </div>
+          <div class="sm:text-xl px-10 pt-8 pb-10">
+            <div class="flex justify-between gap-4">
+              <h4 class="text-[#555555]">Release</h4>
+              <p class="">15% TGE</p>
+            </div>
+            <div class="flex justify-between gap-4 mt-2">
+              <h4 class="text-[#555555]">Cliff</h4>
+              <p class="">1 months</p>
+            </div>
+            <div class="flex justify-between gap-4 mt-2">
+              <h4 class="text-[#555555]">Vesting</h4>
+              <p class="">11 months</p>
+            </div>
+            <div class="flex justify-between gap-4 mt-2">
+              <h4 class="text-[#555555]">Distribution</h4>
+              <p class="">Daily</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 4th Section End-->
+
+    <!-- 5th Section Start-->
+    <div
+      class="max-w-6xl m-auto sm:px-16 px-6 flex flex-col justify-center py-14"
+    >
+      <h1 class="sm:text-5xl text-3xl text-center sm:px-0 px-2 max-w-lg m-auto">
+        Why Choose
+        <span
+          class="bg-gradient-to-r from-[#AAA2F7] to-[#706EF5] inline-block text-transparent bg-clip-text"
+          >Aesther?</span
+        >
+      </h1>
+      <div
+        class="flex gap-6 lg:flex-row flex-col lg:items-baseline items-center mt-20"
+      >
+        <div
+          class="border border-white py-8 sm:px-14 px-4 rounded-xl lg:w-1/2 flex flex-col gap-4 bg-[#020211] relative lg:h-[22rem]"
+        >
+          <h3
+            class="font-bold sm:text-2xl text-xl bg-gradient-to-r from-[#AAA2F7] to-[#706EF5] inline-block text-transparent bg-clip-text"
+          >
+            Reach a Qualified Audience:
+          </h3>
+          <p class="sm:text-xl max-w-sm">
+            Tap into our network of active and engaged investors seeking
+            promising projects.
+          </p>
+          <img src="./assets/box 1 img.png" alt="" width="150" class="mt-4" />
+          <img
+            src="./assets/box 1 bg.png"
+            alt=""
+            width="280"
+            class="absolute bottom-0 right-0"
+          />
+        </div>
+        <div
+          class="border border-white py-8 sm:px-14 px-4 rounded-xl lg:w-1/2 flex flex-col gap-4 bg-[#020211] relative lg:h-[22rem]"
+        >
+          <h3
+            class="font-bold sm:text-2xl text-xl bg-gradient-to-r from-[#AAA2F7] to-[#706EF5] inline-block text-transparent bg-clip-text"
+          >
+            Expert Guidance:
+          </h3>
+          <p class="sm:text-xl max-w-sm">
+            Benefit from our team's deep industry expertise and comprehensive
+            support throughout your launch journey.
+          </p>
+          <img src="./assets/box 2 img.png" alt="" width="120" class="mt-4" />
+          <img
+            src="./assets/box 2 bg.png"
+            alt=""
+            width="280"
+            class="absolute bottom-0 right-0"
+          />
+        </div>
+      </div>
+      <div
+        class="flex gap-6 lg:flex-row flex-col lg:items-baseline items-center mt-6"
+      >
+        <div
+          class="border border-white py-8 sm:px-14 px-4 rounded-xl lg:w-1/2 flex flex-col gap-4 bg-[#020211] relative lg:h-[22rem]"
+        >
+          <h3
+            class="font-bold sm:text-2xl text-xl bg-gradient-to-r from-[#AAA2F7] to-[#706EF5] inline-block text-transparent bg-clip-text"
+          >
+            Community-Driven Ecosystem:
+          </h3>
+          <p class="sm:text-xl sm:max-w-sm sm:pr-10">
+            Connect and collaborate with a passionate community of builders and
+            supporters.
+          </p>
+          <img src="./assets/box 3 img.png" alt="" width="120" class="mt-4" />
+          <img
+            src="./assets/box 3 bg.png"
+            alt=""
+            width="280"
+            class="absolute bottom-0 right-0"
+          />
+        </div>
+        <div
+          class="border border-white py-8 sm:px-14 px-4 rounded-xl lg:w-1/2 flex flex-col gap-4 bg-[#020211] relative lg:h-[22rem]"
+        >
+          <h3
+            class="font-bold sm:text-2xl text-xl bg-gradient-to-r from-[#AAA2F7] to-[#706EF5] inline-block text-transparent bg-clip-text"
+          >
+            Seamless User Experience:
+          </h3>
+          <p class="sm:text-xl sm:max-w-sm sm:pr-10">
+            Enjoy a user-friendly platform designed for efficiency and
+            convenience.
+          </p>
+          <img src="./assets/box 4 img.png" alt="" width="120" class="mt-4" />
+          <img
+            src="./assets/box 4 bg.png"
+            alt=""
+            width="280"
+            class="absolute bottom-0 right-0"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- 5th Section End-->
+
+    <!-- 6th Section Start-->
+    <div
+      class="bg-[#06051F] border-y-[#706EF5] border-y-2 py-16 mt-14 mb-6 relative"
+    >
+      <div class="px-10 flex flex-col gap-6 justify-center items-center">
+        <h1 class="sm:text-5xl text-3xl text-center sm:px-0 px-2">
+          Launch Your Project
+        </h1>
+        <p class="sm:text-xl text-center">
+          Apply to launch your project on Aesther and unlock your full
+          potential.
+        </p>
+        <button
+          class="text-white bg-gradient-to-r from-[#AAA2F7] to-[#706EF5] py-1 sm:px-8 px-4 rounded-full"
+        >
+          Connect Wallet
+        </button>
+      </div>
+      <img
+        src="./assets/Group 1089682.png"
+        alt=""
+        width="120"
+        class="absolute right-0 top-6"
+      />
+    </div>
+    <!-- 6th Section End-->
+
+    <!-- Footer Start-->
+    <div class="flex flex-col gap-4 py-10 items-center justify-center relative">
+      <img src="./assets/icon.png" alt="" width="120" />
+      <p class="text-[#6F6F6F]">© 2024 AETHER, All rights reserved.</p>
+      <div class="flex gap-2">
+        <img src="./assets/x.png" alt="" />
+        <img src="./assets/telegram.png" alt="" />
+        <img src="./assets/3rd social.png" alt="" />
+      </div>
+      <img
+        src="./assets/Ellipse 6.png"
+        alt=""
+        width="650"
+        class="absolute bottom-0"
+      />
+    </div>
+    <!-- Footer End-->
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".toggle_icon").click(function () {
+          $("#dropdown").toggleClass("h-screen pt-10");
+        });
+        // function openNav() {
+        //     $("#dropdown").addClass("h-screen pt-10");
+        // }
+
+        $(".closebtn").click(function () {
+          $("#dropdown").removeClass("h-screen pt-10");
+        });
+      });
+    </script>
+  </body>
+</html>

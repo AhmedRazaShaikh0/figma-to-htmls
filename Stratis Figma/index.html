@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stratis</title>
+    <link rel="icon" href="./assets/icon.png" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+  </head>
+
+  <style>
+    .custom-sec {
+      display: flex !important;
+    }
+    .slick-slide {
+      margin: 6rem 8px;
+      box-shadow: rgba(7, 193xl 245, 0.192) 0px 0px 39px 0px;
+    }
+
+    .slick-list {
+      padding: 0 10% !important;
+    }
+
+    .slick-arrow {
+      display: none !important;
+    }
+    .arrowSlideBg {
+      transition: 0.8s ease; /* Add transition property */
+    }
+
+    .bg-image {
+      background-image: url(./assets/Group.png);
+    }
+    .custom-gradient {
+      background-image: linear-gradient(to bottom, #000000be 0%, #000000 100%);
+    }
+    .custom-gradient2 {
+      background-image: linear-gradient(to bottom, #000000e5 0%, #000000 100%);
+    }
+    .border-gradient {
+      border-style: solid;
+      border-width: 1px;
+      border-image: linear-gradient(to top, #7717ff, #7717ff00) 1;
+    }
+
+    @font-face {
+      font-family: Logik;
+      src: url("Logik SemiBold.otf");
+    }
+    @font-face {
+      font-family: Axiforma;
+      src: url("FontsFree-Net-sddd4.ttf");
+    }
+    h1 {
+      font-family: Logik, sans-serif;
+    }
+    p {
+      font-family: Axiforma, sans-serif;
+    }
+  </style>
+
+  <body class="bg-black">
+    <div>
+      <!-- Header -->
+      <header class="absolute sm:top-12 top-8 w-full z-10 sm:px-8 px-4">
+        <div class="max-w-7xl m-auto text-white flex justify-between">
+          <div>
+            <img
+              src="./assets/icon.png"
+              alt=""
+              width="50"
+              height="50"
+              class="md:-mt-4"
+            />
+          </div>
+          <div class="hidden sm:block">
+            <ul class="flex gap-12">
+              <li
+                class="active:border-b-2 hover:border-b-2 border-[#7717FF] pb-1"
+              >
+                <a href="#"><p>Home</p> </a>
+              </li>
+              <li
+                class="active:border-b-2 hover:border-b-2 border-[#7717FF] pb-1"
+              >
+                <a href="#"><p>Key Features</p> </a>
+              </li>
+              <li
+                class="active:border-b-2 hover:border-b-2 border-[#7717FF] pb-1"
+              >
+                <a href="#"><p>FAQs</p> </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <button
+              class="font-semibold text-lg bg-gradient-to-r from-[#886CFF] to-[#7717FF] pb-2 pt-1 px-5 rounded-md"
+            >
+              <p>Register</p>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- Body -->
+
+      <!-- 1st Section -->
+      <div class="bg-image relative">
+        <img src="./assets/Vector.png" alt="" class="absolute top-0" />
+        <div class="custom-gradient">
+          <div
+            class="flex flex-col justify-center items-center relative max-w-5xl m-auto text-white md:gap-14 gap-8"
+          >
+            <h1
+              class="md:text-7xl sm:text-6xl text-4xl font-medium text-center sm:pt-52 pt-40 sm:px-0 px-2"
+            >
+              Pioneering the
+              <span class="text-[#7821FF]">Decentralized</span> Betting
+              <span class="text-[#7821FF]">Revolution</span>
+            </h1>
+            <img src="./assets/Group 4.png" alt="" width="200" height="200" />
+            <p
+              class="text-center max-w-4xl px-8 text-[#CFCFCF] sm:text-base text-sm"
+            >
+              Unlock a new era in sports betting with Stratis, where innovation
+              meets transparency, and the future is decentralized. We are
+              committed to reshaping the betting landscape by introducing
+              groundbreaking features and leveraging cutting-edge technology to
+              create a seamless, secure, and user-centric platform.
+            </p>
+            <img
+              src="./assets/Group 2.png"
+              alt=""
+              width="100"
+              height="100"
+              class="absolute md:-left-24 left-0 opacity-50 md:opacity-100 sm:top-80 top-64 sm:w-[100px] w-[70px] sm:h-[100px] h-[70px]"
+            />
+          </div>
+
+          <div class="flex justify-between max-w-[1400px] m-auto -mt-10">
+            <img
+              src="./assets/Layer_1.png"
+              alt=""
+              class="opacity-50 md:opacity-100 md:w-[90px] w-[50px]"
+            />
+            <img
+              src="./assets/Group 3.png"
+              alt=""
+              width="280"
+              height="280"
+              class="sm:w-[250px] w-[200px] sm:h-[250px] h-[200px] opacity-50 md:opacity-100"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 2nd Section -->
+      <!-- <div>
+        <div
+          class="flex flex-col justify-center items-center -mt-12 max-w-[1400px] m-auto relative"
+        >
+          <h1
+            class="text-white sm:text-3xl text-2xl border-[#7717FF] bg-gradient-to-b from-[#7817ff52] to-[#000000] border-[3px] rounded-md px-7 py-1"
+          >
+            Key Features
+          </h1>
+          <img
+            src="./assets/buttons.png"
+            alt=""
+            width="200"
+            class="absolute right-16 top-6"
+          />
+          <div class="flex gap-5 text-white mt-36">
+            <div
+              class="flex flex-col relative bg-[#FFCE6F0D] gap-6 text-center sm:px-8 px-4 md:py-16 sm:py-12 py-6 border border-[#FF5C00] rounded-xl items-center justify-between"
+            >
+              <img src="./assets/TEXTS (1).png" alt="" width="60" />
+              <h2 class="font-bold text-2xl">
+                No Account Restrictions for Winners
+              </h2>
+              <p class="text-[#CFCFCF] text-sm">
+                Dive into a world of unparalleled liquidity and competitive
+                odds, enhancing your sports betting experience. Stratis
+                guarantees a dynamic marketplace for all users.
+              </p>
+              <img
+                src="./assets/Vector 26.png"
+                alt=""
+                class="absolute right-0 bottom-0"
+              />
+            </div>
+            <div
+              class="flex flex-col relative gap-6 bg-[#00E0FF0D] text-center px-8 py-10 border border-[#8041FF] rounded-xl items-center justify-between"
+            >
+              <img src="./assets/TEXTS (2).png" alt="" width="60" />
+              <h2 class="font-bold text-2xl">High Liquidity and Great Odds</h2>
+              <p class="text-[#CFCFCF] text-sm">
+                Dive into a world of unparalleled liquidity and competitive
+                odds, enhancing your sports betting experience. Stratis
+                guarantees a dynamic marketplace for all users.
+              </p>
+              <img
+                src="./assets/Vector 27.png"
+                alt=""
+                class="absolute right-0 bottom-0"
+              />
+            </div>
+            <div
+              class="flex flex-col relative gap-6 bg-[#A394FF0D] text-center px-8 py-10 border border-[#824FFF] rounded-xl items-center justify-between"
+            >
+              <img src="./assets/TEXTS.png" alt="" width="90" />
+              <h2 class="font-3ol px-48 text-2xl">Industry Low Fees</h2>
+              <p class="text-[#CFCFCF] text-sm">
+                Dive into a world of unparalleled liquidity and competitive
+                odds, enhancing your sports betting experience. Stratis
+                guarantees a dynamic marketplace for all users.
+              </p>
+              <img
+                src="./assets/Vector 22.png"
+                alt=""
+                class="absolute right-0 bottom-0"
+              />
+            </div>
+            <div
+              class="flex flex-col relative gap-6 bg-[#FFCE6F0D] text-center px-8 py-10 border border-[#FF5C00] rounded-xl items-center justify-between"
+            >
+              <img src="./assets/Group 1027.png" alt="" width="90" />
+              <h2 3la px-4s8="font-bold text-2xl">
+                Powered by the Stratis Protocol
+              </h2>
+              <p class="text-[#CFCFCF] text-sm">
+                Dive into a world of unparalleled liquidity and competitive
+                odds, enhancing your sports betting experience. Stratis
+                guarantees a dynamic marketplace for all users.
+              </p>
+              <img
+                src="./assets/Vector 26.png"
+                alt=""
+                class="absolute right-0 bottom-0"
+              />
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- key feature section start -->
+      <div id="features_" class="py-6 relative z-[10] -mt-12">
+        <!-- Slider Buttons -->
+        <h1
+          class="text-white w-fit m-auto sm:text-3xl text-2xl border-[#7717FF] bg-gradient-to-b from-[#7817ff52] to-[#000000] border-[3px] rounded-md px-7 py-1"
+        >
+          Key Features
+        </h1>
+        <div class="flex justify-end pr-12 sm:pr-28 -mb-10 sm:-mb-6 mt-8 my-4">
+          <div
+            class="relative flex w-max z-[1] rounded-[40px] py-1 px-2 gap-3 border border-[#7717FF]"
+          >
+            <button
+              class="buttonArrowPrev rounded-full pl-[1rem] pr-[0.8rem] py-[0.5rem]"
+            >
+              <svg
+                width="18"
+                height="29"
+                viewBox="0 0 24 35"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M23 34L2 18.2857L23 1"
+                  stroke="#7717FF"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+            <div
+              class="arrowSlideBg absolute top-1 w-[45px] z-[-1] bottom-1 left-2.5 rounded-full bg-[#D7C3FF]"
+            ></div>
+            <button
+              class="buttonArrowNext rounded-full pl-[1rem] pr-[0.8rem] py-[0.5rem]"
+            >
+              <svg
+                width="18"
+                height="29"
+                viewBox="0 0 24 35"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 1L22 16.7143L1 34"
+                  stroke="#8560FF"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Boxes -->
+        <div id="team_" class="team text-center">
+          <div
+            class="h-auto text-white custom-sec flex flex-col relative gap-8 bg-[#FFCE6F0D] text-center sm:px-8 px-4 md:py-16 sm:py-12 py-6 border border-[#FF5C00] rounded-3xl items-center justify-between"
+          >
+            <img src="./assets/Group 1027.png" alt="" width="90" />
+            <h2 class="font-bold md:text-3xl text-2xl px-4">
+              Powered by the Stratis Protocol
+            </h2>
+            <p class="text-[#CFCFCF] sm:text-sm text-xs">
+              Dive into a world of unparalleled liquidity and competitive odds,
+              enhancing your sports betting experience. Stratis guarantees a
+              dynamic marketplace for all users.
+            </p>
+            <img
+              src="./assets/Vector 26.png"
+              alt=""
+              class="absolute right-0 bottom-0"
+            />
+          </div>
+          <div
+            class="h-auto text-white custom-sec flex flex-col relative gap-8 bg-[#FFCE6F0D] text-center sm:px-8 px-4 md:py-16 sm:py-12 py-6 border border-[#FF5C00] rounded-3xl items-center justify-between"
+          >
+            <img src="./assets/Group 1027.png" alt="" width="90" />
+            <h2 class="font-bold md:text-3xl text-2xl px-4">
+              Powered by the Stratis Protocol
+            </h2>
+            <p class="text-[#CFCFCF] sm:text-sm text-xs">
+              Dive into a world of unparalleled liquidity and competitive odds,
+              enhancing your sports betting experience. Stratis guarantees a
+              dynamic marketplace for all users.
+            </p>
+            <img
+              src="./assets/Vector 26.png"
+              alt=""
+              class="absolute right-0 bottom-0"
+            />
+          </div>
+          <div
+            class="h-auto text-white custom-sec flex flex-col relative gap-8 bg-[#FFCE6F0D] text-center sm:px-8 px-4 md:py-16 sm:py-12 py-6 border border-[#FF5C00] rounded-3xl items-center justify-between"
+          >
+            <img src="./assets/Group 1027.png" alt="" width="90" />
+            <h2 class="font-bold md:text-3xl text-2xl px-4">
+              Powered by the Stratis Protocol
+            </h2>
+            <p class="text-[#CFCFCF] sm:text-sm text-xs">
+              Dive into a world of unparalleled liquidity and competitive odds,
+              enhancing your sports betting experience. Stratis guarantees a
+              dynamic marketplace for all users.
+            </p>
+            <img
+              src="./assets/Vector 26.png"
+              alt=""
+              class="absolute right-0 bottom-0"
+            />
+          </div>
+          <div
+            class="h-auto text-white custom-sec flex flex-col relative gap-8 bg-[#FFCE6F0D] text-center sm:px-8 px-4 md:py-16 sm:py-12 py-6 border border-[#FF5C00] rounded-3xl items-center justify-between"
+          >
+            <img src="./assets/Group 1027.png" alt="" width="90" />
+            <h2 class="font-bold md:text-3xl text-2xl px-4">
+              Powered by the Stratis Protocol
+            </h2>
+            <p class="text-[#CFCFCF] sm:text-sm text-xs">
+              Dive into a world of unparalleled liquidity and competitive odds,
+              enhancing your sports betting experience. Stratis guarantees a
+              dynamic marketplace for all users.
+            </p>
+            <img
+              src="./assets/Vector 26.png"
+              alt=""
+              class="absolute right-0 bottom-0"
+            />
+          </div>
+          <div
+            class="h-auto text-white custom-sec flex flex-col relative gap-8 bg-[#FFCE6F0D] text-center sm:px-8 px-4 md:py-16 sm:py-12 py-6 border border-[#FF5C00] rounded-3xl items-center justify-between"
+          >
+            <img src="./assets/Group 1027.png" alt="" width="90" />
+            <h2 class="font-bold md:text-3xl text-2xl px-4">
+              Powered by the Stratis Protocol
+            </h2>
+            <p class="text-[#CFCFCF] sm:text-sm text-xs">
+              Dive into a world of unparalleled liquidity and competitive odds,
+              enhancing your sports betting experience. Stratis guarantees a
+              dynamic marketplace for all users.
+            </p>
+            <img
+              src="./assets/Vector 26.png"
+              alt=""
+              class="absolute right-0 bottom-0"
+            />
+          </div>
+          <div
+            class="h-auto text-white custom-sec flex flex-col relative gap-8 bg-[#FFCE6F0D] text-center sm:px-8 px-4 md:py-16 sm:py-12 py-6 border border-[#FF5C00] rounded-3xl items-center justify-between"
+          >
+            <img src="./assets/Group 1027.png" alt="" width="90" />
+            <h2 class="font-bold md:text-3xl text-2xl px-4">
+              Powered by the Stratis Protocol
+            </h2>
+            <p class="text-[#CFCFCF] sm:text-sm text-xs">
+              Dive into a world of unparalleled liquidity and competitive odds,
+              enhancing your sports betting experience. Stratis guarantees a
+              dynamic marketplace for all users.
+            </p>
+            <img
+              src="./assets/Vector 26.png"
+              alt=""
+              class="absolute right-0 bottom-0"
+            />
+          </div>
+          <div
+            class="h-auto text-white custom-sec flex flex-col relative gap-8 bg-[#FFCE6F0D] text-center sm:px-8 px-4 md:py-16 sm:py-12 py-6 border border-[#FF5C00] rounded-3xl items-center justify-between"
+          >
+            <img src="./assets/Group 1027.png" alt="" width="90" />
+            <h2 class="font-bold md:text-3xl text-2xl px-4">
+              Powered by the Stratis Protocol
+            </h2>
+            <p class="text-[#CFCFCF] sm:text-sm text-xs">
+              Dive into a world of unparalleled liquidity and competitive odds,
+              enhancing your sports betting experience. Stratis guarantees a
+              dynamic marketplace for all users.
+            </p>
+            <img
+              src="./assets/Vector 26.png"
+              alt=""
+              class="absolute right-0 bottom-0"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- key feature section end -->
+
+      <!-- 3rd Section -->
+      <div style="box-shadow: 0px 10px 20px -10px #886cff">
+        <div
+          class="flex flex-col justify-center items-center sm:px-24 px-4 py-20 relative max-w-[1400px] m-auto"
+        >
+          <div class="bg-black z-10">
+            <h1
+              class="text-white sm:text-3xl text-2xl border-[#7717FF] bg-gradient-to-b from-[#7817ff52] to-[#000000] border-[3px] rounded-md px-7 py-1"
+            >
+              Stratis Protocol
+            </h1>
+          </div>
+          <div
+            class="sm:p-16 p-5 border-2 border-[#8041FF] rounded-tl-[35px] rounded-br-[35px] md:-mt-7 mt-5"
+          >
+            <img src="./assets/Group 1041.png" alt="" width="850" />
+          </div>
+          <img
+            src="./assets/Layer_2.png"
+            alt=""
+            class="absolute md:-bottom-[212px] -bottom-[116px] right-0 opacity-50 md:opacity-100 md:w-[90px] w-[50px]"
+          />
+        </div>
+      </div>
+
+      <!-- 4th Section -->
+      <div class="bg-image -z-10 relative">
+        <div class="custom-gradient2">
+          <div
+            class="flex flex-col justify-center items-center py-10 sm:gap-12 gap-8 text-white relative max-w-7xl m-auto"
+          >
+            <h1
+              class="text-white sm:text-3xl text-2xl border-[#7717FF] bg-gradient-to-b from-[#7817ff52] to-[#000000] border-[3px] rounded-md px-7 py-1"
+            >
+              Tokenomics
+            </h1>
+            <h1
+              class="text-white md:text-7xl sm:text-6xl text-4xl sm:px-0 px-2 text-center"
+            >
+              <span class="text-[#7821FF]">$STR</span> Total Supply
+            </h1>
+            <h1
+              class="text-[#7821FF] md:text-7xl sm:text-6xl text-4xl border-2 border-[#7717FF] px-5 py-2 border-gradient"
+            >
+              1,000,000
+            </h1>
+            <div class="flex md:-mt-10 -mt-5 md:text-base sm:text-base text-xs">
+              <h2 class="border-r px-3"><p>Liquidity: 90%</p></h2>
+              <h2 class="border-r px-3"><p>Treasury: 5%</p></h2>
+              <h2 class="px-3"><p>Marketing: 5%</p></h2>
+            </div>
+            <img
+              src="./assets/Group 1049.png"
+              alt=""
+              class="absolute md:-left-28 -left-0 md:top-44 top-36 md:w-[130px] w-[60px] opacity-50 md:opacity-100"
+              width="130"
+              height="130"
+            />
+            <img
+              src="./assets/Group 1050.png"
+              alt=""
+              class="absolute sm:right-20 right-0 sm:bottom-12 bottom-2 opacity-50 md:opacity-100"
+              width="100"
+              height="100"
+            />
+            <img
+              src="./assets/Group 1051 (1).png"
+              alt=""
+              width="750"
+              height="750"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 5th Section -->
+      <div
+        class="flex flex-col justify-center items-center py-12 md:gap-12 gap-8 text-white relative max-w-[1050px] m-auto text-center"
+      >
+        <h1
+          class="text-white sm:text-3xl text-2xl border-[#7717FF] bg-gradient-to-b from-[#7817ff52] to-[#000000] border-[3px] rounded-md px-7 py-1 mx-4"
+        >
+          Powered By Cutting-Edge Technology
+        </h1>
+        <p
+          class="text-center max-w-4xl px-8 text-[#CFCFCF] sm:text-base text-sm"
+        >
+          At the heart of Stratis lies the revolutionary Stratis Protocol.
+          Engineered with the latest advancements in blockchain technology, our
+          protocol ensures a robust, decentralized, and scalable infrastructure
+          for our betting platform. Embrace the future of sports betting with
+          confidence, knowing that Stratis is powered by cutting-edge solutions
+          designed to elevate your experience to new heights.
+        </p>
+        <div>
+          <div
+            class="flex gap-5 flex-wrap items-center justify-center relative mt-5"
+          >
+            <img
+              src="./assets/1st.png"
+              alt=""
+              class="border-2 border-[#7717FF] bg-[#A394FF0D] px-12 py-3 rounded-md sm:w-[320px] w-[250px] h-[70px]"
+              width="320"
+              height="320"
+            />
+            <img
+              src="./assets/2nd.png"
+              alt=""
+              class="border-2 border-[#FF5C00] bg-[#FFCE6F0D] px-10 py-3 rounded-md sm:w-[320px] w-[250px] h-[70px]"
+              width="320"
+              height="320"
+            />
+            <img
+              src="./assets/3rd.png"
+              alt=""
+              class="border-2 border-[#8041FF] bg-[#00E0FF0D] px-12 py-3 rounded-md sm:w-[320px] w-[250px] h-[70px]"
+              width="320"
+              height="320"
+            />
+            <img
+              src="./assets/4th.png"
+              alt=""
+              class="border-2 border-[#7717FF] bg-[#A394FF0D] px-12 py-3 rounded-md sm:w-[320px] w-[250px] h-[70px]"
+              width="320"
+              height="320"
+            />
+            <img
+              src="./assets/5th.png"
+              alt=""
+              class="border-2 border-[#8041FF] bg-[#00E0FF0D] px-12 py-3 rounded-md sm:w-[320px] w-[250px] h-[70px]"
+              width="320"
+              height="320"
+            />
+          </div>
+          <div
+            class="border-2 border-[#FF5C00] bg-[#FFCE6F0D] px-12 py-3 sm:w-[320px] w-[250px] h-[70px] m-auto rounded-md mt-5"
+          >
+            <img
+              src="./assets/6th.png"
+              alt=""
+              class="w-[220px] h-[45px] m-auto"
+              width="320"
+              height="320"
+            />
+          </div>
+          <img
+            src="./assets/Group 1038.png"
+            alt=""
+            class="absolute md:-left-20 sm:left-10 left-4 sm:bottom-16 bottom-4 opacity-50 md:opacity-100"
+            width="120"
+            height="150"
+          />
+        </div>
+      </div>
+
+      <!-- 6th Section -->
+      <div
+        class="border-t-2 border-[#7717FF]"
+        style="box-shadow: 0px 10px 20px -10px #886cff"
+      >
+        <div
+          class="flex flex-col justify-center items-center py-12 sm:gap-20 gap-10 text-white relative max-w-[1050px] m-auto text-center"
+        >
+          <h1
+            class="text-white sm:text-3xl text-2xl border-[#7717FF] bg-gradient-to-b from-[#7817ff52] to-[#000000] border-[3px] rounded-md px-7 py-1 mx-4"
+          >
+            Transparency in Action
+          </h1>
+          <div class="flex flex-wrap items-center justify-center gap-6">
+            <div class="border-2 border-[#7717FF] p-5 border-gradient">
+              <h1 class="sm:text-6xl text-5xl text-[#7717FF]">$0.00025</h1>
+              <p
+                class="text-[#CFCFCF] max-w-[280px] sm:text-base text-sm mt-5 font-light"
+              >
+                Avg. Cost Per Transaction
+              </p>
+              <p class="text-[#CFCFCF] max-w-[280px] sm:text-base text-sm">
+                Incredibly cheap transactions
+              </p>
+            </div>
+            <div class="border-2 border-[#7717FF] p-5 border-gradient">
+              <h1 class="sm:text-6xl text-5xl text-[#7717FF]">50,000+</h1>
+              <p
+                class="text-[#CFCFCF] max-w-[280px] sm:text-base text-sm mt-5 font-light"
+              >
+                Transactions per Second
+              </p>
+              <p class="text-[#CFCFCF] max-w-[280px] sm:text-base text-sm">
+                Built to handle global volume
+              </p>
+            </div>
+            <div class="border-2 border-[#7717FF] p-5 border-gradient">
+              <h1 class="sm:text-6xl text-5xl text-[#7717FF]">400</h1>
+              <p
+                class="text-[#CFCFCF] max-w-[280px] sm:text-base text-sm mt-5 font-light"
+              >
+                Millisecond Block Times
+              </p>
+              <p class="text-[#CFCFCF] max-w-[280px] sm:text-base text-sm">
+                The fastest blockchain in the World
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7th Section -->
+      <div
+        class="flex flex-col justify-center items-center py-6 gap-12 text-white relative max-w-[1050px] m-auto text-center"
+      >
+        <img
+          src="./assets/design.png"
+          alt=""
+          width="50"
+          height="50"
+          class="self-start"
+        />
+        <h1
+          class="text-white sm:text-3xl text-2xl border-[#7717FF] bg-gradient-to-b from-[#7817ff52] to-[#000000] border-[3px] rounded-md px-7 py-1 mx-4"
+        >
+          Join the Future of Betting
+        </h1>
+        <div class="max-w-[800px]">
+          <p class="text-[#CFCFCF] px-8 sm:text-base text-sm">
+            Become a part of the Stratis community and be at the forefront of
+            the decentralized betting revolution. Our commitment is to provide
+            an ecosystem where liquidity is shared, winners are embraced, and
+            innovation thrives.
+          </p>
+          <p class="text-[#CFCFCF] mt-4 px-8 sm:text-base text-sm">
+            Ready to experience the future of sports betting? Start Trading with
+            Stratis Today!
+          </p>
+        </div>
+        <button
+          class="sm:text-xl font-semibold bg-gradient-to-r from-[#886CFF] to-[#7717FF] px-6 pt-2 pb-3 rounded-md border-0"
+        >
+          <p>Connect Wallet</p>
+        </button>
+        <img
+          src="./assets/Group 1050.png"
+          alt=""
+          width="150"
+          height="150"
+          class="absolute sm:-bottom-20 -bottom-0 -z-50 sm:-right-6 right-2 opacity-50 md:opacity-100"
+        />
+      </div>
+
+      <!-- 8th Section -->
+      <div class="py-10 max-w-[1050px] m-auto px-6">
+        <h1
+          class="text-white w-fit m-auto text-3xl border-[#7717FF] bg-gradient-to-b from-[#7817ff52] to-[#000000] border-[3px] rounded-md px-7 py-1"
+        >
+          FAQs
+        </h1>
+        <div class="flex flex-col gap-5 mt-12">
+          <div>
+            <button
+              class="text-sm flex justify-between items-center accordion rounded-md font-semibold bg-[#17191E] text-white cursor-pointer py-3 px-6 w-full text-left border-none outline-none transition duration-300 hover:bg-[#212329]"
+            >
+              <p class="w-5/6">Q: Why Solana?</p>
+              <span>
+                <img src="./assets/Group 1051.png" alt="" width="25" />
+              </span>
+            </button>
+            <div
+              class="panel bg-[#121417] relative -z-50 text-white py-4 px-6 -mt-2 overflow-hidden hidden"
+            >
+              <p class="text-[#CFCFCF] max-w-3xl text-sm">
+                Solana's speed, scalability, and cost-effectiveness make it the
+                ideal blockchain for a seamless and efficient betting experience
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <button
+              class="text-sm flex justify-between items-center accordion rounded-md font-semibold bg-[#17191E] text-white cursor-pointer py-3 px-6 w-full text-left border-none outline-none transition duration-300 hover:bg-[#212329]"
+            >
+              <p class="w-5/6">Q: How much traffic can the platform handle?</p>
+              <span>
+                <img src="./assets/Group 1051.png" alt="" width="25" />
+              </span>
+            </button>
+            <div
+              class="panel bg-[#121417] relative -z-50 text-white py-4 px-6 -mt-2 overflow-hidden hidden"
+            >
+              <p class="text-[#CFCFCF] max-w-3xl text-sm">
+                Solana's speed, scalability, and cost-effectiveness make it the
+                ideal blockchain for a seamless and efficient betting experience
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <button
+              class="text-sm flex justify-between items-center accordion rounded-md font-semibold bg-[#17191E] text-white cursor-pointer py-3 px-6 w-full text-left border-none outline-none transition duration-300 hover:bg-[#212329]"
+            >
+              <p class="w-5/6">Q: Where is Stratis based?</p>
+              <span>
+                <img src="./assets/Group 1051.png" alt="" width="25" />
+              </span>
+            </button>
+            <div
+              class="panel bg-[#121417] relative -z-50 text-white py-4 px-6 -mt-2 overflow-hidden hidden"
+            >
+              <p class="text-[#CFCFCF] max-w-3xl text-sm">
+                Solana's speed, scalability, and cost-effectiveness make it the
+                ideal blockchain for a seamless and efficient betting experience
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <button
+              class="text-sm flex justify-between items-center accordion rounded-md font-semibold bg-[#17191E] text-white cursor-pointer py-3 px-6 w-full text-left border-none outline-none transition duration-300 hover:bg-[#212329]"
+            >
+              <p class="w-5/6">Q: Where is Stratis based?</p>
+              <span>
+                <img src="./assets/Group 1051.png" alt="" width="25" />
+              </span>
+            </button>
+            <div
+              class="panel bg-[#121417] relative -z-50 text-white py-4 px-6 -mt-2 overflow-hidden hidden"
+            >
+              <p class="text-[#CFCFCF] max-w-3xl text-sm">
+                Solana's speed, scalability, and cost-effectiveness make it the
+                ideal blockchain for a seamless and efficient betting experience
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <button
+              class="text-sm flex justify-between items-center accordion rounded-md font-semibold bg-[#17191E] text-white cursor-pointer py-3 px-6 w-full text-left border-none outline-none transition duration-300 hover:bg-[#212329]"
+            >
+              <p class="w-5/6">Q: Where is Stratis based?</p>
+              <span>
+                <img src="./assets/Group 1051.png" alt="" width="25" />
+              </span>
+            </button>
+            <div
+              class="panel bg-[#121417] relative -z-50 text-white py-4 px-6 -mt-2 overflow-hidden hidden"
+            >
+              <p class="text-[#CFCFCF] max-w-3xl text-sm">
+                Solana's speed, scalability, and cost-effectiveness make it the
+                ideal blockchain for a seamless and efficient betting experience
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9th Section -->
+      <footer class="max-w-5xl m-auto py-10 md:px-0 px-10">
+        <img src="./assets/Group 1037.png" alt="" width="250" height="250" />
+      </footer>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $(".buttonArrowPrev").on("click", function () {
+          $(".slick-prev").click();
+
+          if ($(".arrowSlideBg").hasClass("right-2.5")) {
+            $(".arrowSlideBg").removeClass("right-2.5");
+          }
+
+          $(".arrowSlideBg").addClass("left-2.5");
+        });
+
+        $(".buttonArrowNext").on("click", function () {
+          $(".slick-next").click();
+
+          if ($(".arrowSlideBg").hasClass("left-2.5")) {
+            $(".arrowSlideBg").removeClass("left-2.5");
+          }
+
+          $(".arrowSlideBg").addClass("right-2.5");
+        });
+
+        $(".team").slick({
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          arrows: true,
+          dots: false,
+          autoplay: true,
+          autoplaySpeed: 300,
+          speed: 300,
+          centerMode: true,
+          infinite: true,
+          autoplaySpeed: 5000,
+          autoplay: true,
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 2,
+              },
+            },
+            {
+              breakpoint: 636,
+              settings: {
+                slidesToShow: 1,
+              },
+            },
+          ],
+        });
+      });
+    </script>
+
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+      // acc.addEventListener("click", );
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+            this.style.color = "";
+          } else {
+            panel.style.display = "block";
+            this.style.color = "#8458FF";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

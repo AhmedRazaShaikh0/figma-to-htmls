@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexus</title>
+    <link rel="icon" href="./assets/icon.png" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    .border-gradient {
+      border-style: solid;
+      border-width: 4px 0px;
+      border-image: linear-gradient(to right, #41b85f62, #000000) 4;
+    }
+    .dropdown {
+      width: 100%;
+      height: 0;
+      position: fixed;
+      z-index: 500;
+      overflow-x: hidden;
+      transition: 0.8s;
+    }
+
+    .dropdown a {
+      padding: 8px 8px 8px 8px;
+      text-decoration: none;
+      font-size: 20px;
+      color: #ffffff;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .dropdown .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      color: white;
+      font-size: 50px;
+      margin-left: 50px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .dropdown a {
+        font-size: 18px;
+      }
+    }
+
+    .toggle_icon {
+      cursor: pointer;
+      color: #ffffff;
+      order: 2;
+    }
+    .font-montserrat {
+      font-family: "Montserrat", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+    }
+  </style>
+  <body class="font-montserrat bg-[#000000]">
+    <!-- Header Start -->
+    <header
+      class="absolute top-0 w-full z-10 sm:px-10 px-4 py-5 border-b border-[#3A3A3A] backdrop-blur-3xl"
+    >
+      <div
+        class="max-w-[85rem] m-auto text-white flex justify-between items-center"
+      >
+        <div>
+          <img src="./assets/icon.png" alt="" width="70" class="" />
+        </div>
+        <div class="hidden md:block">
+          <ul class="text-white flex gap-10">
+            <li
+              class="hover:bg-gradient-to-br from-[#41b85f65] to-[#000000] py-1 px-2 rounded-md"
+            >
+              <a href="/">Home</a>
+            </li>
+            <li
+              class="hover:bg-gradient-to-br from-[#41b85f65] to-[#000000] py-1 px-2 rounded-md"
+            >
+              <a href="/">PrivateSQL</a>
+            </li>
+            <li
+              class="hover:bg-gradient-to-br from-[#41b85f65] to-[#000000] py-1 px-2 rounded-md"
+            >
+              <a href="/">Solutions</a>
+            </li>
+            <li
+              class="hover:bg-gradient-to-br from-[#41b85f65] to-[#000000] py-1 px-2 rounded-md"
+            >
+              <a href="/">Features</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <button
+            class="font-semibold text-white text-lg bg-gradient-to-br from-[#41B85F] to-[#000000] py-2 px-6 rounded-full"
+          >
+            <p>Learn More</p>
+          </button>
+        </div>
+        <div class="md:hidden block z-50">
+          <button id="hamburger-icon" class="float-right toggle_icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8"
+              fill="white"
+              viewBox="0 0 24 24"
+              stroke="white"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="3"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <div
+          id="dropdown"
+          class="dropdown flex flex-col justify-center uppercase top-0 left-0 bg-[rgba(0,0,0,0.9)] z-50"
+        >
+          <button class="closebtn mr-4 mt-8">×</button>
+          <ul class="text-white p-12 text-center">
+            <li>
+              <a
+                class="hover:bg-gradient-to-br from-[#41b85f65] to-[#000000] px-2 rounded-md py-2"
+                href="/"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:bg-gradient-to-br from-[#41b85f65] to-[#000000] px-2 rounded-md py-2"
+                href="#"
+                >PrivateSQL</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:bg-gradient-to-br from-[#41b85f65] to-[#000000] px-2 rounded-md py-2"
+                href="#"
+                >Solutions</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:bg-gradient-to-br from-[#41b85f65] to-[#000000] px-2 rounded-md py-2"
+                href="#"
+                >Features</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- Header Start -->
+
+    <!-- 1st Section Start -->
+    <div class="relative">
+      <div
+        class="max-w-4xl flex flex-col justify-center items-center m-auto text-white md:gap-12 gap-8 md:pt-72 pt-56 md:pb-40 pb-28 px-8"
+      >
+        <h1
+          class="sm:text-6xl text-4xl text-center sm:px-0 px-2 font-extrabold"
+        >
+          Empower Your
+          <span
+            class="bg-gradient-to-b from-[#aaeeb2] to-[#025213] inline-block text-transparent bg-clip-text"
+            >AI Vision</span
+          >
+          with
+          <span
+            class="bg-gradient-to-b from-[#ebf1f5] to-[#53585B] inline-block text-transparent bg-clip-text"
+            >Nexus</span
+          >
+        </h1>
+        <div
+          class="text-center max-w-3xl sm:px-10 text-[#D2D2D2] sm:text-lg text-base"
+        >
+          <p>Craft, Deploy, and Thrive with AI Applications</p>
+          <p>
+            Dive into the heart of innovation with Nexus—an avant-garde platform
+            igniting the AI revolution.
+          </p>
+        </div>
+        <div class="flex gap-2">
+          <button
+            class="text-white bg-gradient-to-br from-[#41B85F] to-[#000000] py-2 sm:px-8 px-4 rounded-full"
+          >
+            DOCS
+          </button>
+          <button
+            class="border border-[#41B85F] py-2 sm:px-6 px-4 text-white rounded-full"
+          >
+            TELEGRAM
+          </button>
+        </div>
+      </div>
+      <img
+        src="./assets/OBJECTS.png"
+        alt=""
+        width="170"
+        class="absolute bottom-0 left-0"
+      />
+      <img
+        src="./assets/Ellipse 24.png"
+        alt=""
+        width="500"
+        class="absolute -bottom-72 left-0"
+      />
+      <img
+        src="./assets/Ellipse 1.png"
+        alt=""
+        width="1000"
+        class="absolute top-0 right-0"
+      />
+      <img
+        src="./assets/OBJECTs 1.png"
+        alt=""
+        width="550"
+        class="absolute top-0 right-0"
+      />
+      <img
+        src="./assets/OBJECTs 1.png"
+        alt=""
+        width="200"
+        class="absolute md:top-[60%] top-[80%] right-0"
+      />
+    </div>
+    <!-- 1st Section End-->
+
+    <!-- 2nd Section Start -->
+    <div class="px-10">
+      <div
+        class="max-w-6xl m-auto rounded-2xl bg-gradient-to-br from-[#41b85f2d] to-[#000000] flex min-[900px]:flex-row flex-col gap-10 justify-between sm:mb-40 mb-28 relative"
+      >
+        <div
+          class="flex flex-col gap-12 min-[900px]:w-[55%] sm:px-10 sm:pb-10 px-6 pb-6 pt-20"
+        >
+          <h1
+            class="sm:text-4xl text-3xl font-bold text-white min-[900px]:max-w-sm"
+          >
+            Unleash
+            <span
+              class="bg-gradient-to-b from-[#aaeeb2] to-[#025213] inline-block text-transparent bg-clip-text"
+              >AI Potential
+            </span>
+            Without
+            <span
+              class="bg-gradient-to-b from-[#aaeeb2] to-[#025213] inline-block text-transparent bg-clip-text"
+            >
+              Limits
+            </span>
+          </h1>
+          <p class="text-[#D2D2D2] sm:text-lg text-base">
+            Elevate your systems effortlessly into the AI realm, seamlessly
+            integrating with Nexus without any API overhaul. Uncover boundless
+            opportunities in the AI ecosystem.
+          </p>
+          <button
+            class="border border-[#41B85F] py-2 sm:px-6 px-4 text-white rounded-full w-fit font-semibold"
+          >
+            Discover More
+          </button>
+        </div>
+        <div class="min-[900px]:self-end self-center">
+          <img src="./assets/Group.png" alt="" width="450" />
+        </div>
+        <img
+          src="./assets/Ellipse 10.png"
+          alt=""
+          width="550"
+          class="absolute right-0 bottom-0"
+        />
+      </div>
+    </div>
+    <!-- 2nd Section End-->
+
+    <!-- 3rd Section Start -->
+    <div class="border-y border-[#626463] py-14 bg-[#101010] relative z-10">
+      <div class="flex flex-col gap-12 items-center max-w-5xl m-auto px-6">
+        <h1 class="sm:text-4xl text-3xl font-bold text-white text-center">
+          Redefine
+          <span
+            class="bg-gradient-to-b from-[#aaeeb2] to-[#025213] inline-block text-transparent bg-clip-text"
+          >
+            Legacy Systems
+          </span>
+          with
+          <span
+            class="bg-gradient-to-b from-[#ffffff] to-[#53585B] inline-block text-transparent bg-clip-text"
+          >
+            Nexus
+          </span>
+        </h1>
+        <p class="text-[#D2D2D2] sm:text-lg text-base text-center">
+          Elevate your systems effortlessly into the AI realm, seamlessly
+          integrating with Nexus without any API overhaul. Uncover boundless
+          opportunities in the AI ecosystem.
+        </p>
+        <img src="./assets/Group 19.png" alt="" width="800" />
+      </div>
+      <img
+        src="./assets/Ellipse 9.png"
+        alt=""
+        class="absolute bottom-0 left-0"
+      />
+      <img
+        src="./assets/OBJECTS1.png"
+        alt=""
+        width="300"
+        class="absolute bottom-0 left-0"
+      />
+      <img
+        src="./assets/Ellipse 11.png"
+        alt=""
+        class="absolute top-0 right-0"
+      />
+      <img
+        src="./assets/OBJECTS2.png"
+        alt=""
+        width="300"
+        class="absolute top-0 right-0"
+      />
+    </div>
+    <!-- 3rd Section End-->
+
+    <!-- 4th Section Start -->
+    <div class="relative">
+      <div
+        class="flex flex-col gap-12 items-center max-w-5xl m-auto px-6 pb-20 pt-32"
+      >
+        <h1 class="sm:text-4xl text-3xl font-bold text-white text-center">
+          Seamless
+          <span
+            class="bg-gradient-to-b from-[#aaeeb2] to-[#025213] inline-block text-transparent bg-clip-text"
+            >Holiday
+          </span>
+          Experiences Await
+        </h1>
+        <p class="text-[#D2D2D2] sm:text-lg text-base text-center">
+          Elevate your systems effortlessly into the AI realm, seamlessly
+          integrating with Nexus without any API overhaul. Uncover boundless
+          opportunities in the AI ecosystem.
+        </p>
+        <div class="text-2xl text-center max-w-xl font-bold">
+          <h2
+            class="bg-gradient-to-b from-[#ffffff] to-[#53585B] inline-block text-transparent bg-clip-text"
+          >
+            "Planning a beach getaway in late August?
+          </h2>
+          <h2
+            class="bg-gradient-to-b from-[#ffffff] to-[#53585B] inline-block text-transparent bg-clip-text"
+          >
+            Let Nexus handle the rest."
+          </h2>
+        </div>
+        <button
+          class="border border-[#41B85F] py-2 sm:px-6 px-4 rounded-full w-fit font-semibold text-[#D2D2D2]"
+        >
+          LEARN MORE
+        </button>
+      </div>
+      <div class="px-10">
+        <div
+          class="border border-white max-w-7xl m-auto lg:p-14 sm:p-10 p-6 rounded-2xl bg-gradient-to-br from-[#41b85f2d] to-[#000000] flex min-[900px]:flex-row flex-col gap-10 justify-between sm:mb-32 mb-28"
+        >
+          <div
+            class="flex items-center min-[900px]:w-[30%] min-[900px]:self-start self-center"
+          >
+            <img
+              src="./assets/Group 14.png"
+              alt=""
+              width="250"
+              class="w-[250px]"
+            />
+          </div>
+          <div class="flex flex-col gap-12 py-10">
+            <h1 class="sm:text-4xl text-3xl font-bold text-white">
+              Explore Our
+              <span
+                class="bg-gradient-to-b from-[#aaeeb2] to-[#025213] inline-block text-transparent bg-clip-text"
+              >
+                Integrations
+              </span>
+            </h1>
+            <div class="text-[#D2D2D2] sm:text-lg text-base">
+              <p>Streamline Experiences with DeltaV</p>
+              <p>
+                Simplify user interactions across multiple services effortlessly
+                with DeltaV,
+              </p>
+              <p class="pr-10">
+                Nexus's cutting-edge integration solution. Seamlessly navigate
+                between services with ease.
+              </p>
+            </div>
+            <button
+              class="border border-[#41B85F] py-3 sm:px-6 px-4 text-white rounded-full w-fit font-semibold"
+            >
+              Discover DeltaV Now
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col gap-12 items-center max-w-5xl m-auto px-6 pb-20"
+      >
+        <h1 class="sm:text-4xl text-3xl font-bold text-white text-center">
+          Navigate
+          <span
+            class="bg-gradient-to-b from-[#aaeeb2] to-[#025213] inline-block text-transparent bg-clip-text"
+          >
+            Stress-Free
+          </span>
+          with Nexus
+        </h1>
+        <p class="text-[#D2D2D2] sm:text-lg text-base text-center">
+          Banish range anxiety with Nexus's AI-powered journey planner for
+          electric vehicles. Enjoy seamless journeys with precise planning
+          tailored to your preferences.
+        </p>
+        <div class="text-2xl text-center max-w-2xl font-bold">
+          <h2
+            class="bg-gradient-to-b from-[#ffffff] to-[#53585B] inline-block text-transparent bg-clip-text"
+          >
+            "Planning a trip to Exeter on October 5th at 3 pm?
+          </h2>
+          <h2
+            class="bg-gradient-to-b from-[#ffffff] to-[#53585B] inline-block text-transparent bg-clip-text"
+          >
+            Nexus has you covered."
+          </h2>
+        </div>
+        <button
+          class="border border-[#41B85F] py-2 sm:px-6 px-4 rounded-full w-fit font-semibold text-[#D2D2D2]"
+        >
+          LEARN MORE
+        </button>
+      </div>
+      <img
+        src="./assets/Ellipse 7.png"
+        alt=""
+        width="500"
+        class="absolute -top-96 right-0"
+      />
+    </div>
+    <!-- 4th Section End-->
+
+    <!-- 5th Section Start-->
+    <div class="pb-20 relative">
+      <div class="border-y border-gradient py-32">
+        <div class="flex md:flex-row flex-col max-w-6xl m-auto">
+          <div
+            class="flex flex-col gap-12 max-w-5xl m-auto px-6 pb-20 md:w-1/2"
+          >
+            <h1 class="sm:text-4xl text-3xl font-bold text-white">
+              Tokenomics:
+            </h1>
+            <h1 class="sm:text-4xl text-3xl font-bold text-white">
+              Powering the Nexus Ecosystem
+            </h1>
+            <p class="text-[#D2D2D2] sm:text-lg text-base max-w-sm">
+              Nexus tokens fuel our ecosystem, facilitating seamless
+              transactions and powering innovation."
+            </p>
+
+            <div class="flex gap-5 text-white font-bold">
+              <div>
+                <h2>
+                  Liquidity:<span
+                    class="bg-gradient-to-b from-[#aaeeb2] to-[#025213] inline-block text-transparent bg-clip-text ml-2"
+                    >90%</span
+                  >
+                </h2>
+              </div>
+              <div>
+                <h2>
+                  Marketing:<span
+                    class="bg-gradient-to-b from-[#aaeeb2] to-[#025213] inline-block text-transparent bg-clip-text ml-2"
+                    >5%</span
+                  >
+                </h2>
+              </div>
+              <div>
+                <h2>
+                  Treadury:<span
+                    class="bg-gradient-to-b from-[#aaeeb2] to-[#025213] inline-block text-transparent bg-clip-text ml-2"
+                    >5%</span
+                  >
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center justify-center p-4">
+            <img src="./assets/Group 18.png" alt="" width="450" />
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/Ellipse 81.png"
+        alt=""
+        width="400"
+        class="absolute -bottom-56 left-0"
+      />
+    </div>
+    <!-- 5th Section End-->
+
+    <!-- 6th Section Start-->
+    <div class="relative bg-[#101010]">
+      <div
+        class="flex flex-col gap-12 items-center max-w-5xl m-auto px-6 py-20"
+      >
+        <h1 class="sm:text-5xl text-3xl font-bold text-white text-center">
+          Start
+          <span
+            class="bg-gradient-to-b from-[#aaeeb2] to-[#025213] inline-block text-transparent bg-clip-text"
+          >
+            Strong
+          </span>
+          , Stay
+          <span
+            class="bg-gradient-to-b from-[#aaeeb2] to-[#025213] inline-block text-transparent bg-clip-text"
+          >
+            Agile
+          </span>
+        </h1>
+        <p class="text-[#D2D2D2] sm:text-lg text-base text-center">
+          Kickstart your journey with Nexus—it takes mere minutes to begin.
+          Empower yourself with robust developer tools, fueling your AI
+          aspirations effortlessly.
+        </p>
+
+        <button
+          class="text-white bg-gradient-to-br from-[#41B85F] to-[#000000] py-2 sm:px-8 px-4 rounded-full font-semibold"
+        >
+          Join Us Now
+        </button>
+      </div>
+      <img
+        src="./assets/Group 1.png"
+        alt=""
+        width="350"
+        class="absolute top-0 right-0"
+      />
+      <img
+        src="./assets/Group 2.png"
+        alt=""
+        width="230"
+        class="absolute bottom-0 left-0"
+      />
+      <img
+        src="./assets/Ellipse 8.png"
+        alt=""
+        width="300"
+        class="absolute -bottom-56 left-0"
+      />
+      <img
+        src="./assets/Ellipse 3.png"
+        alt=""
+        width="350"
+        class="absolute top-0 right-0"
+      />
+    </div>
+    <!-- 6th Section End-->
+
+    <!-- Footer Start-->
+    <div class="bg-[#101010]">
+      <div
+        class="max-w-7xl m-auto flex sm:flex-row flex-col sm:justify-between justify-center gap-10 items-center py-6 px-10"
+      >
+        <div>
+          <img src="./assets/icon2.png" alt="" width="120" />
+          <p class="text-[#555555] sm:text-lg text-base text-center mt-8">
+            © 2024 NEXUS. All rights reserved.
+          </p>
+        </div>
+        <div class="flex gap-4">
+          <img src="./assets/telegram.png" alt="" width="40" />
+          <img src="./assets/x.png" alt="" width="40" />
+        </div>
+      </div>
+    </div>
+    <!-- Footer End-->
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".toggle_icon").click(function () {
+          $("#dropdown").toggleClass("h-screen pt-10");
+        });
+        // function openNav() {
+        //     $("#dropdown").addClass("h-screen pt-10");
+        // }
+
+        $(".closebtn").click(function () {
+          $("#dropdown").removeClass("h-screen pt-10");
+        });
+      });
+    </script>
+  </body>
+</html>

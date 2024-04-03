@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simplex</title>
+    <link rel="icon" href="./assets/icon.svg" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <style>
+    @font-face {
+      font-family: Altone-Trial;
+      src: url("./assets/Altone-Trial.ttf");
+    }
+    @font-face {
+      font-family: Altone-Trial-Bold;
+      src: url("./assets/Altone-Trial-Bold.ttf");
+    }
+    @font-face {
+      font-family: Glitten;
+      src: url("./assets/Glitten-Regular.otf");
+    }
+    body {
+      font-family: Altone-Trial, sans-serif;
+    }
+    h1 {
+      font-family: Altone-Trial-Bold, sans-serif;
+    }
+    h4 {
+      font-family: Glitten, sans-serif;
+    }
+    .dropdown {
+      width: 100%;
+      height: 0;
+      position: fixed;
+      z-index: 500;
+      overflow-x: hidden;
+      transition: 0.8s;
+    }
+
+    .dropdown a {
+      padding: 8px 8px 8px 8px;
+      text-decoration: none;
+      font-size: 20px;
+      color: #ffffff;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .dropdown .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      color: white;
+      font-size: 50px;
+      margin-left: 50px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .dropdown a {
+        font-size: 18px;
+      }
+    }
+
+    .toggle_icon {
+      cursor: pointer;
+      color: #ffffff;
+      order: 2;
+    }
+  </style>
+  <body>
+    <!-- Header Start -->
+    <header class="absolute sm:top-8 top-8 w-full z-10 sm:px-12 px-4">
+      <div
+        class="max-w-7xl m-auto text-[#272E35] flex justify-between items-center"
+      >
+        <div>
+          <img src="./assets/icon.svg" alt="" width="50" height="50" class="" />
+        </div>
+        <div class="hidden md:block">
+          <ul class="text-[#272E35] flex gap-10">
+            <li>
+              <a class="hover:text-[#ED4738]" href="/">Home</a>
+            </li>
+            <li>
+              <a class="hover:text-[#ED4738]" href="/">About us</a>
+            </li>
+            <li>
+              <a class="hover:text-[#ED4738]" href="/">How it works?</a>
+            </li>
+            <li>
+              <a class="hover:text-[#ED4738]" href="/"> FAQs</a>
+            </li>
+            <li>
+              <a class="hover:text-[#ED4738]" href="/">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <button
+            class="font-bold text-white bg-[#FF6E30] py-2 px-6 rounded-md"
+          >
+            Join Now
+          </button>
+        </div>
+        <div class="md:hidden block z-50">
+          <button id="hamburger-icon" class="float-right toggle_icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8"
+              fill="black"
+              viewBox="0 0 24 24"
+              stroke="black"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="3"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <div
+          id="dropdown"
+          class="dropdown flex flex-col justify-center uppercase top-0 left-0 bg-[rgba(0,0,0,0.9)] z-50"
+        >
+          <button class="closebtn mr-4 mt-8">×</button>
+          <ul class="text-white p-12 text-center">
+            <li>
+              <a class="text-[#ED4738] py-2" href="/">Home</a>
+            </li>
+            <li>
+              <a class="text-[#ED4738] py-2" href="#">About us</a>
+            </li>
+            <li>
+              <a class="text-[#ED4738] py-2" href="#">How it works?</a>
+            </li>
+            <li>
+              <a class="text-[#ED4738] py-2" href="#"> FAQs</a>
+            </li>
+            <li>
+              <a class="text-[#ED4738] py-2" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- Header Start -->
+
+    <!-- 1st Section Start -->
+    <div class="bg-image relative px-8">
+      <div class="">
+        <div
+          class="flex flex-col justify-center items-center relative max-w-4xl m-auto text-black md:gap-10 gap-8 md:pt-52 pt-40 md:pb-40 pb-28"
+        >
+          <p
+            class="text-center text-[#000000] sm:text-lg text-sm font-semibold"
+          >
+            Welcome to Simplex
+          </p>
+          <h1
+            class="sm:text-6xl text-4xl text-center sm:px-0 px-2 font-extrabold"
+          >
+            Your
+            <span
+              class="bg-gradient-to-r from-[#FF6E30] to-[#E93E3A] inline-block text-transparent bg-clip-text"
+              >trusted</span
+            >
+            solana Flash Loan
+            <span
+              class="bg-gradient-to-r from-[#FF6E30] to-[#E93E3A] inline-block text-transparent bg-clip-text"
+              >solution</span
+            >
+          </h1>
+          <img src="./assets/Group 3.png" alt="" width="200" height="200" />
+          <p
+            class="text-center max-w-xl sm:px-20 text-[#000000] sm:text-base text-sm font-semibold"
+          >
+            Experience lightning-fast transactions, low fees, and a
+            user-friendly interface designed to simplify the Flash Loan process.
+          </p>
+          <div class="flex gap-4">
+            <button
+              class="font-bold text-white bg-[#FF6E30] py-2 sm:px-6 px-4 rounded-md"
+            >
+              Join Now
+            </button>
+            <button
+              class="border border-[#E93E3A] py-2 sm:px-6 px-4 rounded-md text-black font-semibold"
+            >
+              Explore more
+            </button>
+          </div>
+          <img
+            src="./assets/circle 1.png"
+            alt=""
+            class="-z-10 absolute top-40 left-10"
+          />
+          <img
+            src="./assets/circle 2.png"
+            alt=""
+            class="-z-10 absolute top-60 -left-36"
+          />
+          <img
+            src="./assets/circle 3.png"
+            alt=""
+            class="-z-10 absolute bottom-72 -left-16"
+          />
+          <img
+            src="./assets/circle 4.png"
+            alt=""
+            width="80"
+            class="-z-10 absolute md:top-40 top-32 min-[1200px]:-right-[20%] right-[-0%]"
+          />
+          <img
+            src="./assets/circle 5.png"
+            alt=""
+            class="-z-10 absolute bottom-40 right-4"
+          />
+        </div>
+        <img
+          src="./assets/circle 6.png"
+          alt=""
+          width="200"
+          class="-z-10 absolute right-0 md:bottom-32 -bottom-40"
+        />
+        <img
+          src="./assets/Ellipse 27.png"
+          alt=""
+          width="500"
+          class="-z-10 absolute right-0 -bottom-32"
+        />
+        <img
+          src="./assets/Ellipse 35.svg"
+          alt=""
+          width="300"
+          class="-z-10 absolute left-0 top-0"
+        />
+      </div>
+    </div>
+    <!-- 1st Section End-->
+
+    <!-- 2nd Section Start-->
+    <div
+      class="bg-gradient-to-r from-[#444444] to-[#272E35] flex justify-center items-center flex-col p-10 gap-12 z-10"
+    >
+      <h1 class="text-white text-4xl font-extrabold">About Us:</h1>
+      <div
+        class="flex flex-wrap justify-center text-white max-w-7xl m-auto gap-10"
+      >
+        <div class="flex flex-col gap-4 md:w-[22rem]">
+          <img src="./assets/list icon 1.png" alt="" width="50" />
+          <h2 class="sm:text-2xl text-xl font-bold mt-2">Introduction</h2>
+          <p class="sm:text-xl lg:pr-16">
+            Simplex is a leading provider of solana Flash Loan services,
+            dedicated to revolutionizing decentralized finance (DeFi) through
+            innovation and transparency.
+          </p>
+        </div>
+        <div class="flex flex-col gap-4 md:w-[22rem]">
+          <img src="./assets/list icon 1.png" alt="" width="50" />
+          <h2 class="sm:text-2xl text-xl font-bold mt-2">Team</h2>
+          <p class="sm:text-xl lg:pr-16">
+            Our team consists of industry experts with a shared vision of making
+            blockchain transactions more accessible and secure for users
+            worldwide.
+          </p>
+        </div>
+        <div class="flex flex-col gap-4 md:w-[22rem]">
+          <img src="./assets/list icon 1.png" alt="" width="50" />
+          <h2 class="sm:text-2xl text-xl font-bold mt-2">Commitment</h2>
+          <p class="sm:text-xl lg:pr-16">
+            Committed to compliance and security, Simplex adheres to the highest
+            industry standards to safeguard our users' assets and data.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- 2nd Section End-->
+
+    <!-- 3rd Section Start-->
+    <div
+      class="flex flex-col items-center justify-center gap-10 py-24 relative"
+    >
+      <h1
+        class="bg-gradient-to-r from-[#FF6E30] to-[#E93E3A] inline-block text-transparent bg-clip-text text-4xl font-extrabold"
+      >
+        How It Works:
+      </h1>
+      <div class="max-w-7xl m-auto flex flex-wrap justify-center gap-2">
+        <div class="flex flex-col gap-4 w-72">
+          <img src="./assets/Group 1071.png" alt="" width="250" />
+          <p class="text-lg font-bold px-12 pr-16">
+            Connect your Solana wallet to the Simplex platform.
+          </p>
+        </div>
+        <div class="flex flex-col gap-4 w-72">
+          <img src="./assets/Group 1070.png" alt="" width="250" />
+          <p class="text-lg font-bold px-12">
+            Select the desired amount for your Flash Loan transaction and
+            specify the terms.
+          </p>
+        </div>
+        <div class="flex flex-col gap-4 w-72">
+          <img src="./assets/Group 1072.png" alt="" width="250" />
+          <p class="text-lg font-bold px-12 pr-16">
+            Confirm the transaction and wait for it to be processed.
+          </p>
+        </div>
+        <div class="flex flex-col gap-4 w-72">
+          <img src="./assets/Group 1073.png" alt="" width="250" />
+          <p class="text-lg font-bold px-12 pr-16">
+            Execute your Flash Loan transaction and enjoy the benefits of
+            instant liquidity.
+          </p>
+        </div>
+      </div>
+      <img
+        src="./assets/circle 7.png"
+        alt=""
+        width="200"
+        class="absolute sm:-top-60 -top-80 left-0 -z-10"
+      />
+      <img
+        src="./assets/circle 9.png"
+        alt=""
+        width="30"
+        class="absolute right-0 top-20"
+      />
+      <img
+        src="./assets/circle 8.png"
+        alt=""
+        width="30"
+        class="absolute right-20 top-10"
+      />
+      <img
+        src="./assets/circle 10.png"
+        alt=""
+        width="100"
+        class="absolute -bottom-12 right-10 -z-10"
+      />
+    </div>
+    <!-- 3rd Section End-->
+
+    <!-- 4th Section Start-->
+    <div
+      class="border-y border-[#E93E3A] flex flex-col lg:flex-row bg-white pb-28"
+    >
+      <div
+        class="lg:w-[40%] bg-gradient-to-b from-[#FF6E30] to-[#E93E3A] sm:h-[600px] h-[400px] rounded-br-[100px] pt-16 flex flex-col text-center"
+      >
+        <h1 class="text-white text-4xl font-extrabold">Testimonials</h1>
+        <div
+          class="text-white sm:text-6xl text-3xl max-w-xs mx-auto sm:mt-32 mt-16 relative"
+        >
+          <h4>What our customers are saying</h4>
+          <img
+            src="./assets/Group 1074.png"
+            alt=""
+            width="60"
+            class="absolute -top-10 -left-2"
+          />
+        </div>
+      </div>
+      <div class="lg:w-[60%]">
+        <div
+          class="relative max-w-4xl flex gap-8 flex-wrap justify-center px-2"
+        >
+        <img src="./assets/Ellipse 41.png" alt="">
+          <div
+            class="min-[1400px]:absolute top-20 min-[1400px]:left-[10%] lg:left-[8%] left-[4%]"
+          >
+            <div
+              class="bg-white w-[17rem] h-[21rem] drop-shadow-2xl rounded-2xl px-10 py-10 relative"
+            >
+              <img
+                src="./assets/Group 1075.png"
+                alt=""
+                width="70"
+                class="absolute -top-6 mx-auto left-[6.5rem]"
+              />
+              <p class="text-[#000000] mt-8 font-semibold">
+                "I've tried other Flash Loan services, but Simplex stands out
+                for its reliability and exceptional customer support."
+              </p>
+              <h2 class="text-[#F55934] font-extrabold mt-10">Jane Smith,</h2>
+              <p class="text-[#6F6F6F] text-sm">Blockchain Developer</p>
+            </div>
+          </div>
+          <div
+            class="min-[1400px]:absolute top-[18rem] min-[1400px]:left-[33%] left-[33%]"
+          >
+            <div
+              class="bg-white w-[17rem] h-[21rem] drop-shadow-2xl rounded-2xl px-10 py-10 relative"
+            >
+              <img
+                src="./assets/Group 1075.png"
+                alt=""
+                width="70"
+                class="absolute -top-6 mx-auto left-[6.5rem]"
+              />
+              <p class="text-[#000000] mt-8 font-semibold">
+                "Thanks to Simplex, I was able to execute a high-value
+                transaction with ease and confidence. Highly recommended!"
+              </p>
+              <h2 class="text-[#F55934] font-extrabold mt-10">Alex Johnson,</h2>
+              <p class="text-[#6F6F6F] text-sm">Financial Analyst</p>
+            </div>
+          </div>
+          <div
+            class="min-[1400px]:absolute lg:top-36 top-16 min-[1400px]:right-[10%] lg:right-[6%] right-[1%]"
+          >
+            <div
+              class="bg-white w-[17rem] h-[21rem] drop-shadow-2xl rounded-2xl px-10 py-10 relative"
+            >
+              <img
+                src="./assets/Group 1075.png"
+                alt=""
+                width="70"
+                class="absolute -top-6 mx-auto left-[6.5rem]"
+              />
+              <p class="text-[#000000] mt-8 font-semibold">
+                "Simplex has completely transformed the way I engage in DeFi.
+                The platform is intuitive, secure, and lightning-fast."
+              </p>
+              <h2 class="text-[#F55934] font-extrabold mt-10">John Doe,</h2>
+              <p class="text-[#6F6F6F] text-sm">Crypto Trader</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 4th Section End-->
+
+    <!-- 5th Section Start-->
+    <div class="z-10 bg-white relative">
+      <div
+        class="md:py-32 py-20 flex md:flex-row flex-col max-w-7xl m-auto items-center px-10 md:gap-4 gap-8"
+      >
+        <div class="md:w-[45%]">
+          <img src="./assets/Group.png" alt="" width="400" />
+        </div>
+        <div class="md:w-[55%] lg:pr-24">
+          <h1 class="text-[#272E35] text-4xl font-extrabold">
+            Security and Trust:
+          </h1>
+          <div class="flex flex-col gap-8 sm:mt-16 mt-6">
+            <div>
+              <h1
+                class="font-extrabold text-lg border-l-8 border-[#FF6E30] pl-4 bg-gradient-to-r from-[#ff6e3059] to-[#e93d3a0a] pr-10 w-fit"
+              >
+                Encryption
+              </h1>
+              <p class="sm:text-xl mt-3">
+                At Simplex, security is our top priority. We utilize
+                state-of-the-art encryption and multi-factor authentication to
+                protect your funds and personal information.
+              </p>
+            </div>
+            <div>
+              <h1
+                class="font-extrabold text-lg border-l-8 border-[#FF6E30] pl-4 bg-gradient-to-r from-[#ff6e3059] to-[#e93d3a0a] pr-10 w-fit"
+              >
+                Guidelines
+              </h1>
+              <p class="sm:text-xl mt-3">
+                As a fully compliant entity, Simplex follows strict regulatory
+                guidelines to ensure the safety and integrity of our users'
+                transactions.
+              </p>
+            </div>
+            <div>
+              <h1
+                class="font-extrabold text-lg border-l-8 border-[#FF6E30] pl-4 bg-gradient-to-r from-[#ff6e3059] to-[#e93d3a0a] pr-10 w-fit"
+              >
+                Surety
+              </h1>
+              <p class="sm:text-xl mt-3">
+                Rest assured, your assets are in good hands with Simplex.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="./assets/circle 1.png" alt="" class="absolute top-20 left-28" />
+      <img src="./assets/circle 2.png" alt="" class="absolute top-32 left-10" />
+      <img
+        src="./assets/circle 11.png"
+        alt=""
+        width="50"
+        class="absolute -bottom-20 right-0"
+      />
+    </div>
+
+    <!-- 5th Section End-->
+
+    <!-- 6th Section Start-->
+    <div class="py-10 max-w-7xl m-auto px-6">
+      <div class="flex flex-col gap-5 mt-12">
+        <h1 class="text-[#272E35] text-4xl font-extrabold text-center mb-10">
+          Frequently Asked Questions
+        </h1>
+        <div>
+          <button
+            class="text-sm flex justify-between items-center accordion rounded-md font-semibold bg-white text-[#454545] cursor-pointer py-3 px-6 w-full text-left border-none outline-none transition duration-300"
+          >
+            <p class="w-5/6">Q: What is Flash Loan</p>
+            <span>
+              <img src="./assets/Group 1051.png" alt="" width="25" />
+            </span>
+          </button>
+          <div
+            class="panel bg-white border border-[#F55934] relative -z-50 text-[#585858] pb-4 pt-6 px-6 -mt-2 overflow-hidden hidden"
+          >
+            <p class="max-w-3xl text-sm border-l-4 border-[#F55934] pl-4">
+              A Flash Loan is a type of decentralized loan that allows users to
+              borrow funds instantly without collateral, provided the borrowed
+              amount is returned within the same transaction.
+            </p>
+          </div>
+        </div>
+        <div>
+          <button
+            class="text-sm flex justify-between items-center accordion rounded-md font-semibold bg-white text-[#454545] cursor-pointer py-3 px-6 w-full text-left border-none outline-none transition duration-300"
+          >
+            <p class="w-5/6">
+              Q: How long does it take to process a Flash Loan transaction?
+            </p>
+            <span>
+              <img src="./assets/Group 1051.png" alt="" width="25" />
+            </span>
+          </button>
+          <div
+            class="panel bg-white border border-[#F55934] relative -z-50 text-[#585858] pb-4 pt-6 px-6 -mt-2 overflow-hidden hidden"
+          >
+            <p class="max-w-3xl text-sm border-l-4 border-[#F55934] pl-4">
+              A Flash Loan is a type of decentralized loan that allows users to
+              borrow funds instantly without collateral, provided the borrowed
+              amount is returned within the same transaction.
+            </p>
+          </div>
+        </div>
+        <div>
+          <button
+            class="text-sm flex justify-between items-center accordion rounded-md font-semibold bg-white text-[#454545] cursor-pointer py-3 px-6 w-full text-left border-none outline-none transition duration-300"
+          >
+            <p class="w-5/6">Q: Is Simplex regulated?</p>
+            <span>
+              <img src="./assets/Group 1051.png" alt="" width="25" />
+            </span>
+          </button>
+          <div
+            class="panel bg-white border border-[#F55934] relative -z-50 text-[#585858] pb-4 pt-6 px-6 -mt-2 overflow-hidden hidden"
+          >
+            <p class="max-w-3xl text-sm border-l-4 border-[#F55934] pl-4">
+              A Flash Loan is a type of decentralized loan that allows users to
+              borrow funds instantly without collateral, provided the borrowed
+              amount is returned within the same transaction.
+            </p>
+          </div>
+        </div>
+        <div>
+          <button
+            class="text-sm flex justify-between items-center accordion rounded-md font-semibold bg-white text-[#454545] cursor-pointer py-3 px-6 w-full text-left border-none outline-none transition duration-300"
+          >
+            <p class="w-5/6">Q. How do I deposit funds into Simplex?</p>
+            <span>
+              <img src="./assets/Group 1051.png" alt="" width="25" />
+            </span>
+          </button>
+          <div
+            class="panel bg-white border border-[#F55934] relative -z-50 text-[#585858] pb-4 pt-6 px-6 -mt-2 overflow-hidden hidden"
+          >
+            <p class="max-w-3xl text-sm border-l-4 border-[#F55934] pl-4">
+              A Flash Loan is a type of decentralized loan that allows users to
+              borrow funds instantly without collateral, provided the borrowed
+              amount is returned within the same transaction.
+            </p>
+          </div>
+        </div>
+        <div>
+          <button
+            class="text-sm flex justify-between items-center accordion rounded-md font-semibold bg-white text-[#454545] cursor-pointer py-3 px-6 w-full text-left border-none outline-none transition duration-300"
+          >
+            <p class="w-5/6">Q. How do I deposit funds into Simplex?</p>
+            <span>
+              <img src="./assets/Group 1051.png" alt="" width="25" />
+            </span>
+          </button>
+          <div
+            class="panel bg-white border border-[#F55934] relative -z-50 text-[#585858] pb-4 pt-6 px-6 -mt-2 overflow-hidden hidden"
+          >
+            <p class="max-w-3xl text-sm border-l-4 border-[#F55934] pl-4">
+              A Flash Loan is a type of decentralized loan that allows users to
+              borrow funds instantly without collateral, provided the borrowed
+              amount is returned within the same transaction.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 6th Section End-->
+
+    <!-- Footer Start-->
+    <div class="bg-gradient-to-r from-[#444444] to-[#272E35] pt-20 pb-6 px-8">
+      <div
+        class="text-white flex flex-col gap-8 items-center text-center max-w-3xl m-auto"
+      >
+        <h1 class="text-white text-4xl font-extrabold">Contact Us:</h1>
+        <p class="sm:text-xl">
+          Need assistance? Our dedicated support team is here to help. Reach out
+          to us via email at support@simplex.com or give us a call at +1 (123)
+          456-7890.
+        </p>
+        <img src="./assets/Group 4.png" alt="" width="200" height="200" />
+        <p class="sm:text-xl">
+          For the latest updates and news, follow us on Twitter and Telegram
+        </p>
+        <div class="flex gap-6">
+          <img src="./assets/Vector.png" alt="" />
+          <img src="./assets/Vector 1.png" alt="" />
+        </div>
+      </div>
+      <div class="max-w-7xl m-auto text-white mt-4">
+        <img src="./assets/icon 2.png" alt="" width="70" />
+        <p class="sm:text-xl mt-2">© 2024 Simplex. All rights reserved.</p>
+      </div>
+    </div>
+    <!-- Footer End-->
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".toggle_icon").click(function () {
+          $("#dropdown").toggleClass("h-screen pt-10");
+        });
+        // function openNav() {
+        //     $("#dropdown").addClass("h-screen pt-10");
+        // }
+
+        $(".closebtn").click(function () {
+          $("#dropdown").removeClass("h-screen pt-10");
+        });
+      });
+    </script>
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          var isActive = this.classList.contains("active");
+
+          // Close all panels
+          var panels = document.getElementsByClassName("panel");
+          for (var j = 0; j < panels.length; j++) {
+            panels[j].style.display = "none";
+            acc[j].classList.remove("active");
+            acc[j].style.color = "";
+            acc[j].style.background = "white";
+          }
+
+          // Toggle current panel
+          if (!isActive) {
+            this.classList.add("active");
+            var panel = this.nextElementSibling;
+            panel.style.display = "block";
+            this.style.color = "white";
+            this.style.background = "#F55934";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

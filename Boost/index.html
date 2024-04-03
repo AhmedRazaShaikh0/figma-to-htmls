@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boost</title>
+    <link rel="icon" href="./assets/icon.png" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    .dropdown {
+      width: 100%;
+      height: 0;
+      position: fixed;
+      z-index: 500;
+      overflow-x: hidden;
+      transition: 0.8s;
+    }
+
+    .dropdown a {
+      padding: 8px 8px 8px 8px;
+      text-decoration: none;
+      font-size: 20px;
+      color: #ffffff;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .dropdown .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      color: white;
+      font-size: 50px;
+      margin-left: 50px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .dropdown a {
+        font-size: 18px;
+      }
+    }
+
+    .toggle_icon {
+      cursor: pointer;
+      color: #ffffff;
+      order: 2;
+    }
+    .font-montserrat {
+      font-family: "Montserrat", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+    }
+    .hero-bg {
+      background-image: url("./assets/BG.png");
+      background-size: cover;
+    }
+    .border-gradient {
+      border-style: solid;
+      border-width: 0.1px;
+      border-image: linear-gradient(to top, #4ecefd, #ffffff00) 0.5;
+    }
+  </style>
+  <body class="bg-[#0F0F0F] font-montserrat">
+    <!-- Header Start -->
+    <header class="absolute sm:top-10 top-8 w-full z-10 sm:px-12 px-4">
+      <div
+        class="max-w-7xl m-auto text-white flex gap-4 justify-between items-center"
+      >
+        <div>
+          <img src="./assets/icon.png" alt="" width="50" height="50" class="" />
+        </div>
+        <div class="hidden md:block">
+          <ul class="text-white flex gap-10">
+            <li
+              class="hover:bg-gradient-to-b from-[#66EDFF] to-[#0974F8] hover:inline-block hover:text-transparent hover:bg-clip-text"
+            >
+              <a href="/">Home</a>
+            </li>
+            <li
+              class="hover:bg-gradient-to-b from-[#66EDFF] to-[#0974F8] hover:inline-block hover:text-transparent hover:bg-clip-text"
+            >
+              <a href="/">About us</a>
+            </li>
+            <li
+              class="hover:bg-gradient-to-b from-[#66EDFF] to-[#0974F8] hover:inline-block hover:text-transparent hover:bg-clip-text"
+            >
+              <a href="/">How it works?</a>
+            </li>
+            <li
+              class="hover:bg-gradient-to-b from-[#66EDFF] to-[#0974F8] hover:inline-block hover:text-transparent hover:bg-clip-text"
+            >
+              <a href="/"> Tokenomics</a>
+            </li>
+            <li
+              class="hover:bg-gradient-to-b from-[#66EDFF] to-[#0974F8] hover:inline-block hover:text-transparent hover:bg-clip-text"
+            >
+              <a href="/">Insights</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <button
+            class="font-bold text-white text-lg bg-gradient-to-r from-[#66EDFF] to-[#0974F8] py-2 px-7 rounded-md"
+          >
+            <p>Join Us</p>
+          </button>
+        </div>
+        <div class="md:hidden block z-50">
+          <button id="hamburger-icon" class="float-right toggle_icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8"
+              fill="white"
+              viewBox="0 0 24 24"
+              stroke="white"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="3"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <div
+          id="dropdown"
+          class="dropdown flex flex-col justify-center uppercase top-0 left-0 bg-[rgba(0,0,0,0.9)] z-50"
+        >
+          <button class="closebtn mr-4 mt-8">×</button>
+          <ul class="text-white p-12 text-center">
+            <li>
+              <a
+                class="hover:bg-gradient-to-b from-[#66EDFF] to-[#0974F8] hover:inline-block hover:text-transparent hover:bg-clip-text py-2"
+                href="/"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:bg-gradient-to-b from-[#66EDFF] to-[#0974F8] hover:inline-block hover:text-transparent hover:bg-clip-text py-2"
+                href="#"
+                >About us</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:bg-gradient-to-b from-[#66EDFF] to-[#0974F8] hover:inline-block hover:text-transparent hover:bg-clip-text py-2"
+                href="#"
+                >How it works?</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:bg-gradient-to-b from-[#66EDFF] to-[#0974F8] hover:inline-block hover:text-transparent hover:bg-clip-text py-2"
+                href="#"
+              >
+                Tokenomics</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:bg-gradient-to-b from-[#66EDFF] to-[#0974F8] hover:inline-block hover:text-transparent hover:bg-clip-text py-2"
+                href="#"
+                >Insights</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- 1st Section Start -->
+    <div class="relative px-6 hero-bg">
+      <div
+        class="max-w-4xl flex flex-col justify-center items-center m-auto text-white md:gap-12 gap-8 md:pt-60 pt-44 pb-28 px-5"
+      >
+        <h1 class="sm:text-6xl text-4xl text-center sm:px-0 px-2 font-bold">
+          Your Gateway to
+          <span
+            class="bg-gradient-to-r from-[#66EDFF] to-[#0974F8] inline-block text-transparent bg-clip-text"
+          >
+            Smart</span
+          >
+          <span
+            class="bg-gradient-to-r from-[#66EDFF] to-[#0974F8] inline-block text-transparent bg-clip-text sm:mt-3"
+          >
+            Investing</span
+          >
+        </h1>
+        <div
+          class="text-center max-w-2xl sm:px-10 text-[#D2D2D2] sm:text-lg text-base"
+        >
+          <p>
+            At BOOST, we're revolutionizing market making to empower smart
+            investors like you.
+          </p>
+        </div>
+        <div class="flex gap-2 mt-6">
+          <button
+            class="font-semibold text-white bg-gradient-to-r from-[#66EDFF] to-[#0974F8] py-2 px-7 rounded-md sm:text-base text-sm"
+          >
+            <p>Invest now</p>
+          </button>
+          <button
+            class="font-semibold border border-[#0974F8] py-2 sm:px-6 px-4 text-white rounded-md sm:text-base text-sm"
+          >
+            Learn More
+          </button>
+        </div>
+      </div>
+      <img
+        src="./assets/star.png"
+        alt=""
+        width="60"
+        class="absolute top-48 md:left-36 left-4"
+      />
+      <img
+        src="./assets/star.png"
+        alt=""
+        width="60"
+        class="absolute bottom-80 md:right-64 sm:right-20 right-4"
+      />
+      <img
+        src="./assets/star 2.png"
+        alt=""
+        width="15"
+        class="absolute top-[28rem] md:left-28 left-10"
+      />
+      <img
+        src="./assets/star 2.png"
+        alt=""
+        width="25"
+        class="absolute md:top-[34rem] top-80 sm:left-56 left-80 -z-10"
+      />
+      <img
+        src="./assets/star 2.png"
+        alt=""
+        width="15"
+        class="absolute md:top-48 top-32 md:right-80 right-20 -z-10"
+      />
+      <img
+        src="./assets/left circle.png"
+        alt=""
+        width="100"
+        class="absolute top-[50%] left-0"
+      />
+      <img
+        src="./assets/right circle.png"
+        alt=""
+        width="200"
+        class="absolute top-28 right-0"
+      />
+      <img
+        src="./assets/Vector.png"
+        alt=""
+        width="40"
+        class="absolute sm:top-[34rem] top-[30rem] sm:left-96 left-56"
+      />
+      <img
+        src="./assets/Vector.png"
+        alt=""
+        width="40"
+        class="absolute top-80 left-52"
+      />
+      <img
+        src="./assets/Vector.png"
+        alt=""
+        width="40"
+        class="absolute bottom-60 right-96"
+      />
+      <img
+        src="./assets/Vector.png"
+        alt=""
+        width="40"
+        class="absolute bottom-60 right-96"
+      />
+      <img
+        src="./assets/Vector.png"
+        alt=""
+        width="40"
+        class="absolute top-36 right-[55%]"
+      />
+      <div
+        class="max-w-7xl m-auto flex flex-col gap-8 items-center text-white sm:p-12 p-6 relative border-gradient"
+      >
+        <h2 class="sm:text-4xl text-3xl font-bold">
+          About
+          <span
+            class="bg-gradient-to-r from-[#66EDFF] to-[#0974F8] inline-block text-transparent bg-clip-text"
+          >
+            Us:</span
+          >
+        </h2>
+        <p class="text-center max-w-6xl sm:px-10 sm:text-lg text-base">
+          BOOST is a team of experienced professionals dedicated to transforming
+          the investment landscape. With a deep understanding of market dynamics
+          and a commitment to innovation, we strive to provide investors with
+          the tools and resources they need to succeed in today's ever-changing
+          financial ecosystem.
+        </p>
+        <img
+          src="./assets/quotations.png"
+          alt=""
+          width="50"
+          class="absolute sm:left-12 left-6 sm:top-20 top-10"
+        />
+      </div>
+    </div>
+    <!-- 1st Section End-->
+
+    <!-- 2nd Section Start -->
+    <div class="relative px-6">
+      <div
+        class="max-w-7xl m-auto flex flex-col items-center text-white pt-16 pb-36 sm:px-0 px-4 relative"
+      >
+        <h2 class="sm:text-4xl text-3xl font-bold text-center">
+          Why Choose
+          <span
+            class="bg-gradient-to-r from-[#66EDFF] to-[#0974F8] inline-block text-transparent bg-clip-text"
+          >
+            BOOST?</span
+          >
+        </h2>
+        <img
+          src="./assets/bordered icon.png"
+          alt=""
+          width="140"
+          class="mt-16"
+        />
+        <img
+          src="./assets/Vector 4.png"
+          alt=""
+          width="850"
+          class="w-[70%] lg:block hidden"
+        />
+        <div
+          class="max-w-7xl m-auto flex lg:flex-nowrap flex-wrap lg:justify-start justify-center gap-12 lg:mt-0 mt-6"
+        >
+          <div
+            class="lg:w-1/3 sm:w-[400px] bg-[#0F0F0F] border border-[#0974F8] rounded-lg relative sm:px-12 px-8 pb-8 pt-12 flex flex-col gap-4 justify-between"
+          >
+            <h3 class="font-bold">Enhanced Investment Opportunities:</h3>
+            <p class="font-light">
+              Experience a new level of investment flexibility with BOOST's
+              dynamic market making strategies.
+            </p>
+          </div>
+          <div
+            class="lg:w-1/3 sm:w-[400px] bg-[#0F0F0F] border border-[#0974F8] rounded-lg relative sm:px-12 px-8 pb-8 pt-12 flex flex-col gap-4 justify-between"
+          >
+            <h3 class="font-bold">Investor Protection:</h3>
+            <p class="font-light">
+              We prioritize security and transparency, ensuring your investments
+              are safe and your interests are protected.
+            </p>
+          </div>
+
+          <div
+            class="lg:w-1/3 sm:w-[400px] bg-[#0F0F0F] border border-[#0974F8] rounded-lg relative sm:px-12 px-8 pb-8 pt-12 flex flex-col gap-4 justify-between"
+          >
+            <h3 class="font-bold">Community Engagement:</h3>
+            <p class="font-light">
+              Join a vibrant community of investors and collaborate with
+              like-minded individuals to maximize your investment potential.
+            </p>
+          </div>
+        </div>
+
+        <img
+          src="./assets/Group 13.png"
+          alt=""
+          width="60"
+          class="absolute top-32 left-0"
+        />
+        <img
+          src="./assets/Vector.png"
+          alt=""
+          width="40"
+          class="absolute top-64 sm:left-20 left-5 -z-10"
+        />
+        <img
+          src="./assets/Vector.png"
+          alt=""
+          width="30"
+          class="absolute top-64 sm:right-20 right-5 -z-10"
+        />
+      </div>
+      <img
+        src="./assets/Group 973.png"
+        alt=""
+        width="270"
+        class="absolute -bottom-40 right-0 -z-10"
+      />
+    </div>
+    <!-- 2nd Section End -->
+
+    <!-- 3rd Section Start -->
+    <div
+      class="bg-gradient-to-br from-[#66edffc7] to-[#0974F8] pt-16 pb-32 px-10 relative"
+    >
+      <div class="flex flex-col gap-8 items-center text-white">
+        <h2 class="sm:text-4xl text-3xl font-bold">The Problem</h2>
+        <p class="text-center max-w-2xl sm:px-10 sm:text-xl text-base">
+          Centralized market making poses risks to investors, with limited
+          transparency and control over liquidity.
+        </p>
+      </div>
+      <div class="flex flex-col gap-8 items-center text-white mt-16">
+        <h2 class="sm:text-4xl text-3xl font-bold">Our Solution</h2>
+        <p class="text-center max-w-4xl sm:px-12 sm:text-xl text-base">
+          BOOST introduces a dynamic market making approach, ensuring liquidity
+          adapts to market trends while prioritizing investor protection and
+          fair distribution of value.
+        </p>
+      </div>
+      <img
+        src="./assets/Group 971.png"
+        alt=""
+        width="200"
+        class="absolute top-0 left-0"
+      />
+      <img
+        src="./assets/Group 970.png"
+        alt=""
+        width="200"
+        class="absolute bottom-0 right-0"
+      />
+    </div>
+    <!-- 3rd Section End -->
+
+    <!-- 4th Section Start -->
+    <div class="hero-bg relative">
+      <div
+        class="max-w-7xl m-auto px-10 flex lg:flex-nowrap lg:justify-start justify-center flex-wrap gap-16 text-white sm:text-lg text-base -mt-16"
+      >
+        <div
+          class="lg:w-1/3 w-[400px] bg-[#0F0F0F] border border-[#1685F9] rounded-xl relative px-8 py-12 flex flex-col gap-4 items-center justify-center text-center"
+        >
+          <img src="./assets/1.png" alt="" width="70" class="absolute -top-8" />
+          <img src="./assets/box 1 img.png" alt="" width="60" />
+          <h3 class="font-bold mt-6">Adaptive Liquidity Provision:</h3>
+          <p class="font-light">
+            Our platform dynamically adjusts liquidity to market conditions,
+            optimizing trading opportunities and minimizing risks.
+          </p>
+        </div>
+        <div
+          class="lg:w-1/3 w-[400px] bg-[#0F0F0F] border border-[#1685F9] rounded-xl relative px-8 py-12 flex flex-col gap-4 items-center justify-center text-center"
+        >
+          <img src="./assets/2.png" alt="" width="70" class="absolute -top-8" />
+          <img src="./assets/box 2 img.png" alt="" width="60" />
+          <h3 class="font-bold mt-6">Investor-Centric Approach:</h3>
+          <p class="font-light">
+            We prioritize investor needs, offering transparent fee structures
+            and innovative investment solutions.
+          </p>
+        </div>
+        <div
+          class="lg:w-1/3 w-[400px] bg-[#0F0F0F] border border-[#1685F9] rounded-xl relative px-8 py-12 flex flex-col gap-4 items-center justify-center text-center"
+        >
+          <img src="./assets/3.png" alt="" width="70" class="absolute -top-8" />
+          <img src="./assets/box 3 img.png" alt="" width="60" />
+          <h3 class="font-bold mt-6">Tokenomics:</h3>
+          <p class="font-light">
+            Holders of BOOST tokens enjoy staking rewards, governance
+            participation, and a share of trading fees.
+          </p>
+        </div>
+      </div>
+      <div class="max-w-7xl m-auto px-10">
+        <div
+          class="max-w-7xl m-auto md:px-28 sm:px-16 px-8 bg-[#0D0D0D] border border-[#0974F8] rounded-xl mt-44 mb-32 pt-12 pb-24 flex flex-col md:gap-20 gap-10"
+        >
+          <h2 class="sm:text-4xl text-3xl font-bold text-center">
+            <span
+              class="bg-gradient-to-r from-[#66EDFF] to-[#0974F8] inline-block text-transparent bg-clip-text"
+            >
+              Tokenomics:</span
+            >
+          </h2>
+          <div
+            class="flex lg:flex-row flex-col justify-between lg:gap-6 gap-10 sm:text-lg text-base"
+          >
+            <div class="lg:w-1/2 lg:pr-16">
+              <div class="flex flex-col gap-4 text-white">
+                <h2 class="font-bold">Staking Rewards:</h2>
+                <p class="font-light">
+                  Earn passive income by staking BOOST tokens and participating
+                  in market making activities.
+                </p>
+                <h2 class="font-bold">Governance Participation:</h2>
+                <p class="font-light">
+                  Have a say in platform decisions and shape the future of
+                  decentralized finance.
+                </p>
+                <h2 class="font-bold">Trading Fee Sharing:</h2>
+                <p class="font-light">
+                  Receive a portion of trading fees generated on the platform,
+                  enhancing your investment returns.
+                </p>
+              </div>
+            </div>
+            <div
+              class="lg:w-1/2 flex lg:justify-end justify-center items-center"
+            >
+              <img
+                src="./assets/icon graph.png"
+                alt=""
+                width="250"
+                class="lg:mr-12"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/Group 972.png"
+        alt=""
+        width="400"
+        class="absolute top-[35%] left-0 -z-10"
+      />
+    </div>
+    <!-- 4th Section End -->
+
+    <!-- 5th Section Start -->
+    <div class="text-white sm:text-lg text-base">
+      <h2 class="sm:text-4xl text-3xl font-bold text-center">
+        Market
+        <span
+          class="bg-gradient-to-r from-[#66EDFF] to-[#0974F8] inline-block text-transparent bg-clip-text"
+        >
+          Insights:</span
+        >
+      </h2>
+      <div
+        class="max-w-7xl m-auto px-10 flex lg:flex-nowrap flex-wrap lg:justify-start justify-center gap-6 mt-16"
+      >
+        <div
+          class="lg:w-1/3 w-[400px] bg-[#0F0F0F] border border-[#1685F9] rounded-lg relative px-7 py-10 flex flex-col gap-4 justify-between"
+        >
+          <h3 class="font-bold">
+            Centralized vs. Decentralized Market Making:
+          </h3>
+          <p class="font-light">
+            Learn about the risks associated with centralized market making and
+            the benefits of decentralization.
+          </p>
+        </div>
+        <div
+          class="lg:w-1/3 w-[400px] bg-[#0F0F0F] border border-[#1685F9] rounded-lg relative px-7 py-10 flex flex-col gap-4 justify-between"
+        >
+          <h3 class="font-bold">Liquidity Trends:</h3>
+          <p class="font-light">
+            Explore how liquidity provision impacts market dynamics and
+            investment outcomes.
+          </p>
+        </div>
+        <div
+          class="lg:w-1/3 w-[400px] bg-[#0F0F0F] border border-[#1685F9] rounded-lg relative px-7 py-10 flex flex-col gap-4 justify-between"
+        >
+          <h3 class="font-bold">Price Control and Fundamental Analysis:</h3>
+          <p class="font-light">
+            Understand the relationship between supply control, price stability,
+            and asset fundamentals.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- 5th Section End -->
+
+    <!-- 6th Section Start -->
+    <div
+      class="text-white py-20 flex flex-col gap-8 items-center text-center max-w-6xl m-auto px-12"
+    >
+      <h2 class="md:text-4xl text-2xl font-bold">
+        Start Your
+        <span
+          class="bg-gradient-to-r from-[#66EDFF] to-[#0974F8] inline-block text-transparent bg-clip-text"
+        >
+          Investment</span
+        >
+        Journey with
+        <span
+          class="bg-gradient-to-r from-[#66EDFF] to-[#0974F8] inline-block text-transparent bg-clip-text"
+        >
+          BOOST:</span
+        >
+      </h2>
+      <p class="md:text-2xl sm:text-lg text-base px-4">
+        Unlock the power of decentralized market making and take control of your
+        investment future with BOOST today!
+      </p>
+      <button
+        class="font-semibold mt-6 text-white bg-gradient-to-r from-[#66EDFF] to-[#0974F8] py-2 px-7 rounded-md"
+      >
+        Invest now
+      </button>
+    </div>
+    <!-- 6th Section End -->
+
+    <!-- Footer Start -->
+    <div
+      class="max-w-7xl m-auto px-10 flex sm:flex-row flex-col sm:gap-4 gap-8 text-white justify-betweensm:items-start items-center py-20"
+    >
+      <div
+        class="w-full flex flex-col justify-between sm:items-start items-center"
+      >
+        <img src="./assets/icon 2.png" alt="" width="150" />
+        <p class="text-lg text-[#555555] sm:mt-24 mt-6 text-center">
+          © 2024 BOOST. All rights reserved.
+        </p>
+      </div>
+      <div class="flex flex-col text-center gap-4 w-1/2">
+        <h2 class="text-2xl font-bold">Resources</h2>
+        <ul class="font-light text-lg text-[#868686] flex flex-col gap-4">
+          <li>Insights</li>
+          <li>Blog</li>
+          <li>Guides</li>
+          <li>Help Center</li>
+        </ul>
+      </div>
+      <div class="flex flex-col text-center gap-4 w-1/2">
+        <h2 class="text-2xl font-bold">Company</h2>
+        <ul class="font-light text-lg text-[#868686] flex flex-col gap-4">
+          <li>About Us</li>
+          <li>Press</li>
+          <li>Careers</li>
+          <li>Legal</li>
+        </ul>
+      </div>
+      <div class="flex flex-col text-center gap-4 w-1/2">
+        <h2 class="text-2xl font-bold">Social</h2>
+        <ul class="font-light text-lg text-[#868686] flex flex-col gap-4">
+          <li>X (Twitter)</li>
+          <li>Telegram</li>
+          <li>Discord</li>
+        </ul>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".toggle_icon").click(function () {
+          $("#dropdown").toggleClass("h-screen pt-10");
+        });
+        // function openNav() {
+        //     $("#dropdown").addClass("h-screen pt-10");
+        // }
+
+        $(".closebtn").click(function () {
+          $("#dropdown").removeClass("h-screen pt-10");
+        });
+      });
+    </script>
+  </body>
+</html>

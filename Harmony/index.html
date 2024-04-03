@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harmony</title>
+    <link rel="icon" href="./assets/icon.png" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <style>
+    @font-face {
+      font-family: Axiforma;
+      src: url("./assets/Axiforma-Regular.ttf");
+    }
+    body {
+      font-family: Axiforma, sans-serif;
+    }
+    .dropdown {
+      width: 100%;
+      height: 0;
+      position: fixed;
+      z-index: 500;
+      overflow-x: hidden;
+      transition: 0.8s;
+    }
+
+    .dropdown a {
+      padding: 8px 8px 8px 8px;
+      text-decoration: none;
+      font-size: 20px;
+      color: #ffffff;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .dropdown .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      color: white;
+      font-size: 50px;
+      margin-left: 50px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .dropdown a {
+        font-size: 18px;
+      }
+    }
+
+    .toggle_icon {
+      cursor: pointer;
+      color: #ffffff;
+      order: 2;
+    }
+
+    .bg-image {
+      background-image: url("./assets/bg.png");
+      background-size: cover;
+    }
+  </style>
+  <body class="bg-black text-white">
+    <!-- Header Start -->
+    <header class="absolute sm:top-8 top-8 w-full z-10 sm:px-12 px-4">
+      <div
+        class="max-w-7xl m-auto text-[#272E35]px-4 flex justify-between items-center"
+      >
+        <div class="w-[10%] md:block hidden"></div>
+        <div class="flex md:justify-center justify-between items-center gap-28">
+          <div class="hidden md:block md:-ml-12">
+            <ul class="text-white flex gap-10">
+              <li>
+                <a class="hover:text-[#FF8343]" href="/">Home</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <img
+              src="./assets/icon.png"
+              alt=""
+              width="80"
+              height="80"
+              class=""
+            />
+          </div>
+          <div class="hidden md:block">
+            <ul class="text-white flex gap-10">
+              <li>
+                <a class="hover:text-[#FF8343]" href="/">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <button
+            class="bg-gradient-to-r from-[#FF8B43] to-[#FF6243] px-5 pt-2 pb-1 w-fit rounded-md font-extrabold text-black"
+          >
+            Join Now
+          </button>
+        </div>
+        <div class="md:hidden block z-50">
+          <button id="hamburger-icon" class="float-right toggle_icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8"
+              fill="white"
+              viewBox="0 0 24 24"
+              stroke="white"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="3"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <div
+          id="dropdown"
+          class="dropdown flex flex-col justify-center uppercase top-0 left-0 bg-[rgba(0,0,0,0.9)] z-50"
+        >
+          <button class="closebtn mr-4 mt-8">×</button>
+          <ul class="text-white p-12 text-center">
+            <li>
+              <a class="hover:text-[#FF8343] py-2" href="/">Home</a>
+            </li>
+            <li>
+              <a class="hover:text-[#FF8343] py-2" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- Header Start -->
+
+    <!-- 1st Section Start -->
+    <div class="px-10 sm:py-56 py-36 relative bg-image">
+      <div class="max-w-6xl m-auto relative">
+        <div class="max-w-4xl flex flex-col gap-12">
+          <h1
+            class="sm:text-[4rem] text-4xl font-extrabold sm:leading-relaxed tracking-wide"
+          >
+            Where
+            <span
+              class="bg-gradient-to-r from-[#FF8B43] to-[#FF6243] inline-block text-transparent bg-clip-text"
+            >
+              Crypto</span
+            >
+            Investing Finds its
+            <span
+              class="bg-gradient-to-r from-[#FF8B43] to-[#FF6243] inline-block text-transparent bg-clip-text"
+            >
+              Rhythm!</span
+            >
+          </h1>
+          <p class="sm:text-lg max-w-xl pr-4">
+            Join us on a journey where professionalism meets simplicity, and
+            investing becomes harmonious.
+          </p>
+          <div class="flex gap-4 item mt-6">
+            <button
+              class="bg-gradient-to-r from-[#FF8B43] to-[#FF6243] px-5 pt-2 pb-1 w-fit rounded-md font-extrabold text-black"
+            >
+              Twitter
+            </button>
+            <button
+              class="bg-transparent border border-[#FF6243] text-[#FF8B43] px-5 pt-2 pb-1 w-fit rounded-md font-extrabold"
+            >
+              Telegram
+            </button>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/Group 10a.png"
+        alt=""
+        width="400"
+        class="absolute sm:-bottom-20 -bottom-32 right-0 md:opacity-100 opacity-50 md:w-[400px] sm:w-[300px] w-[200px] -z-10"
+      />
+      <img
+        src="./assets/Groupas.png"
+        alt=""
+        width="100"
+        class="absolute sm:top-10 top-32 left-0 md:opacity-100 opacity-50 sm:w-[100px] w-[50px]"
+      />
+      <img
+        src="./assets/Ellipse 2.png"
+        alt=""
+        width="120"
+        class="absolute sm:top-6 top-28 left-0 -z-10 sm:w-[120px] w-[70px]"
+      />
+      <img
+        src="./assets/light@4x-8 5.png"
+        alt=""
+        width="70"
+        class="absolute top-6 left-40 -z-10"
+      />
+      <img
+        src="./assets/light@4x-8 5.png"
+        alt=""
+        width="90"
+        class="absolute bottom-40 right-[35%] -z-10"
+      />
+      <img
+        src="./assets/light@4x-8 5.png"
+        alt=""
+        width="40"
+        class="absolute bottom-32 left-40 -z-10"
+      />
+      <img
+        src="./assets/light@4x-8 5.png"
+        alt=""
+        width="50"
+        class="absolute top-40 right-20 -z-10"
+      />
+      <img
+        src="./assets/light@4x-8 5.png"
+        alt=""
+        width="30"
+        class="absolute top-[45%] left-16 -z-10"
+      />
+    </div>
+    <!-- 1st Section End -->
+
+    <!-- 2nd Section Start -->
+    <div class="border-y border-[#FF6243] py-16 bg-[#0F0F0F] relative px-8">
+      <div
+        class="max-w-6xl m-auto flex sm:flex-row flex-col sm:gap-2 gap-8 items-center z-10 relative"
+      >
+        <div class="flex flex-col gap-10">
+          <h1 class="sm:text-5xl text-3xl font-extrabold tracking-wide">
+            Diversified
+            <span
+              class="bg-gradient-to-r from-[#FF8B43] to-[#FF6243] inline-block text-transparent bg-clip-text"
+              >Exposure</span
+            >
+            Made
+            <span
+              class="bg-gradient-to-r from-[#FF8B43] to-[#FF6243] inline-block text-transparent bg-clip-text"
+              >Simple</span
+            >
+          </h1>
+          <h2
+            class="text-xl bg-gradient-to-r from-[#FF8B43] to-[#FF6243] inline-block text-transparent bg-clip-text font-extrabold"
+          >
+            Crypto Investing, Simplified:
+          </h2>
+          <p class="sm:text-lg max-w-xl pr-4">
+            Dive into the world of crypto with Harmony's all-in-one token. No
+            need to juggle multiple coins - just one token for diversified
+            exposure.
+          </p>
+          <button
+            class="bg-transparent border border-[#FF6243] text-[#FF8B43] px-5 pt-2 pb-1 w-fit rounded-md font-extrabold"
+          >
+            Learn More
+          </button>
+        </div>
+        <div><img src="./assets/Group 10.png" alt="" width="280" /></div>
+      </div>
+      <img
+        src="./assets/Ellipse 7.png"
+        alt=""
+        class="absolute bottom-0 left-0 sm:z-0 -z-10"
+        width="250"
+      />
+      <img
+        src="./assets/Ellipse 6.png"
+        alt=""
+        class="absolute top-0 right-0"
+        width="200"
+      />
+    </div>
+    <!-- 2nd Section End -->
+
+    <!-- 3rd Section Start -->
+    <div class="pt-20 px-8">
+      <h1 class="sm:text-5xl text-3xl font-extrabold tracking-wide text-center">
+        Invest with
+        <span
+          class="bg-gradient-to-r from-[#FF8B43] to-[#FF6243] inline-block text-transparent bg-clip-text"
+          >Confidence</span
+        >
+      </h1>
+      <div
+        class="border border-[#FF6243] max-w-6xl m-auto rounded-md sm:p-12 p-6 flex flex-col gap-8 items-center justify-center mt-16"
+      >
+        <h2
+          class="text-xl bg-gradient-to-r from-[#FF8B43] to-[#FF6243] inline-block text-transparent bg-clip-text font-extrabold"
+        >
+          Our Diverse Network!
+        </h2>
+        <p class="sm:text-lg max-w-2xl text-center">
+          With Harmony, investing is more than a leap of faith – it's a
+          strategic move. Let us guide you through the market's ups and downs,
+          ensuring your investments stand the test of time.
+        </p>
+        <img src="./assets/Group.png" alt="" width="600" />
+        <button
+          class="bg-gradient-to-r from-[#FF8B43] to-[#FF6243] px-5 pt-2 pb-1 w-fit rounded-md font-extrabold text-black"
+        >
+          Invest Now
+        </button>
+      </div>
+    </div>
+    <!-- 3rd Section End -->
+
+    <!-- 4th Section Start -->
+    <div class="py-28 relative px-8">
+      <div
+        class="max-w-4xl m-auto flex flex-col items-center justify-center px-4 gap-12"
+      >
+        <h1
+          class="sm:text-5xl text-3xl font-extrabold tracking-wide text-center"
+        >
+          Backed by Industry
+          <span
+            class="bg-gradient-to-r from-[#FF8B43] to-[#FF6243] inline-block text-transparent bg-clip-text"
+          >
+            Leaders</span
+          >
+        </h1>
+        <p class="sm:text-lg text-center">
+          Powered by Giants: Harmony isn't just another platform - it's a force
+          backed by industry titans. Join the ranks of a16z, Coinbase, and
+          Franklin Templeton as we redefine the future of crypto investing.
+        </p>
+        <img src="./assets/Group 6.png" alt="" width="750" />
+      </div>
+      <img
+        src="./assets/Ellipse 18.png"
+        alt=""
+        class="absolute -bottom-48 left-0 z-10"
+        width="350"
+      />
+      <img
+        src="./assets/Ellipse 19.png"
+        alt=""
+        class="absolute bottom-0 right-0"
+        width="350"
+      />
+    </div>
+    <!-- 4th Section End -->
+
+    <!-- 5th Section Start -->
+    <div class="border-y border-[#FF6243] py-16 bg-[#0F0F0F] relative px-8">
+      <div
+        class="max-w-6xl m-auto flex md:flex-row flex-col lg:gap-32 gap-10 items-center px-6"
+      >
+        <div class="lg:w-3/4 w-full">
+          <img
+            src="./assets/Group 1.png"
+            alt=""
+            width="330"
+            class="m-auto z-10 relative"
+          />
+        </div>
+        <div class="flex flex-col gap-10 z-10 relative">
+          <h1 class="sm:text-5xl text-3xl font-extrabold tracking-wide">
+            Seamless User
+            <span
+              class="bg-gradient-to-r from-[#FF8B43] to-[#FF6243] inline-block text-transparent bg-clip-text"
+            >
+              Experience</span
+            >
+          </h1>
+          <p class="sm:text-lg md:pr-16">
+            Investing Made Easy: Say goodbye to complex interfaces and hello to
+            simplicity. With Harmony, navigating the crypto market is as easy as
+            a walk in the park. Sign up, invest, and watch your portfolio grow –
+            it's that simple.
+          </p>
+        </div>
+      </div>
+      <img
+        src="./assets/Ellipse 7.png"
+        alt=""
+        class="absolute bottom-0 left-0"
+        width="250"
+      />
+      <img
+        src="./assets/Ellipse 6.png"
+        alt=""
+        class="absolute top-0 right-0"
+        width="200"
+      />
+    </div>
+    <!-- 5th Section End -->
+
+    <!-- 6th Section Start -->
+    <div class="py-28 relative px-8">
+      <div
+        class="max-w-4xl m-auto flex flex-col items-center justify-center px-4 gap-12"
+      >
+        <h1
+          class="sm:text-5xl text-3xl font-extrabold tracking-wide text-center"
+        >
+          Uncompromising
+          <span
+            class="bg-gradient-to-r from-[#FF8B43] to-[#FF6243] inline-block text-transparent bg-clip-text"
+          >
+            Security</span
+          >
+        </h1>
+        <p class="sm:text-lg text-center">
+          Security at its Core: Trust is our currency, and security is our
+          foundation. Rest easy knowing your assets are safeguarded by Harmony's
+          team of experts, with a track record that speaks for itself.
+        </p>
+        <img src="./assets/Group 100.png" alt="" width="250" />
+      </div>
+      <img
+        src="./assets/Ellipse 9.png"
+        alt=""
+        width="750"
+        class="absolute -bottom-40 left-1/2 transform -translate-x-1/2"
+      />
+    </div>
+    <!-- 6th Section End -->
+
+    <!-- Footer Start -->
+    <footer class="py-16 bg-[#0F0F0F] border-t border-[#FF6243] relative px-8">
+      <div
+        class="flex flex-col gap-8 max-w-4xl m-auto items-center justify-center z-10 relative"
+      >
+        <h1 class="sm:text-5xl text-3xl font-extrabold tracking-wide">
+          <span
+            class="bg-gradient-to-r from-[#FF8B43] to-[#FF6243] inline-block text-transparent bg-clip-text"
+          >
+            Contact Us:</span
+          >
+        </h1>
+        <p class="sm:text-xl text-center">
+          Need assistance? Our dedicated support team is here to help. Reach out
+          to us via email at
+          <span class="text-[#0094FF]"> support@harmony.com </span>or give us a
+          call at +1 (123) 456-7890.
+        </p>
+        <img src="./assets/Group 4.png" alt="" width="150" />
+        <p class="sm:text-xl text-center">
+          For the latest updates and news, follow us on Twitter and Telegram
+        </p>
+        <div class="flex gap-4">
+          <img src="./assets/telegram.png" alt="" width="30" />
+          <img src="./assets/x.png" alt="" width="30" />
+        </div>
+      </div>
+
+      <div class="max-w-7xl m-auto mt-10 z-10 relative">
+        <img src="./assets/Group 7.png" alt="" width="90" />
+        <p class="text-[#797575] text-lg mt-4">
+          © 2024 Simplex. All rights reserved.
+        </p>
+      </div>
+      <img
+        src="./assets/Ellipse 7.png"
+        alt=""
+        class="absolute bottom-0 left-0"
+        width="200"
+      />
+      <img
+        src="./assets/Ellipse 6.png"
+        alt=""
+        class="absolute top-0 right-0"
+        width="200"
+      />
+    </footer>
+    <!-- Footer End -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".toggle_icon").click(function () {
+          $("#dropdown").toggleClass("h-screen pt-10");
+        });
+        // function openNav() {
+        //     $("#dropdown").addClass("h-screen pt-10");
+        // }
+
+        $(".closebtn").click(function () {
+          $("#dropdown").removeClass("h-screen pt-10");
+        });
+      });
+    </script>
+  </body>
+</html>
